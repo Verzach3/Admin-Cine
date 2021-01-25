@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Admin Cine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Admin_Cine_jar</output-path>
+    <root id="archive" name="Admin Cine.jar">
+      <element id="module-output" name="Admin Cine" />
+    </root>
+  </artifact>
+</component>
