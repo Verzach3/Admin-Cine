@@ -29,7 +29,11 @@ public class seatViewer extends JFrame {
 
     public void paint(Graphics g){
         
+<<<<<<< HEAD
         g.draw3DRect(0, 0, 100, 100, false);
+=======
+        g.drawLine(0, 0, 500, 500);
+>>>>>>> main
 
     }
 
