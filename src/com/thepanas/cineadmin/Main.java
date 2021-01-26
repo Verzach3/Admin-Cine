@@ -1,7 +1,4 @@
-package com.thepanas.cine;
-
-import javax.swing.JFrame;
-import java.awt.Graphics;
+package com.thepanas.cineadmin;
 
 public class Main {
 
@@ -10,6 +7,7 @@ public class Main {
         System.out.println("Hola pro");
         
         new seatViewer();
+
 
 
 

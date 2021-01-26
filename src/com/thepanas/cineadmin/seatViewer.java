@@ -1,4 +1,4 @@
-package com.thepanas.cine;
+package com.thepanas.cineadmin;
 
 import javax.swing.JFrame;
 import java.awt.*;
@@ -23,14 +23,15 @@ public class seatViewer extends JFrame {
         boolean arraySillas3D [] = new boolean[sillas3D];
 
         boolean arraySillasVip [] = new boolean[sillasVip];  
-        
+
+
 
     }
 
     public void paint(Graphics g){
-        
-        g.draw3DRect(0, 0, 100, 100, false);
 
+        //g.draw3DRect(0, 0, 100, 100, false);
+        TButton bt = new TButton();
     }
 
 }

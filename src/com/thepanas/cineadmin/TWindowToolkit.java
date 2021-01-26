@@ -1,4 +1,4 @@
-package com.thepanas.cine;
+package com.thepanas.cineadmin;
 
 import java.awt.Graphics;
 
