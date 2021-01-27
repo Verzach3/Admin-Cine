@@ -22,16 +22,23 @@ public class seatViewer extends JFrame {
 
         boolean arraySillas3D [] = new boolean[sillas3D];
 
-        boolean arraySillasVip [] = new boolean[sillasVip];  
+        boolean arraySillasVip [] = new boolean[sillasVip];
 
+        TButton button = new TButton();
 
+        button.BUTTON_TEXT = "Hola mi so";
+        button.Height = 455;
+        button.Width = 455;
+
+        button.setVisible(true);
+        this.add(button);
+        this.pack();
 
     }
 
     public void paint(Graphics g){
 
-        g.draw3DRect(0, 0, 100, 100, false);
-        //TButton bt = new TButton();
+        //g.draw3DRect(0, 0, 100, 100, false);
     }
 
 }
