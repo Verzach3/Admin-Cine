@@ -30,8 +30,8 @@ public class seatViewer extends JFrame {
 
     public void paint(Graphics g){
 
-        //g.draw3DRect(0, 0, 100, 100, false);
-        TButton bt = new TButton();
+        g.draw3DRect(0, 0, 100, 100, false);
+        //TButton bt = new TButton();
     }
 
 }
