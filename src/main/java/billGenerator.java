@@ -1,6 +1,5 @@
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.layout.Document;
-import com.itextpdf.layout.element.LineSeparator;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
 
@@ -25,7 +24,7 @@ public class billGenerator {
         Document document = new Document(pdf);
         document.setTextAlignment(TextAlignment.CENTER);
         document.setFontSize(40);
-        String line = "Hello! Welcome to iTextPdf";
+        String line = "Hello! Welcome to iTextPdf \n como seria mi pana fresco ";
         document.add(new Paragraph(line));
 
         document.close();
