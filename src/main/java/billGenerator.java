@@ -1,5 +1,4 @@
 import com.itextpdf.kernel.pdf.*;
-import com.itextpdf.kernel.pdf.tagging.IStructureNode;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
