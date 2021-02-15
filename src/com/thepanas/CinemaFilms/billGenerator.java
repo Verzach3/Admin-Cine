@@ -1,9 +1,14 @@
-import com.itextpdf.kernel.pdf.*;
+package com.thepanas.CinemaFilms;
+
+import com.itextpdf.io.IOException;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.property.TextAlignment;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+//import java.io.*;
 
 public class billGenerator {
     // Formato de la matriz para las faturas : Pelicula, Tipo de funcion (2D o 3D),
@@ -15,7 +20,7 @@ public class billGenerator {
 
     // Funcion principal para general la factura
     public static void saveBill(String Pelicula, String Tipo, String Horario, String Sala, String Clasificacion,
-            String Sillas, String Filename) throws IOException {
+                                String Sillas, String Filename) throws IOException, FileNotFoundException {
 
         PdfDocument pdf = new PdfDocument(new PdfWriter(path + "/"+Filename+".pdf"));
         Document document = new Document(pdf);
@@ -55,7 +60,7 @@ public class billGenerator {
     public static void generateBill(String Pelicula, String Tipo, String Horario, String Sala, String Clasificacion,String Sillas, String Filename) {
         try {
             saveBill(Pelicula, Tipo, Horario, Sala, Clasificacion, Sillas, Filename);
-        } catch (IOException e) {
+        } catch (IOException | FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("Error al guardar la factura");
         }
@@ -68,11 +73,11 @@ public class billGenerator {
         // Matriz de prueba
         String[] matrizDemoInvoice = { "Jumanji", "2D", "9pm a 11pm", "2", "+12", "A12, A13"};
 
-        
+
         try {
             saveBill(matrizDemoInvoice[0], matrizDemoInvoice[1], matrizDemoInvoice[2], matrizDemoInvoice[3],matrizDemoInvoice[4], matrizDemoInvoice[5], "DemoBill");
-        } catch (IOException e) {
-            
+        } catch (IOException | FileNotFoundException e) {
+
             e.printStackTrace();
         }
 

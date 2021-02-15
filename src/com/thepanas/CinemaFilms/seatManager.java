@@ -1,3 +1,5 @@
+package com.thepanas.CinemaFilms;
+
 public class seatManager {
 
     /*

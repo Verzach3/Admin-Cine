@@ -1,3 +1,5 @@
+package com.thepanas.CinemaFilms;
+
 import java.util.Scanner;
 
 public class login {
