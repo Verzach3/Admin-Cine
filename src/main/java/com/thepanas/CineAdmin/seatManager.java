@@ -15,19 +15,19 @@ public class seatManager {
             los valores almacenados en la matriz solo son 0 y 1 usados como false y true respactivamente
     */
 
-    static Boolean[] sala2D_1 = new Boolean[80];
-    static Boolean[] sala2D_2 = new Boolean[80];
-    static Boolean[] sala2D_3 = new Boolean[80];
+    static boolean[] sala2D_1 = new boolean[80];
+    static boolean[] sala2D_2 = new boolean[80];
+    static boolean[] sala2D_3 = new boolean[80];
 
-    static Boolean[] sala3D_1 = new Boolean[50];
-    static Boolean[] sala3D_2 = new Boolean[50];
+    static boolean[] sala3D_1 = new boolean[50];
+    static boolean[] sala3D_2 = new boolean[50];
 
-    static Boolean[] salaVIP = new Boolean[30];
+    static boolean[] salaVIP = new boolean[30];
 
     //Obtiene las sillas libres de la sala seleccionada
-    public static Boolean[] getSeats(int sala) {
+    public static boolean[] getSeats(int sala) {
         if (sala == 0) {
-            printSeats(sala2D_1);
+            //printSeats(sala2D_1);
             return sala2D_1;
         }else if (sala == 1) {
             return sala2D_2;
@@ -45,8 +45,19 @@ public class seatManager {
         return null;
     }
 
-    public static void setSeats() {
-        
+    public static void setSeats(int bs,int index) {
+        System.out.println("Ingrese el estado al que quiere cambiar la silla\n1.Libre\n2.Ocupado");
+        Scanner scan = new Scanner(System.in);
+        int estado = scan.nextInt();
+        if (estado == 1) {
+            getSeats(bs)[index] = false;
+            seatmanagercli();
+        }else if (estado == 2) {
+            getSeats(bs)[index] = true;
+            seatmanagercli();
+        }else {
+            System.out.println("Opcion incorrecta");
+        }
     }
 
     //Herramienta para manejar al seat manager mediante comandos (Solo para pruebas durante el desarrollo)
@@ -57,18 +68,70 @@ public class seatManager {
             System.out.println("------------------|Seatmanager CLI|------------------");
             System.out.println("Por favor ingrese la sala de la que desea obtener los asientos");
             int Seleccion = scan.nextInt();
+            System.out.println("");
             if (Seleccion == 10){
               break;
             }else{ getSeats(Seleccion);
             }
+            while (exit == false) {
+                System.out.println("Sala seleccionada: " + Seleccion);
+                printSeats(getSeats(Seleccion));
+                System.out.println("\n1.Cambiar estado de una silla\n10.Salir");
+                int Seleccion2 = scan.nextInt();
+                if (Seleccion2 == 1) {
+                    System.out.println("De que silla desea cambiar el estado");
+                    int silla = scan.nextInt();
+                    if (silla >= 0 && silla<= 79) {
+                        setSeats(Seleccion, silla);
+                    }
+                }else if (Seleccion2 == 10) {
+                    break;
+                }
+
+
+
+            }
+
         }
-        scan.close();
+
     }
 
-    public static void printSeats(Boolean[] sillas){
-      for(int i = 0; i < sillas.length; i++){
-        System.out.println(sillas[i]);
-      }
+    public static void printSeats(boolean[] sillas){
+        if (sillas.length == 80) {
+            int contador = 0;
+            int contador2 = 0;
+            for(int i = 0; i < sillas.length; i++){
+                if (contador == 4) {
+                    contador = 0;
+                    contador2 ++;
+                    System.out.print("        ");
+                }else{
+                    System.out.print(
+                        "[" +
+                        seatStatus(sillas, i) +
+                        "]"
+                    );
+                    contador ++;
+
+                }
+                if (contador2 == 2) {
+                    contador2 = 0;
+                    System.out.print("\n");
+                }
+
+        
+            }  
+        }
+
+        System.out.println("");
+    }
+
+    public static String seatStatus(boolean[] sillas, int silla) {
+        if (sillas[silla] == true) {
+            return "*";
+        }else{
+            return " ";
+        }
     }
 
     //Constructor
