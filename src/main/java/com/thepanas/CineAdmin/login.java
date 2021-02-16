@@ -1,5 +1,4 @@
-package com.thepanas.CinemaFilms;
-
+package com.thepanas.CineAdmin;
 import java.util.Scanner;
 
 public class login {

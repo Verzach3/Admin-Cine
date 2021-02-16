@@ -1,4 +1,5 @@
-package com.thepanas.CinemaFilms;
+package com.thepanas.CineAdmin;
+import java.util.Scanner;
 
 public class seatManager {
 
@@ -7,7 +8,7 @@ public class seatManager {
         --Para las salas 2D y 3D--
         Si una posicion en la matriz es true significa que el asiento ha sido ocupado
         en caso contrario significa que el asiento esta libre
-
+        
         --Para las salas VIP--
         Como son 10 balcones y cada uno tiene 3 sillas reclinables entonces:
             el primer numero en el index de la matriz define el balcon y el segundo numero la silla
@@ -26,6 +27,7 @@ public class seatManager {
     //Obtiene las sillas libres de la sala seleccionada
     public static Boolean[] getSeats(int sala) {
         if (sala == 0) {
+            printSeats(sala2D_1);
             return sala2D_1;
         }else if (sala == 1) {
             return sala2D_2;
@@ -38,7 +40,6 @@ public class seatManager {
         }else if (sala == 5) {
             return salaVIP;
         }
-
         
         
         return null;
@@ -50,15 +51,25 @@ public class seatManager {
 
     //Herramienta para manejar al seat manager mediante comandos (Solo para pruebas durante el desarrollo)
     public static void seatmanagercli() {
+        Scanner scan = new Scanner(System.in);
         boolean exit = false;
         while (exit == false) {
             System.out.println("------------------|Seatmanager CLI|------------------");
-            
-
-
+            System.out.println("Por favor ingrese la sala de la que desea obtener los asientos");
+            int Seleccion = scan.nextInt();
+            if (Seleccion == 10){
+              break;
+            }else{ getSeats(Seleccion);
+            }
         }
+        scan.close();
     }
 
+    public static void printSeats(Boolean[] sillas){
+      for(int i = 0; i < sillas.length; i++){
+        System.out.println(sillas[i]);
+      }
+    }
 
     //Constructor
     seatManager(boolean enable_cli){
@@ -67,8 +78,5 @@ public class seatManager {
             seatmanagercli();
             System.exit(0);
         }
-
-
     }
-
 }
