@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/io.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kernel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_api_1_7_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin Cine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/io.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/kernel.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/layout.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/slf4j-api-1.7.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Admin Cine/com/thepanas/CinemaFilms/io.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Admin Cine/com/thepanas/CinemaFilms/kernel.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Admin Cine/com/thepanas/CinemaFilms/layout.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Admin Cine/com/thepanas/CinemaFilms/slf4j-api-1.7.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/thepanas/CinemaFilms/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/thepanas/CinemaFilms/billGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/thepanas/CinemaFilms/login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/thepanas/CinemaFilms/seatManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/seatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/seatManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +86,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
@@ -129,9 +106,10 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.thepanas.CinemaFilms.Main" />
-      <module name="Admin Cine" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" value="adopt-openj9-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.thepanas.CineAdmin.Main" />
+      <module name="Admin-Cine" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
