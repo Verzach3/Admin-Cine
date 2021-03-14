@@ -11,7 +11,9 @@ import javax.swing.JFrame;
 
 class TButtonExample extends JFrame {
 
+    private static final long serialVersionUID = 1L;
     TButton button = new TButton();
+    TCheckBox checkBox = new TCheckBox();
 
     TButtonExample(){
         this.setSize(new Dimension(800,600));
@@ -22,6 +24,9 @@ class TButtonExample extends JFrame {
         button.setSize(110, 40);
         button.setLocation(50, 50);
 
+        checkBox.setSize(20);
+        checkBox.setLocation(60, 150);
+
         eventosMouse();
     }
 
@@ -29,7 +34,7 @@ class TButtonExample extends JFrame {
         Graphics2D g2D = (Graphics2D) g;
 
         button.paintComponent(g2D);
-
+        checkBox.paintComponent(g2D);
 
     }
 
@@ -47,10 +52,14 @@ class TButtonExample extends JFrame {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
+                //Click boton
                 if(e.getX() >= button.getX() && e.getX() <= button.WIDTH + button.getX() && e.getY() >= button.getY() && e.getY() <= button.HEIGHT + button.getY()){
                   button.onClick();
                 }
-
+                //Click checkbox
+                if(e.getX() >= checkBox.getX() && e.getX() <= checkBox.SIZE + checkBox.getX() && e.getY() >= checkBox.getY() && e.getY() <= checkBox.SIZE + checkBox.getY()){
+                  checkBox.onClick();
+                }
 
                 //Leave here
                 repaint();

@@ -6,13 +6,5 @@ public class Main {
 
     public static void main(String[] args) {
 
-<<<<<<< Updated upstream
-=======
-    registroPelis.imprimir();
-	//new seatManager(true);
-        //billGenerator.generateDemoBill();
-        //login.Login();
-
->>>>>>> Stashed changes
     }
 }

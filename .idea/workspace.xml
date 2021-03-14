@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/thepanasFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/thepanasGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TCheckBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -106,7 +105,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TCheckBox">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="adopt-openj9-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -118,8 +117,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TCheckBox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thepanas.GUILib.TCheckBox" />
+      <module name="Admin-Cine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thepanas.GUILib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCheckBox" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

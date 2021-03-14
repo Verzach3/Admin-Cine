@@ -2,8 +2,6 @@ package com.thepanas.GUILib;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.color.*;
-import java.awt.*;
 import java.awt.Font;
 
 public class TButton {
@@ -68,6 +66,7 @@ public class TButton {
 
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", 2, fontSize);
+        g.setFont(font);
         g.drawString(TEXT, X + WIDTH/centrarTextoH(), Y + (HEIGHT/2 + fontSize/2));
 
 
