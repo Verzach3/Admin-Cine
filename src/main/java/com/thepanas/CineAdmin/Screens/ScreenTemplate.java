@@ -1,17 +1,17 @@
 package com.thepanas.CineAdmin.Screens;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.*;
-import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
-public class FirstOpenScreen extends JPanel{
-    
+public class ScreenTemplate extends JPanel{
 
-    public FirstOpenScreen(){
+
+    public ScreenTemplate(){
         this.setSize(1024,768);
+
 
     }
 

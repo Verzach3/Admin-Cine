@@ -29,7 +29,7 @@ class TButtonExample extends JFrame {
         checkBox.setSize(20);
         checkBox.setLocation(60, 150);
 
-        label.setLocation(200, 60);
+        label.setLocation(201, 60);
         label.setText("Hola mi pana");
         label.setSize(20);
 
@@ -70,6 +70,12 @@ class TButtonExample extends JFrame {
                 if(e.getX() >= checkBox.getX() && e.getX() <= checkBox.SIZE + checkBox.getX() && e.getY() >= checkBox.getY() && e.getY() <= checkBox.SIZE + checkBox.getY()){
                   checkBox.onClick();
                 }
+                //Click inputbox
+                if(e.getX() >= inputbox.getX() && e.getX() <= inputbox.WIDTH + inputbox.getX() && e.getY() >= inputbox.getY() && e.getY() <= inputbox.HEIGHT + inputbox.getY()){
+
+                    inputbox.onClick();
+                }
+
 
                 //Leave here
                 repaint();
@@ -128,6 +134,7 @@ class TButtonExample extends JFrame {
     public static void main(String[] args) {
         TButtonExample frame = new TButtonExample();
         frame.setVisible(true);
+
 
     }
 }

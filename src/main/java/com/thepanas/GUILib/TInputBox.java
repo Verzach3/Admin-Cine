@@ -1,7 +1,12 @@
 package com.thepanas.GUILib;
 
+
+
 import java.awt.Color;
 import java.awt.Graphics2D;
+
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 
 public class TInputBox {
@@ -10,15 +15,15 @@ public class TInputBox {
     int WIDTH = 0;
     int HEIGHT = 0;
     int fontSize = 15;
-    String TEXT = "Button";
-    Boolean clickStatus = false;
+    String TEXT = "";
+    String PLACEHOLDER = "PLACEHOLDER";
 
     public int getX(){
-      return X;
+        return X;
     }
 
     public int getY(){
-      return Y;
+        return Y;
     }
 
     public void setLocation(int x, int y){
@@ -32,26 +37,39 @@ public class TInputBox {
     }
 
     public void setText(String text){
-        this.TEXT = text;
+        if (TEXT == null || TEXT.equals("")){
+            TEXT = PLACEHOLDER;
+        }else {
+            this.TEXT = text;
+        }
     }
 
-    public int centrarTextoH(){
-        char[] chars = TEXT.toCharArray();
-
-        return chars.length / 2;
+    public void setPLACEHOLDER(String placeholder){
+        this.PLACEHOLDER = placeholder;
     }
 
     public void onClick(){
-        clickStatus = true;
-    }
+        String input;
+        input = JOptionPane.showInputDialog(null, "Ingrese el texto: ");
+        try{
+            if (input == null){
+                this.TEXT = TEXT;
+            }else if (TEXT.equals("")){
+                TEXT = PLACEHOLDER;
+            }else {
+                TEXT = input;
+            }
+        }catch (NullPointerException e){
 
-    public void onRelease(){
-        clickStatus = false;
+        }
+
+
     }
 
 
 
     public void paintComponent(Graphics2D g){
+        this.setText(this.TEXT);
         g.setColor(Color.LIGHT_GRAY);
         g.fillRoundRect(X, Y, WIDTH, HEIGHT,3,3);
         g.setColor(Color.BLACK);
@@ -60,7 +78,7 @@ public class TInputBox {
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", 2, fontSize);
         g.setFont(font);
-        g.drawString(TEXT, X + WIDTH/centrarTextoH(), Y + (HEIGHT/2 + fontSize/2));
+        g.drawString(TEXT, X + WIDTH/20, Y + (HEIGHT/2 + fontSize/2));
 
 
     }

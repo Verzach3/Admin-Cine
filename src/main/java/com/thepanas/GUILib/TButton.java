@@ -6,10 +6,10 @@ import java.awt.Font;
 
 public class TButton {
 
-    int X = 0;
-    int Y = 0;
-    int WIDTH = 0;
-    int HEIGHT = 0;
+    int X = 1;
+    int Y = 1;
+    int WIDTH = 1;
+    int HEIGHT = 1;
     int fontSize = 15;
     String TEXT = "Button";
     Boolean clickStatus = false;

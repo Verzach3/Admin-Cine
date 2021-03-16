@@ -1,10 +1,14 @@
 package com.thepanas.CineAdmin;
 
-import com.itextpdf.layout.element.Image;
+import com.thepanas.CineAdmin.Screens.FirstOpenScreen;
 
-public class Main {
+import javax.swing.JFrame;
+
+
+public class Main extends JFrame{
 
     public static void main(String[] args) {
+        FirstOpenScreen screen1 = new FirstOpenScreen();
 
     }
 }

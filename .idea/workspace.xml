@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TCheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +94,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -104,8 +113,11 @@
       <recent name="$PROJECT_DIR$/src/com/thepanas/CinemaFilms" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.thepanas.CineAdmin.Screens" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.TCheckBox">
+  <component name="RunManager" selected="Application.TButtonExample">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="adopt-openj9-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -113,6 +125,19 @@
       <module name="Admin-Cine" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TButtonExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thepanas.GUILib.TButtonExample" />
+      <module name="Admin-Cine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thepanas.GUILib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,8 +155,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TButtonExample" />
         <item itemvalue="Application.TCheckBox" />
         <item itemvalue="Application.Main" />
       </list>
@@ -145,8 +184,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613412419658</updated>
+      <workItem from="1615884828123" duration="615000" />
+      <workItem from="1615885511963" duration="835000" />
+      <workItem from="1615915379872" duration="10963000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -159,6 +204,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArithmeticException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
