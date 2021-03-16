@@ -14,9 +14,11 @@ class TButtonExample extends JFrame {
     private static final long serialVersionUID = 1L;
     TButton button = new TButton();
     TCheckBox checkBox = new TCheckBox();
+    TLabel label = new TLabel();
+    TInputBox inputbox = new TInputBox();
 
     TButtonExample(){
-        this.setSize(new Dimension(800,600));
+        this.setSize(new Dimension(1024,768));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setLocationRelativeTo(null);
@@ -27,6 +29,13 @@ class TButtonExample extends JFrame {
         checkBox.setSize(20);
         checkBox.setLocation(60, 150);
 
+        label.setLocation(200, 60);
+        label.setText("Hola mi pana");
+        label.setSize(20);
+
+        inputbox.setLocation(200, 100);
+        inputbox.setSize(150, 20);
+
         eventosMouse();
     }
 
@@ -35,7 +44,8 @@ class TButtonExample extends JFrame {
 
         button.paintComponent(g2D);
         checkBox.paintComponent(g2D);
-
+        label.paintComponent(g2D);
+        inputbox.paintComponent(g2D);
     }
 
     //Mouse Handler
