@@ -84,14 +84,14 @@ public class TInputBox {
         g.drawRoundRect(X, Y, WIDTH, HEIGHT,3,3);
 
         g.setColor(Color.WHITE);
-        Font font = new Font("Arial", 2, fontSize);
+        Font font = new Font("Arial", 2, HEIGHT-3);
         g.setFont(font);
         g.drawString(TEXT, X + WIDTH/20, Y + (HEIGHT/2 + fontSize/2));
 
 
     }
 
-    TInputBox() {
+    public TInputBox() {
 
     }
 

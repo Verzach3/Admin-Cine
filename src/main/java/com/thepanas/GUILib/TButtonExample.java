@@ -63,7 +63,9 @@ class TButtonExample extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 //Click boton
-                button.evenListener(e);
+                if (button.evenListener(e)){
+                    System.out.println("Boton pulsado");
+                }
                 //Click checkbox
                 checkBox.evenListener(e);
                 //Click inputbox

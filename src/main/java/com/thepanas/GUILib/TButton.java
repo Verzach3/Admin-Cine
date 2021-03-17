@@ -7,6 +7,13 @@ import java.awt.event.MouseEvent;
 
 public class TButton {
 
+    /* RECOMENDACIONES Y REQUERIMIENTOS */
+    /* Para cada boton se debe de llamar el metodo onRelease()
+       en el mouseReleased de cada panel para que el cambio de
+       color surta efecto
+     */
+
+
     int X = 1;
     int Y = 1;
     int WIDTH = 1;

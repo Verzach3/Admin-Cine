@@ -1,6 +1,6 @@
 package com.thepanas.CineAdmin;
 
-import com.thepanas.CineAdmin.Screens.FirstOpenScreen;
+import com.thepanas.CineAdmin.Screens.*;
 
 import javax.swing.JFrame;
 import java.awt.Dimension;
