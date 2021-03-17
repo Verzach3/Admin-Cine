@@ -11,7 +11,7 @@ public class ScreenTemplate extends JPanel{
 
     public ScreenTemplate(){
         this.setSize(1024,768);
-
+        this.setLayout(null);
 
     }
 

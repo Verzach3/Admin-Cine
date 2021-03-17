@@ -72,7 +72,7 @@ public class TButton {
 
     }
 
-    TButton() {
+    public TButton() {
 
     }
 

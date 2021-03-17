@@ -1,5 +1,7 @@
 package com.thepanas.CineAdmin.Screens;
 
+import com.thepanas.GUILib.TButton;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.Graphics2D;
@@ -18,6 +20,8 @@ public class FirstOpenScreen extends JPanel{
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
+        TButton button = new TButton();
+        
     }
 
 

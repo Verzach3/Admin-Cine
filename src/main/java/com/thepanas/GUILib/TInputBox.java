@@ -59,7 +59,7 @@ public class TInputBox {
             }else {
                 TEXT = input;
             }
-        }catch (NullPointerException e){
+        }catch (NullPointerException ignored){
 
         }
 
