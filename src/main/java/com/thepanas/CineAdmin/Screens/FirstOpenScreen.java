@@ -20,11 +20,14 @@ public class FirstOpenScreen extends JPanel{
         this.setSize(1024,768);
         this.setLayout(null);
         button1.setSize(110, 40);
-        button1.setLocation(250, 100);
-        button1.setText("A Comenzar");
-        label1.setLocation(540,240);
+        button1.setLocation(500, 400);
+        button1.setText("Comenzar");
+        label1.setLocation(400,40);
         label1.setText("Bienvenido al Panel de Control de CinemaFilms");
+
+        eventosMouse();
     }
+
 
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
@@ -41,7 +44,7 @@ public class FirstOpenScreen extends JPanel{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                
+
                 //Leave here
                 repaint();
             }
@@ -49,7 +52,7 @@ public class FirstOpenScreen extends JPanel{
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-
+                button1.evenListener(e);
                 //Leave here
                 repaint();
             }
@@ -57,9 +60,9 @@ public class FirstOpenScreen extends JPanel{
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-
                 //Leave here
                 repaint();
+                button1.onRelease();
             }
 
             @Override

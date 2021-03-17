@@ -3,6 +3,7 @@ package com.thepanas.GUILib;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Font;
+import java.awt.event.MouseEvent;
 
 public class TButton {
 
@@ -56,6 +57,15 @@ public class TButton {
         }else {
             return new Color(96, 125, 170);
         }
+    }
+
+    public Boolean evenListener(MouseEvent e){
+        if(e.getX() >= this.X && e.getX() <= this.WIDTH + this.X && e.getY() >= this.Y && e.getY() <= this.HEIGHT + this.Y){
+            this.clickStatus = true;
+        }else {
+            this.clickStatus = false;
+        }
+        return clickStatus;
     }
 
     public void paintComponent(Graphics2D g){

@@ -2,6 +2,7 @@ package com.thepanas.GUILib;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.event.MouseEvent;
 
 public class TCheckBox {
 
@@ -31,6 +32,13 @@ public class TCheckBox {
 
     public void onClick(){
         clickStatus = !clickStatus;
+    }
+
+    public Boolean evenListener(MouseEvent e){
+        if(e.getX() >= this.X && e.getX() <= this.SIZE + this.X && e.getY() >= this.Y && e.getY() <= this.SIZE + this.Y){
+            clickStatus = !clickStatus;
+    }
+        return clickStatus;
     }
 
     public Color buttonColor(){
