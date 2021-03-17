@@ -8,6 +8,7 @@ import java.awt.Graphics2D;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.event.MouseEvent;
 
 public class TInputBox {
     int X = 0;
@@ -41,6 +42,13 @@ public class TInputBox {
             TEXT = PLACEHOLDER;
         }else {
             this.TEXT = text;
+        }
+    }
+
+    public void evenListener(MouseEvent e){
+        if(e.getX() >= this.X && e.getX() <= this.WIDTH+ this.X && e.getY() >= this.Y && e.getY() <= this.HEIGHT+ this.Y){
+
+            this.onClick();
         }
     }
 

@@ -63,19 +63,11 @@ class TButtonExample extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 //Click boton
-                if(e.getX() >= button.getX() && e.getX() <= button.WIDTH + button.getX() && e.getY() >= button.getY() && e.getY() <= button.HEIGHT + button.getY()){
-                  button.onClick();
-                }
+                button.evenListener(e);
                 //Click checkbox
-                if(e.getX() >= checkBox.getX() && e.getX() <= checkBox.SIZE + checkBox.getX() && e.getY() >= checkBox.getY() && e.getY() <= checkBox.SIZE + checkBox.getY()){
-                  checkBox.onClick();
-                }
+                checkBox.evenListener(e);
                 //Click inputbox
-                if(e.getX() >= inputbox.getX() && e.getX() <= inputbox.WIDTH + inputbox.getX() && e.getY() >= inputbox.getY() && e.getY() <= inputbox.HEIGHT + inputbox.getY()){
-
-                    inputbox.onClick();
-                }
-
+                inputbox.evenListener(e);
 
                 //Leave here
                 repaint();
