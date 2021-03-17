@@ -10,17 +10,22 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
 public class FirstOpenScreen extends JPanel{
-    
+
+    //Component definition
+    TButton button = new TButton();
+
 
     public FirstOpenScreen(){
         this.setSize(1024,768);
-
+        this.setLayout(null);
+        button.setSize(110, 40);
+        button.setLocation(0, 0);
     }
 
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
-        TButton button = new TButton();
+        button.paintComponent(g2D);
         
     }
 
