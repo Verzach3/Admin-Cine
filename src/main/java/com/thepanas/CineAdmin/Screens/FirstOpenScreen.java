@@ -1,6 +1,7 @@
 package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.GUILib.TButton;
+import com.thepanas.GUILib.TLabel;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -12,21 +13,25 @@ import java.awt.event.MouseWheelEvent;
 public class FirstOpenScreen extends JPanel{
 
     //Component definition
-    TButton button = new TButton();
-
+    TButton button1 = new TButton();
+    TLabel label1 = new TLabel();
 
     public FirstOpenScreen(){
         this.setSize(1024,768);
         this.setLayout(null);
-        button.setSize(110, 40);
-        button.setLocation(0, 0);
+        button1.setSize(110, 40);
+        button1.setLocation(250, 100);
+        button1.setText("A Comenzar");
+        label1.setLocation(540,240);
+        label1.setText("Bienvenido al Panel de Control de CinemaFilms");
     }
 
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
-        button.paintComponent(g2D);
-        
+
+        button1.paintComponent(g2D);
+        label1.paintComponent(g2D);
     }
 
 

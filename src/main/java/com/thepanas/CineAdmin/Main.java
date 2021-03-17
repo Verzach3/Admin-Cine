@@ -9,16 +9,16 @@ public class Main extends JFrame{
 
     Main(){
       this.setSize(new Dimension(1024, 768));
+      this.setLayout(null);
       this.setName("Cinema Films");
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      this.setLayout(null);
       this.setLocationRelativeTo(null);
 
     }
 
     public static void main(String[] args) {
       Main mainFrame = new Main();
-      
+
       /*
         Aqui se creara una instancia de cada una
         de los JPanels que tenemos para ocultarlas

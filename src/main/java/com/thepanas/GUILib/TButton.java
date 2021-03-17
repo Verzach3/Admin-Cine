@@ -67,7 +67,7 @@ public class TButton {
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", 2, fontSize);
         g.setFont(font);
-        g.drawString(TEXT, X + WIDTH/centrarTextoH(), Y + (HEIGHT/2 + fontSize/2));
+        g.drawString(TEXT, X + (WIDTH/centrarTextoH())/2, Y + (HEIGHT/2 + fontSize/2));
 
 
     }

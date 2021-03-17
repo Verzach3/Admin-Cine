@@ -1,7 +1,6 @@
 package com.thepanas.GUILib;
 
-import java.awt.Graphics2D;
-import java.awt.Font;
+import java.awt.*;
 
 public class TLabel {
     int X = 0;
@@ -33,6 +32,7 @@ public class TLabel {
 
     public void paintComponent(Graphics2D g){
 
+        g.setColor(Color.BLACK);
         Font font = new Font("Arial", Font.PLAIN, fontSize);
         g.setFont(font);
         g.drawString(TEXT,X,Y);
@@ -40,7 +40,7 @@ public class TLabel {
 
     }
 
-    TLabel() {
+    public TLabel() {
 
     }
 
