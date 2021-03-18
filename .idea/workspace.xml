@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +195,7 @@
       <workItem from="1615885511963" duration="835000" />
       <workItem from="1615915379872" duration="10963000" />
       <workItem from="1615945689631" duration="6040000" />
-      <workItem from="1615992403608" duration="6890000" />
+      <workItem from="1615992403608" duration="7882000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>

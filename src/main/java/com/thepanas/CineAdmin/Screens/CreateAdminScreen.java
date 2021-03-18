@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
+import com.thepanas.GUILib.TLabel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,12 +12,15 @@ import java.awt.event.MouseWheelEvent;
 
 public class CreateAdminScreen extends JPanel{
 
-    TButton button1 = new TButton();
-    TInputBox NameField,UserName,PassWord,ConfirmPassWord = new TInputBox();
+    TButton confirmButton = new TButton();
+    TInputBox nameField,userName,passWord,confirmPassWord = new TInputBox();
+    TLabel welcomeLabe = new TLabel();
 
     public CreateAdminScreen(){
         this.setSize(1024,768);
         this.setLayout(null);
+
+        
 
     }
 
@@ -25,6 +29,11 @@ public class CreateAdminScreen extends JPanel{
         Graphics2D g2D = (Graphics2D) g;
     }
 
+
+    public int onHide(){
+        this.setVisible(false);
+        return 1;
+    }
 
     //Mouse Handler // Maneja los eventos del mouse
     public void eventosMouse() {
@@ -48,7 +57,7 @@ public class CreateAdminScreen extends JPanel{
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-
+                confirmButton.onRelease();
                 //Leave here
                 repaint();
             }

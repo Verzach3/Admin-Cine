@@ -21,6 +21,13 @@ public class ScreenTemplate extends JPanel{
     }
 
 
+    public int onExit(){
+        this.setVisible(false);
+
+        //El return se usa para decirle al mainframe que Panel deberia de estar mostrandose
+        return null;
+    }
+
     //Mouse Handler // Maneja los eventos del mouse
     public void eventosMouse() {
         addMouseListener(new MouseAdapter() {
