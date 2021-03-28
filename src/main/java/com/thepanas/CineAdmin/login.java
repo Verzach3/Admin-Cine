@@ -33,6 +33,7 @@ public class login {
             }
         }
 
+        scan.close();
     }
 
 }

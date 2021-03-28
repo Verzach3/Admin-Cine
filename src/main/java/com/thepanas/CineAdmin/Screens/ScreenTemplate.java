@@ -1,15 +1,24 @@
 package com.thepanas.CineAdmin.Screens;
 
+import com.thepanas.CineAdmin.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
+@SuppressWarnings("serial")
 public class ScreenTemplate extends JPanel{
+    private Main admin;
 
+    FirstOpenScreen firstOpenScreen;
 
-    public ScreenTemplate(){
+    public ScreenTemplate(Main jframe){
+        
+        admin = jframe;
+        firstOpenScreen = new FirstOpenScreen(admin);
+
         this.setSize(1024,768);
         this.setLayout(null);
 
@@ -21,11 +30,11 @@ public class ScreenTemplate extends JPanel{
     }
 
 
-    public int onExit(){
+    public void onExit(){
         this.setVisible(false);
 
         //El return se usa para decirle al mainframe que Panel deberia de estar mostrandose
-        return null;
+
     }
 
     //Mouse Handler // Maneja los eventos del mouse

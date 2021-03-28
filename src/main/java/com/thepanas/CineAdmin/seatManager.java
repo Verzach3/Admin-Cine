@@ -57,6 +57,7 @@ public class seatManager {
         } else {
             System.out.println("Opcion incorrecta");
         }
+        scan.close();
     }
 
     // Herramienta para manejar al seat manager mediante comandos (Solo para pruebas
@@ -101,7 +102,7 @@ public class seatManager {
             }
 
         }
-
+        scan.close();
     }
 
     public static void printSeats(boolean[] sillas) {

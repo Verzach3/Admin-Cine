@@ -1,5 +1,8 @@
 package com.thepanas.CineAdmin.Screens;
 
+import com.thepanas.CineAdmin.Main;
+import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Utils.PrintUsers;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -10,47 +13,114 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 
-public class CreateAdminScreen extends JPanel{
+@SuppressWarnings("serial")
+public class CreateAdminScreen extends JPanel {
 
+    FirstOpenScreen firstOpenScreen;
+    private Main admin;
     TButton confirmButton = new TButton();
-    TInputBox nameField,userName,passWord,confirmPassWord = new TInputBox();
-    TLabel welcomeLabe = new TLabel();
+    TInputBox nameField = new TInputBox();
+    TInputBox userName = new TInputBox();
+    TInputBox passWord = new TInputBox();
+    TInputBox confirmPassWord = new TInputBox();
+    TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(){
-        this.setSize(1024,768);
+    public CreateAdminScreen(Main jframe) {
+        admin = jframe;
+
+        this.setSize(1024, 768);
         this.setLayout(null);
+        nameField.setLocation(402, 50);
+        nameField.setSize(200, 20);
+        nameField.setPLACEHOLDER("Nombre");
+        userName.setLocation(402, 100);
+        userName.setSize(200, 20);
+        userName.setPLACEHOLDER("Usuario");
+        passWord.setLocation(402, 150);
+        passWord.setSize(200, 20);
+        passWord.setPLACEHOLDER("Contraseña");
+        confirmPassWord.setLocation(402, 200);
+        confirmPassWord.setSize(200, 20);
+        confirmPassWord.setPLACEHOLDER("Confirmar Contraseña");
+        confirmButton.setLocation(402, 250);
+        confirmButton.setSize(110, 40);
 
-        
-
+        eventosMouse();
     }
 
-    //Aqui van los metodos .paintComponent de los componentes
-    public void paint(Graphics g){
+    // Aqui van los metodos .paintComponent de los componentes
+    public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
+
+        nameField.paintComponent(g2D);
+        userName.paintComponent(g2D);
+        passWord.paintComponent(g2D);
+        confirmPassWord.paintComponent(g2D);
+        confirmButton.paintComponent(g2D);
+
     }
 
+    public void createAdmin() {
+        Usuario newAdmin;
+        String finalPassword;
 
-    public int onHide(){
+        if (!nameField.getText().equals("") || !userName.getText().equals("") || !passWord.getText().equals("") || !confirmPassWord.getText().equals("")) {
+
+            System.out.println(passWord.getText());
+            if (passWord.getText().equals(confirmPassWord.getText())) {
+                finalPassword = passWord.getText();
+                newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
+                admin.dataBase.add(newAdmin);
+
+            } else {
+                JOptionPane.showMessageDialog(null, "La contraseña no es igual", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Uno o mas campos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }
+
+    public void impriUsers(){
+        PrintUsers printUsers = new PrintUsers(admin.dataBase);
+        printUsers.print();
+    }
+
+    public int onHide() {
         this.setVisible(false);
         return 1;
     }
 
-    //Mouse Handler // Maneja los eventos del mouse
+    // Mouse Handler // Maneja los eventos del mouse
     public void eventosMouse() {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                
-                //Leave here
+
+                // Leave here
                 repaint();
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
+                nameField.evenListener(e);
+                userName.evenListener(e);
+                passWord.evenListener(e);
+                confirmPassWord.evenListener(e);
 
-                //Leave here
+
+                if (confirmButton.evenListener(e)) {
+                    try {
+                        createAdmin();    
+                        impriUsers();
+                    } catch (Exception f) {
+                        System.out.println(f);
+                    }
+
+                }
+                // Leave here
                 repaint();
             }
 
@@ -58,7 +128,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
                 confirmButton.onRelease();
-                //Leave here
+                // Leave here
                 repaint();
             }
 
@@ -66,7 +136,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
 
-                //Leave here
+                // Leave here
                 repaint();
             }
 
@@ -74,7 +144,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseExited(MouseEvent e) {
                 super.mouseExited(e);
 
-                //Leave here
+                // Leave here
                 repaint();
             }
 
@@ -82,7 +152,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseWheelMoved(MouseWheelEvent e) {
                 super.mouseWheelMoved(e);
 
-                //Leave here
+                // Leave here
                 repaint();
             }
 
@@ -90,7 +160,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseDragged(MouseEvent e) {
                 super.mouseDragged(e);
 
-                //Leave here
+                // Leave here
                 repaint();
             }
 
@@ -98,7 +168,7 @@ public class CreateAdminScreen extends JPanel{
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
 
-                //Leave here
+                // Leave here
                 repaint();
             }
         });

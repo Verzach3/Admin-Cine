@@ -30,7 +30,7 @@ class TButtonExample extends JFrame {
         checkBox.setLocation(60, 150);
 
         label.setLocation(201, 60);
-        label.setText("Hola mi pana");
+        label.setText("Hola mi Socio");
         label.setSize(20);
 
         inputbox.setLocation(200, 100);

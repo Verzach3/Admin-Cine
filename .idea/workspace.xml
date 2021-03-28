@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Admin-Cine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Admin-Cine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/registroPelis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/registroPelis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/seatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/seatManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButtonExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +128,7 @@
       <recent name="com.thepanas.CineAdmin.Screens" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TButtonExample">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -157,15 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,8 +184,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TButtonExample" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TButtonExample" />
         <item itemvalue="Application.TCheckBox" />
       </list>
     </recent_temporary>
@@ -195,7 +202,8 @@
       <workItem from="1615885511963" duration="835000" />
       <workItem from="1615915379872" duration="10963000" />
       <workItem from="1615945689631" duration="6040000" />
-      <workItem from="1615992403608" duration="7882000" />
+      <workItem from="1615992403608" duration="10974000" />
+      <workItem from="1616867496428" duration="431000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -204,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616019624736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mejorado el ScreenTemplate">
+      <created>1616026535175</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616026535175</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +239,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finalzada la implementacion de los metodos EventListener en los componentes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalzada la implementacion de los metodos EventListener en los componentes" />
+    <MESSAGE value="Mejorado el ScreenTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejorado el ScreenTemplate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,7 +15,7 @@ public class registroPelis {
                 System.exit(0);
                 break;
             case 1:
-                Pelicula nueva = null;
+
                registro();
                 break;
             default:
