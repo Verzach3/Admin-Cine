@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin;
+package com.thepanas.CineAdmin.Logic;
 
 public class Pelicula {
 

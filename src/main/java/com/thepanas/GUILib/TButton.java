@@ -47,7 +47,11 @@ public class TButton {
     public int centrarTextoH(){
         char[] chars = TEXT.toCharArray();
 
-        return chars.length / 2;
+        if(chars.length /2 == 0){
+            return 1;
+        }else {
+            return chars.length /2;
+        }
     }
 
     public void onClick(){

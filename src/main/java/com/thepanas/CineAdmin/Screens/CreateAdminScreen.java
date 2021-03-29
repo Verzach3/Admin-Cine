@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class CreateAdminScreen extends JPanel {
@@ -19,13 +20,14 @@ public class CreateAdminScreen extends JPanel {
     FirstOpenScreen firstOpenScreen;
     private Main admin;
     TButton confirmButton = new TButton();
+    TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
     TInputBox userName = new TInputBox();
     TInputBox passWord = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(Main jframe) {
+    public CreateAdminScreen(Main jframe, ArrayList<Usuario> dataBase) {
         admin = jframe;
 
         this.setSize(1024, 768);
@@ -44,7 +46,10 @@ public class CreateAdminScreen extends JPanel {
         confirmPassWord.setPLACEHOLDER("Confirmar Contraseña");
         confirmButton.setLocation(402, 250);
         confirmButton.setSize(110, 40);
-
+        confirmButton.setText("Crear Usuario");
+        backButton.setLocation(30, 670);
+        backButton.setSize(40, 40);
+        backButton.setText("<");
         eventosMouse();
     }
 
@@ -57,6 +62,7 @@ public class CreateAdminScreen extends JPanel {
         passWord.paintComponent(g2D);
         confirmPassWord.paintComponent(g2D);
         confirmButton.paintComponent(g2D);
+        backButton.paintComponent(g2D);
 
     }
 
@@ -118,6 +124,14 @@ public class CreateAdminScreen extends JPanel {
                     } catch (Exception f) {
                         System.out.println(f);
                     }
+
+                }
+
+                if (backButton.evenListener(e)){
+                    firstOpenScreen = new FirstOpenScreen(admin, admin.dataBase);
+                    admin.getContentPane().removeAll();
+
+                    admin.setContentPane(firstOpenScreen);
 
                 }
                 // Leave here

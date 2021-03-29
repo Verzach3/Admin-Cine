@@ -18,7 +18,7 @@ public class Main extends JFrame{
     //static CreateAdminScreen createAdminScreen = new CreateAdminScreen(); // No se utilizo aqui   
 
     Main(){
-      firstOpenScreen = new FirstOpenScreen(this);
+      firstOpenScreen = new FirstOpenScreen(this, dataBase);
       this.setSize(new Dimension(1024, 768));
       this.setLayout(null);
       this.setName("Cinema Films");

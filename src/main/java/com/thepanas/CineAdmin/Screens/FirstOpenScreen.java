@@ -1,5 +1,6 @@
 package com.thepanas.CineAdmin.Screens;
 
+import com.thepanas.CineAdmin.Types.Usuario;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;
 
@@ -11,6 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class FirstOpenScreen extends JPanel {
@@ -23,7 +25,7 @@ public class FirstOpenScreen extends JPanel {
     TLabel label1 = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-    public FirstOpenScreen(Main jframe) {
+    public FirstOpenScreen(Main jframe, ArrayList<Usuario> dataBase) {
 
         admin = jframe;
 
@@ -54,7 +56,7 @@ public class FirstOpenScreen extends JPanel {
                 super.mouseClicked(e);
                 if (button1.evenListener(e)) {
                     /* Forma #1 */
-                    createAdminScreen = new CreateAdminScreen(admin);
+                    createAdminScreen = new CreateAdminScreen(admin, admin.dataBase);
                     admin.getContentPane().removeAll();
                     admin.setContentPane(createAdminScreen);
                     // -----------------------------------------

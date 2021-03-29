@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin;
+package com.thepanas.CineAdmin.Logic;
 import com.itextpdf.io.IOException;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;

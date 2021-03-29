@@ -1,12 +1,14 @@
 package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
+import com.thepanas.CineAdmin.Types.Usuario;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class ScreenTemplate extends JPanel{
@@ -14,10 +16,10 @@ public class ScreenTemplate extends JPanel{
 
     FirstOpenScreen firstOpenScreen;
 
-    public ScreenTemplate(Main jframe){
+    public ScreenTemplate(Main jframe, ArrayList<Usuario> dataBase){
         
         admin = jframe;
-        firstOpenScreen = new FirstOpenScreen(admin);
+        firstOpenScreen = new FirstOpenScreen(admin, admin.dataBase);
 
         this.setSize(1024,768);
         this.setLayout(null);
