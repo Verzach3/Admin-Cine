@@ -77,6 +77,7 @@ public class CreateAdminScreen extends JPanel {
                 finalPassword = passWord.getText();
                 newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
                 admin.dataBase.add(newAdmin);
+                System.out.println(admin.dataBase.get(0));
 
             } else {
                 JOptionPane.showMessageDialog(null, "La contraseña no es igual", "Error", JOptionPane.ERROR_MESSAGE);
