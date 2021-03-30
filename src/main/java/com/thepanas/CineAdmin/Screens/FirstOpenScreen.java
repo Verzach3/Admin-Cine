@@ -53,6 +53,7 @@ public class FirstOpenScreen extends JPanel {
         this.setLayout(null);
         // Tamaño de el boton
         button1.setSize(110, 40);
+<<<<<<< Updated upstream
         // Unicacion del boton
         button1.setLocation(500, 400);
         // Texto de el boton
@@ -60,7 +61,18 @@ public class FirstOpenScreen extends JPanel {
         // Ubicacion de el label
         label1.setLocation(400, 40);
         // Texto de el label
+=======
+        //Unicacion del boton
+        button1.setLocation(450, 350);
+        //Texto de el boton
+        button1.setText("Comenzar");
+        //Ubicacion de el label
+        label1.setLocation(225, 40);
+        //Texto de el label
+>>>>>>> Stashed changes
         label1.setText("Bienvenido al Panel de Control de CinemaFilms");
+        //Tamaño del texto
+        label1.setSize(25);
 
         eventosMouse();
     }

@@ -31,7 +31,16 @@ public class Main extends JFrame{
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //Ubicacion relativa a ningun componente
       this.setLocationRelativeTo(null);
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+      this.setResizable(false);
+>>>>>>> Stashed changes
       
+=======
+      //Impide expandir la ventana
+      this.setResizable(false);
+>>>>>>> Stashed changes
 
     }
 

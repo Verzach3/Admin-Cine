@@ -32,19 +32,19 @@ public class CreateAdminScreen extends JPanel {
 
         this.setSize(1024, 768);
         this.setLayout(null);
-        nameField.setLocation(402, 50);
+        nameField.setLocation(402, 150);
         nameField.setSize(200, 20);
         nameField.setPLACEHOLDER("Nombre");
-        userName.setLocation(402, 100);
+        userName.setLocation(402, 200);
         userName.setSize(200, 20);
         userName.setPLACEHOLDER("Usuario");
-        passWord.setLocation(402, 150);
+        passWord.setLocation(402, 250);
         passWord.setSize(200, 20);
         passWord.setPLACEHOLDER("Contraseña");
-        confirmPassWord.setLocation(402, 200);
+        confirmPassWord.setLocation(402, 300);
         confirmPassWord.setSize(200, 20);
         confirmPassWord.setPLACEHOLDER("Confirmar Contraseña");
-        confirmButton.setLocation(402, 250);
+        confirmButton.setLocation(402, 350);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
         backButton.setLocation(30, 670);
