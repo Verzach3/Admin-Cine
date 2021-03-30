@@ -29,6 +29,9 @@ public class ScreenTemplate extends JPanel{
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
+
+        //Remover
+        g2D.drawString("Hello World", 0, 0);
     }
 
 
