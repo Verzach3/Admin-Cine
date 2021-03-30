@@ -31,7 +31,6 @@ public class Main extends JFrame{
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //Ubicacion relativa a ningun componente
       this.setLocationRelativeTo(null);
-      this.setResizable(false);
       
 
     }
