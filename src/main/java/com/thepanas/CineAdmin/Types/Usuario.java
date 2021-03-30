@@ -12,6 +12,13 @@ public class Usuario {
 
     }
 
+    /**
+     * Objeto usuario
+     * @param setAccessLevel
+     * @param setName
+     * @param setNickName
+     * @param setPassword
+     */
     public Usuario(int setAccessLevel, String setName, String setNickName, String setPassword){
         accessLevel = setAccessLevel;
         name = setName;

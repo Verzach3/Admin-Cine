@@ -39,14 +39,24 @@ public class FirstOpenScreen extends JPanel {
      */
     public FirstOpenScreen(Main jframe, ArrayList<Usuario> dataBase) {
 
+        /**
+         * El admin se iguala al jframe que le entra para que la variable global tenga un valor
+         */
         admin = jframe;
 
+        //Tamaño del panel
         this.setSize(1024, 768);
+        //Layout manager del panel
         this.setLayout(null);
+        //Tamaño de el boton
         button1.setSize(110, 40);
+        //Unicacion del boton
         button1.setLocation(500, 400);
+        //Texto de el boton
         button1.setText("Comenzar");
+        //Ubicacion de el label
         label1.setLocation(400, 40);
+        //Texto de el label
         label1.setText("Bienvenido al Panel de Control de CinemaFilms");
 
         eventosMouse();
@@ -54,8 +64,10 @@ public class FirstOpenScreen extends JPanel {
 
     // Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g) {
+        //Se castea(convierte) de Graphics a Graphics2D
         Graphics2D g2D = (Graphics2D) g;
 
+        //Dibujo de los componentes
         button1.paintComponent(g2D);
         label1.paintComponent(g2D);
     }
@@ -68,9 +80,17 @@ public class FirstOpenScreen extends JPanel {
                 super.mouseClicked(e);
                 if (button1.evenListener(e)) {
                     /* Forma #1 */
+                    //Se le asigna valor a la variable del panel definido anteriormente
                     createAdminScreen = new CreateAdminScreen(admin, admin.dataBase);
+                    //Se obtienen todos los paneles que tiene el frame y los elimina
                     admin.getContentPane().removeAll();
+                    /**
+                     * Se pone el panel que definimos anteriormente, a partir de este punto este panel ya no cuenta
+                     * y todo pasa al panel que se pone
+                     */
                     admin.setContentPane(createAdminScreen);
+
+
                     // -----------------------------------------
                     /* Forma #2 */
                    //admin.panelChanger(createAdminScreen, admin);  // Solo es comentar la forma #1 y descomentar esta 
