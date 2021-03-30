@@ -17,14 +17,26 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class FirstOpenScreen extends JPanel {
 
-    // Administrador de interfaces
+    /**
+     * Cada panel tiene que tener definido un objeto de tipo main para poder modificar el frame padre
+     * definiendo este main aqui se hace global por lo que se puede modificar desde cualquier sitio.
+     */
     private Main admin;
 
-    // Component definition
+    /**
+     * Los componentes tambien se definen como variables globales por la misma razon que el
+     * objeto main.
+     */
     TButton button1 = new TButton();
     TLabel label1 = new TLabel();
     CreateAdminScreen createAdminScreen;
 
+    /**
+     * Constructor del screen, recibe un objeto de tipo main, que contiene un JFrame
+     * y un ArrayList que es la base de datos de los usuarios.
+     * @param jframe
+     * @param dataBase
+     */
     public FirstOpenScreen(Main jframe, ArrayList<Usuario> dataBase) {
 
         admin = jframe;

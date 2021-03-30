@@ -12,47 +12,49 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class Main extends JFrame{
 
+    //Database donde se van a guardar los usuarios
     public ArrayList<Usuario> dataBase = new ArrayList<>();
+
     //Los screens tienen que definirse como variables globales
     static FirstOpenScreen firstOpenScreen;
-    //static CreateAdminScreen createAdminScreen = new CreateAdminScreen(); // No se utilizo aqui   
 
     Main(){
+        //Se le da valor a la variable firstOpenScreen pasandole el JFrame(this) y el ArrayList(dataBase)
       firstOpenScreen = new FirstOpenScreen(this, dataBase);
+      //Tamaño de la ventana
       this.setSize(new Dimension(1024, 768));
+      //Sin layout manager
       this.setLayout(null);
+      //Nombre de la ventana o frame
       this.setName("Cinema Films");
+      //Operacion de cierre de la ventana
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      //Ubicacion relativa a ningun componente
       this.setLocationRelativeTo(null);
 
     }
 
     public static void main(String[] args) {
+
       Main mainFrame = new Main();
 
-      /*
-        Aqui se creara una instancia de cada una
-        de los JPanels que tenemos para ocultarlas
-        o mostrarlas a disposicion
-       */
-
-    /**
-     * Aqui elimino todo y le hago set es pensando en que quizas mas adelante
-     * tenga la opcion de devolver al inicio o algo por el estilo solo por eso
-     */
+      //Se remueven todos los paneles del frame (Por precaucion)
       mainFrame.getContentPane().removeAll();
+      //Se coloca el primer panel
       mainFrame.setContentPane(firstOpenScreen);
+      //Se pone visible el frame
       mainFrame.setVisible(true);
         
     }
 
     
     /*
-    La deje publica sin el estatico por lo que no la utilizo en el mani y porque necesito
-    que sea visible para otras clases
+    Metodo para forma alternativa de cambiar de paneles
     */
     public void panelChanger(JPanel panel, JFrame window){
+        //Se remueven todos los paneles de el frame
         window.getContentPane().removeAll();
+        //Se coloca el panel que se quiere mostrar
         window.setContentPane(panel);        
     }
 }
