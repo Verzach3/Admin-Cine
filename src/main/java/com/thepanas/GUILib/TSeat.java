@@ -1,3 +1,4 @@
+package com.thepanas.GUILib;
 import java.awt.Graphics2D;
 import java.awt.Color;
 
