@@ -84,6 +84,10 @@ public class CreateAdminScreen extends JPanel {
                 Usuario a = admin.dataBase.get(0);
                 System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
 
+                /**
+                 * Avisa de la creacion correcta
+                 */
+                JOptionPane.showMessageDialog(null,"Administrador Creado Correctamente","",JOptionPane.INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "La contraseña no es igual", "Error", JOptionPane.ERROR_MESSAGE);
             }

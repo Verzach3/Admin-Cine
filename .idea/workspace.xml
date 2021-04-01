@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/MainMenuAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/CreateAdminScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -185,6 +187,8 @@
       <workItem from="1616950851892" duration="599000" />
       <workItem from="1617054729042" duration="8202000" />
       <workItem from="1617118110425" duration="2803000" />
+      <workItem from="1617147153076" duration="2403000" />
+      <workItem from="1617317568468" duration="341000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
