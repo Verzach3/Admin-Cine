@@ -36,6 +36,8 @@ public class Main extends JFrame {
 
         Main mainFrame = new Main();
         //Se pone visible el frame
+        FirstOpenScreen screen = new FirstOpenScreen();
+        mainFrame.add(screen);
         mainFrame.setVisible(true);
 
     }

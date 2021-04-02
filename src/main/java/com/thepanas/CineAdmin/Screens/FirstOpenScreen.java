@@ -25,7 +25,7 @@ public class FirstOpenScreen extends JPanel {
     TLabel label1 = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-   public FirstOpenScreen(Main jframe, ArrayList<Usuario> dataBase) {
+   public FirstOpenScreen() {
 
 
         // Tamaño del panel
