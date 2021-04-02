@@ -12,14 +12,10 @@ import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class ScreenTemplate extends JPanel{
-    private Main admin;
 
-    FirstOpenScreen firstOpenScreen;
 
     public ScreenTemplate(Main jframe, ArrayList<Usuario> dataBase){
         
-        admin = jframe;
-        firstOpenScreen = new FirstOpenScreen(admin, admin.dataBase);
 
         this.setSize(1024,768);
         this.setLayout(null);
