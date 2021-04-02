@@ -17,6 +17,7 @@ public class Tests extends JFrame{
 
       Main mainFrame = new Main();
 
+      //jaja //remover
       //Nota pa secho = cambias esto por tu screen
       firstOpenScreen = new FirstOpenScreen(mainFrame, mainFrame.dataBase);
 

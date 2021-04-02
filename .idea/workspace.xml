@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Logic/seatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Logic/seatManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/FirstOpenScreen.java" afterDir="false" />
-    </list>
+    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +112,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.thepanas.CineAdmin" />
       <recent name="com.thepanas.CineAdmin.Screens" />
     </key>
   </component>
@@ -212,7 +208,7 @@
       <workItem from="1617147153076" duration="2403000" />
       <workItem from="1617317568468" duration="341000" />
       <workItem from="1617317936795" duration="562000" />
-      <workItem from="1617319389733" duration="2157000" />
+      <workItem from="1617319389733" duration="2486000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -256,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617318366159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Añadido Tests.java">
+      <created>1617322636066</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617322636066</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +284,8 @@
     <MESSAGE value="Añadidos los primeros comentarios" />
     <MESSAGE value="Terminados comentarios" />
     <MESSAGE value="Cambios menores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios menores" />
+    <MESSAGE value="Añadido Tests.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido Tests.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
