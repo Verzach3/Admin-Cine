@@ -65,7 +65,7 @@ public class seatManager {
     public static void seatmanagercli() {
         Scanner scan = new Scanner(System.in);
         boolean exit = false;
-        while (exit == false) {
+        while (!exit) {
             System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             System.out.println("------------------|Seatmanager CLI|------------------");
             System.out.println("\n\nPor favor ingrese la sala de la que desea obtener los asientos O ingrese 10 para salir");
@@ -81,7 +81,7 @@ public class seatManager {
                 seatmanagercli();
                 break;
             }
-            while (exit == false) {
+            while (!exit) {
                 System.out.println("Sala seleccionada: " + Seleccion);
                 printSeats(getSeats(Seleccion));
                 System.out.println("\n1.Cambiar estado de una silla\n10.Salir");
@@ -157,7 +157,7 @@ public class seatManager {
     }
 
     public static String seatStatus(boolean[] sillas, int silla) {
-        if (sillas[silla] == true) {
+        if (sillas[silla]) {
             return "*";
         } else {
             return " ";
@@ -167,7 +167,7 @@ public class seatManager {
     // Constructor
     seatManager(boolean enable_cli) {
 
-        if (enable_cli == true) {
+        if (enable_cli) {
             seatmanagercli();
             System.exit(0);
         }

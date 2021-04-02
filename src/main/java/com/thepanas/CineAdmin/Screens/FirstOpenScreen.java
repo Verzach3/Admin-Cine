@@ -14,7 +14,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
-@SuppressWarnings("serial")
 public class FirstOpenScreen extends JPanel {
 
     /**
@@ -36,12 +35,10 @@ public class FirstOpenScreen extends JPanel {
      * Constructor del screen, recibe un objeto de tipo main, que contiene un JFrame
      * y un ArrayList que es la base de datos de los usuarios.
      * 
-     * @param jframe
-     * @param dataBase
      */
     public FirstOpenScreen(Main jframe, ArrayList<Usuario> dataBase) {
 
-        /**
+        /*
          * El admin se iguala al jframe que le entra para que la variable global tenga
          * un valor
          */
@@ -89,7 +86,7 @@ public class FirstOpenScreen extends JPanel {
                     createAdminScreen = new CreateAdminScreen(admin, admin.dataBase);
                     // Se obtienen todos los paneles que tiene el frame y los elimina
                     admin.getContentPane().removeAll();
-                    /**
+                    /*
                      * Se pone el panel que definimos anteriormente, a partir de este punto este
                      * panel ya no cuenta y todo pasa al panel que se pone
                      */
