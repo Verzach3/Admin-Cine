@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/AdminLateralPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/MainScreenAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/ScreenTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TInputBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +216,7 @@
       <workItem from="1617386340260" duration="1088000" />
       <workItem from="1617387919348" duration="121000" />
       <workItem from="1617388083214" duration="67000" />
-      <workItem from="1617388175468" duration="18136000" />
+      <workItem from="1617388175468" duration="18833000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -280,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617417698281</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Primer prototipo de el lateral panel">
+      <created>1617430767011</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617430767011</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +308,8 @@
     <MESSAGE value="Cambios menores" />
     <MESSAGE value="Añadido Tests.java" />
     <MESSAGE value="Añadido nuevo PanelChanger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido nuevo PanelChanger" />
+    <MESSAGE value="Primer prototipo de el lateral panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer prototipo de el lateral panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -81,9 +81,9 @@ public class TButton {
 
     public void paintComponent(Graphics2D g){
         g.setColor(buttonColor());
-        g.fillRect(X, Y, WIDTH, HEIGHT);
+        g.fillRoundRect(X, Y, WIDTH, HEIGHT,10,10);
         g.setColor(Color.BLACK);
-        g.drawRect(X, Y, WIDTH, HEIGHT);
+        g.drawRoundRect(X, Y, WIDTH, HEIGHT,10,10);
 
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", 2, fontSize);
