@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.GUILib.TButton;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,23 +12,32 @@ import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")
-public class ScreenTemplate extends JPanel{
+public class AdminLateralPanel extends JPanel{
 
     /*
     Se define un objeto main para poder acceder al metodo panelchanger
      */
     Main mainFrame;
-
-    public ScreenTemplate(Main mainFrame,ArrayList<Usuario> dataBase){
+    TButton logoutButton = new TButton();
+    TButton createUserButton = new TButton();
+    public AdminLateralPanel(Main mainFrame, ArrayList<Usuario> dataBase){
         /*
         Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
         el main
          */
         this.mainFrame = mainFrame;
 
-        this.setSize(17,768);
+        this.setSize(258,768);
         this.setLayout(null);
 
+        ///Componentes///
+        logoutButton.setLocation(83,703);
+        logoutButton.setSize(97,45);
+        logoutButton.setText("Cerrar Sesion");
+
+        createUserButton.setLocation(73,71);
+        createUserButton.setSize(113,45);
+        createUserButton.setText("Crear Usuarios");
 
     }
 
@@ -35,6 +45,9 @@ public class ScreenTemplate extends JPanel{
     public void paint(Graphics g){
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
+        g2D.fillRect(0,0,this.getWidth(),this.getHeight());
+        logoutButton.paintComponent(g2D);
+        createUserButton.paintComponent(g2D);
         //Remover
 
 

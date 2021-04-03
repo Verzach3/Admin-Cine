@@ -46,7 +46,7 @@ public class TInputBox {
     }
 
     public String getText(){
-        if (TEXT == PLACEHOLDER){
+        if (TEXT.equals(PLACEHOLDER)){
             return "";
         }else {
             return TEXT;

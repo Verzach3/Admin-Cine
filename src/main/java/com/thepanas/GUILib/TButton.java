@@ -18,7 +18,7 @@ public class TButton {
     int Y = 1;
     int WIDTH = 1;
     int HEIGHT = 1;
-    int fontSize = 15;
+    int fontSize = 12;
     String TEXT = "Button";
     Boolean clickStatus = false;
 
