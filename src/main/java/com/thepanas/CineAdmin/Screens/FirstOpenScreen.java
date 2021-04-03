@@ -15,8 +15,7 @@ import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
 public class FirstOpenScreen extends JPanel {
-
-
+    Main mainFrame;
     /**
      * Los componentes tambien se definen como variables globales por la misma razon
      * que el objeto main.
@@ -25,8 +24,8 @@ public class FirstOpenScreen extends JPanel {
     TLabel label1 = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-   public FirstOpenScreen() {
-
+   public FirstOpenScreen(Main mainFrame,ArrayList<Usuario> userDatabase) {
+        this.mainFrame = mainFrame;
 
         // Tamaño del panel
         this.setSize(1024, 768);
@@ -64,7 +63,10 @@ public class FirstOpenScreen extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                if (button1.evenListener(e)){
+                    mainFrame.panelChanger(1);
 
+                }
                 // Leave here
                 repaint();
             }

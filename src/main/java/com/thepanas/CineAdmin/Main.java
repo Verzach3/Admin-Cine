@@ -4,7 +4,6 @@ import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Types.Usuario;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -13,10 +12,17 @@ import java.util.ArrayList;
 public class Main extends JFrame {
 
     //Database donde se van a guardar los usuarios
-    public ArrayList<Usuario> dataBase = new ArrayList<>();
+    public ArrayList<Usuario> userDataBase = new ArrayList<>();
 
+    static Main mainFrame = new Main();
 
-    Main() {
+///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////
+    CreateAdminScreen createAdminScreen = new CreateAdminScreen(this,userDataBase);
+    FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this ,userDataBase);
+
+///////////////////
+
+    public Main() {
         //Tamaño de la ventana
         this.setSize(new Dimension(1024, 768));
         //Sin layout manager
@@ -32,15 +38,25 @@ public class Main extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-
-        Main mainFrame = new Main();
-        //Se pone visible el frame
-        FirstOpenScreen screen = new FirstOpenScreen();
-        mainFrame.add(screen);
-        mainFrame.setVisible(true);
-
+    public void panelChanger(int panelNumber){
+        mainFrame.getContentPane().removeAll();
+        mainFrame.repaint();
+        switch (panelNumber){
+            case 1:
+                mainFrame.add(createAdminScreen);
+                break;
+            case 0:
+                mainFrame.add(firstOpenScreen);
+                break;
+        }
     }
+
+    public static void main(String[] args) {
+        //Se pone visible el frame
+        mainFrame.panelChanger(0);
+        mainFrame.setVisible(true);
+    }
+
 }
 
 

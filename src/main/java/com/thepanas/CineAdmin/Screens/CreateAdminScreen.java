@@ -17,6 +17,8 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class CreateAdminScreen extends JPanel {
 
+    Main mainFrame;
+
     TButton confirmButton = new TButton();
     TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
@@ -25,8 +27,8 @@ public class CreateAdminScreen extends JPanel {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(Main jframe, ArrayList<Usuario> dataBase) {
-
+    public CreateAdminScreen(Main mainFrame, ArrayList<Usuario> dataBase) {
+        this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);
         nameField.setLocation(402, 150);
@@ -134,6 +136,9 @@ public class CreateAdminScreen extends JPanel {
 
                 }
 
+                if (backButton.evenListener(e)){
+                    mainFrame.panelChanger(0);
+                }
 
                 // Leave here
                 repaint();
