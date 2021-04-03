@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/GUILib/TButton.java" afterDir="false" />
-    </list>
+    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,17 +164,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Tests" />
       <item itemvalue="Application.Main" />
@@ -216,7 +203,7 @@
       <workItem from="1617386340260" duration="1088000" />
       <workItem from="1617387919348" duration="121000" />
       <workItem from="1617388083214" duration="67000" />
-      <workItem from="1617388175468" duration="18833000" />
+      <workItem from="1617388175468" duration="18857000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -281,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617430767011</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ajustado el boton">
+      <created>1617431376329</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617431376329</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +303,8 @@
     <MESSAGE value="Añadido Tests.java" />
     <MESSAGE value="Añadido nuevo PanelChanger" />
     <MESSAGE value="Primer prototipo de el lateral panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer prototipo de el lateral panel" />
+    <MESSAGE value="Ajustado el boton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustado el boton" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
