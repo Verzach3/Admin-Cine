@@ -12,14 +12,18 @@ import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class ScreenTemplate extends JPanel{
-    private Main admin;
 
-    FirstOpenScreen firstOpenScreen;
+    /*
+    Se define un objeto main para poder acceder al metodo panelchanger
+     */
+    Main mainFrame;
 
-    public ScreenTemplate(Main jframe, ArrayList<Usuario> dataBase){
-        
-        admin = jframe;
-        firstOpenScreen = new FirstOpenScreen(admin, admin.dataBase);
+    public ScreenTemplate(Main mainFrame,ArrayList<Usuario> dataBase){
+        /*
+        Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
+        el main
+         */
+        this.mainFrame = mainFrame;
 
         this.setSize(1024,768);
         this.setLayout(null);

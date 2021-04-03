@@ -17,8 +17,8 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class CreateAdminScreen extends JPanel {
 
-    FirstOpenScreen firstOpenScreen;
-    private Main admin;
+    Main mainFrame;
+
     TButton confirmButton = new TButton();
     TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
@@ -27,9 +27,8 @@ public class CreateAdminScreen extends JPanel {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(Main jframe, ArrayList<Usuario> dataBase) {
-        admin = jframe;
-
+    public CreateAdminScreen(Main mainFrame, ArrayList<Usuario> dataBase) {
+        this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);
         nameField.setLocation(402, 150);
@@ -76,13 +75,13 @@ public class CreateAdminScreen extends JPanel {
             if (passWord.getText().equals(confirmPassWord.getText())) {
                 finalPassword = passWord.getText();
                 newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
-                admin.dataBase.add(newAdmin);
+                //admin.dataBase.add(newAdmin); replace
                 
                 /**
                  * Imprimir el admin recien creado
                  */
-                Usuario a = admin.dataBase.get(0);
-                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
+    //Replace         Usuario a = admin.dataBase.get(0); //reemplazar
+    //                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
 
                 /**
                  * Avisa de la creacion correcta
@@ -98,8 +97,8 @@ public class CreateAdminScreen extends JPanel {
     }
 
     public void impriUsers(){
-        PrintUsers printUsers = new PrintUsers(admin.dataBase);
-        printUsers.print();
+        //PrintUsers printUsers = new PrintUsers(admin.dataBase); replace
+        //printUsers.print();
     }
 
     public int onHide() {
@@ -138,12 +137,9 @@ public class CreateAdminScreen extends JPanel {
                 }
 
                 if (backButton.evenListener(e)){
-                    firstOpenScreen = new FirstOpenScreen(admin, admin.dataBase);
-                    admin.getContentPane().removeAll();
-
-                    admin.setContentPane(firstOpenScreen);
-
+                    mainFrame.panelChanger(0);
                 }
+
                 // Leave here
                 repaint();
             }
