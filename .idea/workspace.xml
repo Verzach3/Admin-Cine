@@ -221,7 +221,7 @@
       <workItem from="1617458355301" duration="1061000" />
       <workItem from="1617497304839" duration="913000" />
       <workItem from="1617501789928" duration="1240000" />
-      <workItem from="1617630810381" duration="1727000" />
+      <workItem from="1617630810381" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617458572628</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Mostrado el Panel Lateral">
+      <created>1617632598463</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617632598463</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +344,8 @@
     <MESSAGE value="Primer prototipo de el lateral panel" />
     <MESSAGE value="Ajustado el boton" />
     <MESSAGE value="Ignorada carpeta .idea (para evitar errores)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignorada carpeta .idea (para evitar errores)" />
+    <MESSAGE value="Mostrado el Panel Lateral" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostrado el Panel Lateral" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -21,6 +21,7 @@ public class Main extends JFrame {
     FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this ,userDataBase);
     ScreenTemplate screenTemplate = new ScreenTemplate(this, userDataBase);
     AdminLateralPanel adminLateralPanel = new AdminLateralPanel(this, userDataBase);
+    MainScreenAdmin mainScreenAdmin = new MainScreenAdmin(this, userDataBase);
 
 ///////////////////
 
@@ -51,6 +52,7 @@ public class Main extends JFrame {
                 break;
             case 2:
                 mainFrame.add(adminLateralPanel);
+                mainFrame.add(mainScreenAdmin);
                 break;
             case 0:
                 mainFrame.add(firstOpenScreen);
