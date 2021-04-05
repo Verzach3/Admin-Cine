@@ -26,7 +26,8 @@ public class Main extends JFrame {
 
     public Main() {
         //Tamaño de la ventana
-        this.setSize(new Dimension(1024, 792));
+        this.setPreferredSize(new Dimension(1024, 792));
+        this.pack();
         //Sin layout manager
         this.setLayout(null);
         //Nombre de la ventana o frame
@@ -37,6 +38,7 @@ public class Main extends JFrame {
         this.setLocationRelativeTo(null);
         //Impide expandir la ventana
         this.setResizable(false);
+
 
     }
 
