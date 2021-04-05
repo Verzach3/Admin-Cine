@@ -1,14 +1,28 @@
-## Getting Started
+#Taller Final IPOO
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Taller final de la asignatura: Introduccion a la Programacion Orientada a Objetos IPOO
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+## Estructura de carpetas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Hay dos carpetas principales en el proyecto
 
-## Dependency Management
+- `src`: Donde se encuentran todos los .java.
+    - `com.thepanas.CineAdmin`: Carpeta contenedora de el proyecto.  
+        - `AdminScreens`: Donde estan todas las pantallas de la aplicacion.
+        - `Types`: Donde estan los tipos de objetos creados por nosotros.
+        - `Utils`: Pequeños .java con metodos utiles para reducir la redundancia de codigo.
+    - `GUILib`: Donde estan los .java de la libreria grafica
+    
+- `lib`: Donde se mantienen todas las dependencias de la aplicacion.
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+## Autores
+
+- Gabriel Correa Cárdenas
+- Juan Camilo Varela Ocoró
+- Kahyberth Stiven Gonzalez Sayas
+
+
+
+
+Licencia: CC BY-SA
