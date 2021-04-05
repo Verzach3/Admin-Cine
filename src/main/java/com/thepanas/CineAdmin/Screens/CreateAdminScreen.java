@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class CreateAdminScreen extends JPanel {
 
     Main mainFrame;
-
+    ArrayList<Usuario> dataBase;
     TButton confirmButton = new TButton();
     TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
@@ -28,6 +28,7 @@ public class CreateAdminScreen extends JPanel {
     TLabel welcomeLabel = new TLabel();
 
     public CreateAdminScreen(Main mainFrame, ArrayList<Usuario> dataBase) {
+        this.dataBase = dataBase;
         this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);
@@ -75,13 +76,13 @@ public class CreateAdminScreen extends JPanel {
             if (passWord.getText().equals(confirmPassWord.getText())) {
                 finalPassword = passWord.getText();
                 newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
-                //admin.dataBase.add(newAdmin); replace
+                dataBase.add(newAdmin);
                 
                 /**
                  * Imprimir el admin recien creado
                  */
-    //Replace         Usuario a = admin.dataBase.get(0); //reemplazar
-    //                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
+                Usuario a = dataBase.get(0);
+                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
 
                 /**
                  * Avisa de la creacion correcta
@@ -96,10 +97,6 @@ public class CreateAdminScreen extends JPanel {
 
     }
 
-    public void impriUsers(){
-        //PrintUsers printUsers = new PrintUsers(admin.dataBase); replace
-        //printUsers.print();
-    }
 
     public int onHide() {
         this.setVisible(false);
@@ -128,8 +125,7 @@ public class CreateAdminScreen extends JPanel {
 
                 if (confirmButton.evenListener(e)) {
                     try {
-                        createAdmin();    
-                        impriUsers();
+                        createAdmin();
                     } catch (Exception f) {
                         System.out.println(f);
                     }
