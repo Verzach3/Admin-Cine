@@ -1,6 +1,7 @@
-package com.thepanas.CineAdmin.Screens;
+package com.thepanas.CineAdmin.Screens.AdminScreens;
 
 import com.thepanas.CineAdmin.Main;
+import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.Usuario;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;

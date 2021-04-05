@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin.Screens;
+package com.thepanas.CineAdmin.Screens.AdminScreens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.Usuario;
@@ -20,6 +20,9 @@ public class AdminLateralPanel extends JPanel{
     Main mainFrame;
     TButton logoutButton = new TButton();
     TButton createUserButton = new TButton();
+    TButton createBillBoardButton = new TButton();
+    TButton createShow = new TButton();
+
     public AdminLateralPanel(Main mainFrame, ArrayList<Usuario> dataBase){
         /*
         Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
@@ -39,6 +42,15 @@ public class AdminLateralPanel extends JPanel{
         createUserButton.setSize(113,45);
         createUserButton.setText("Crear Usuarios");
 
+        createBillBoardButton.setLocation(73, 201);
+        createBillBoardButton.setSize(113, 48);
+        createBillBoardButton.setText("Registrar película");
+
+        createShow.setLocation(73, 331);
+        createShow.setSize(113,48);
+        createShow.setText("Crear función");
+
+
     }
 
     //Aqui van los metodos .paintComponent de los componentes
@@ -48,6 +60,8 @@ public class AdminLateralPanel extends JPanel{
         g2D.fillRect(0,0,this.getWidth(),this.getHeight());
         logoutButton.paintComponent(g2D);
         createUserButton.paintComponent(g2D);
+        createBillBoardButton.paintComponent(g2D);
+        createShow.paintComponent(g2D);
         //Remover
 
 
@@ -75,6 +89,8 @@ public class AdminLateralPanel extends JPanel{
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
+
+
 
                 //Leave here
                 repaint();

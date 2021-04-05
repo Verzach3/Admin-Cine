@@ -1,6 +1,8 @@
 package com.thepanas.CineAdmin;
 
 import com.thepanas.CineAdmin.Screens.*;
+import com.thepanas.CineAdmin.Screens.AdminScreens.AdminLateralPanel;
+import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.Usuario;
 
 import javax.swing.JFrame;
@@ -61,7 +63,7 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         //Se pone visible el frame
-        mainFrame.panelChanger(1);
+        mainFrame.panelChanger(2);
         mainFrame.pack();
         mainFrame.setVisible(true);
 
