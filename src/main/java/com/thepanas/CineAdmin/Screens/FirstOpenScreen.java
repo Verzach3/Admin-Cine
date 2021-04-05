@@ -49,6 +49,7 @@ public class FirstOpenScreen extends JPanel {
 
     // Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g) {
+       super.paint(g);
         // Se castea(convierte) de Graphics a Graphics2D
         Graphics2D g2D = (Graphics2D) g;
 

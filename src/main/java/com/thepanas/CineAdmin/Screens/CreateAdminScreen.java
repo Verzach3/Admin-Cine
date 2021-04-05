@@ -55,6 +55,7 @@ public class CreateAdminScreen extends JPanel {
 
     // Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g) {
+        super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
 
         nameField.paintComponent(g2D);

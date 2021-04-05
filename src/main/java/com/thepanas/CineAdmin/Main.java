@@ -28,11 +28,11 @@ public class Main extends JFrame {
 
     public Main() {
         //Tamaño de la ventana
-        this.setPreferredSize(new Dimension(1024, 792));
+        this.setSize(new Dimension(1024, 805));
+
 
         //Sin layout manager
         this.setLayout(null);
-
         //Nombre de la ventana o frame
         this.setName("Cinema Films");
         //Operacion de cierre de la ventana
@@ -63,8 +63,8 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         //Se pone visible el frame
-        mainFrame.panelChanger(2);
-        mainFrame.pack();
+        mainFrame.panelChanger(1);
+
         mainFrame.setVisible(true);
 
 
