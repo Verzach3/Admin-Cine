@@ -40,6 +40,8 @@ public class MainScreenAdmin extends JPanel {
         label1.setLocation(400, 40);
         // Texto de el label
         label1.setText("Bienvenido al Panel de Control de CinemaFilms");
+
+        this.setLocation(258,0);
         //Tamaño del texto
         label1.setSize(25);
 
