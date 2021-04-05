@@ -5,12 +5,12 @@ package com.thepanas.GUILib;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 
-public class TInputBox {
+public class TInputBox{
     int X = 0;
     int Y = 0;
     int WIDTH = 0;
