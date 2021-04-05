@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="" />
+    <list default="true" id="dcf1ca7b-1b41-4c08-ba86-7303fde78cc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/MainScreenAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thepanas/CineAdmin/Screens/MainScreenAdmin.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,19 +167,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Tests" />
       <item itemvalue="Application.Main" />
@@ -217,6 +207,10 @@
       <workItem from="1617387919348" duration="121000" />
       <workItem from="1617388083214" duration="67000" />
       <workItem from="1617388175468" duration="18857000" />
+      <workItem from="1617458355301" duration="1061000" />
+      <workItem from="1617497304839" duration="913000" />
+      <workItem from="1617501789928" duration="1240000" />
+      <workItem from="1617630810381" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="Finalzada la implementacion de los metodos EventListener en los componentes">
       <created>1616019624736</created>
@@ -288,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617431376329</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ignorada carpeta .idea (para evitar errores)">
+      <created>1617458421353</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617458421353</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ignorada carpeta .idea (para evitar errores)">
+      <created>1617458572628</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617458572628</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +325,8 @@
     <MESSAGE value="Añadido nuevo PanelChanger" />
     <MESSAGE value="Primer prototipo de el lateral panel" />
     <MESSAGE value="Ajustado el boton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustado el boton" />
+    <MESSAGE value="Ignorada carpeta .idea (para evitar errores)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ignorada carpeta .idea (para evitar errores)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

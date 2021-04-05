@@ -13,6 +13,7 @@ import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
 public class MainScreenAdmin extends JPanel {
+    Boolean debugOverlay = false;
     Main mainFrame;
     /**
      * Los componentes tambien se definen como variables globales por la misma razon
@@ -26,7 +27,7 @@ public class MainScreenAdmin extends JPanel {
         this.mainFrame = mainFrame;
 
         // Tamaño del panel
-        this.setSize(1024, 768);
+        this.setSize(767, 768);
         // Layout manager del panel
         this.setLayout(null);
         // Tamaño de el boton
@@ -42,7 +43,14 @@ public class MainScreenAdmin extends JPanel {
         //Tamaño del texto
         label1.setSize(25);
 
+        this.setDebugOverlay(true);
+
         eventosMouse();
+    }
+
+    //Activa el overlay si el status es true
+    public void setDebugOverlay(Boolean status){
+       debugOverlay = status;
     }
 
     // Aqui van los metodos .paintComponent de los componentes
@@ -53,6 +61,10 @@ public class MainScreenAdmin extends JPanel {
         // Dibujo de los componentes
         button1.paintComponent(g2D);
         label1.paintComponent(g2D);
+
+        if (debugOverlay){
+            g2D.fillRect(466,768,132,300);
+        }
     }
 
     // Mouse Handler // Maneja los eventos del mouse
