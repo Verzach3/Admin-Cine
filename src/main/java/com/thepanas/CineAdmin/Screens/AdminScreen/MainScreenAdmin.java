@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin.Screens.AdminScreens;
+package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;

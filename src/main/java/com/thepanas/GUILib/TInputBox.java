@@ -98,7 +98,7 @@ public class TInputBox{
             g.setColor(Color.black);
         }
         
-        Font font = new Font("Arial", Font.PLAIN, height -3);
+        Font font = new Font("Arial", Font.PLAIN, height -11);
         g.setFont(font);
         g.drawString(text, x + width /20, y + (height /2 + fontSize/2));
 

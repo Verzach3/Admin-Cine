@@ -1,7 +1,7 @@
 package com.thepanas.CineAdmin;
 
 import com.thepanas.CineAdmin.Screens.*;
-import com.thepanas.CineAdmin.Screens.AdminScreens.AdminLateralPanel;
+import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.Usuario;
 
@@ -18,7 +18,7 @@ public class Main extends JFrame {
 
     static Main mainFrame = new Main();
 
-///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////
+    ///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////
     CreateAdminScreen createAdminScreen = new CreateAdminScreen(this,userDataBase);
     FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this ,userDataBase);
     LoginScreen loginScreen = new LoginScreen(this,userDataBase);
@@ -28,7 +28,7 @@ public class Main extends JFrame {
 ///////////////////
 
     public Main() {
-        //Tamaño de la ventana
+        //TamaÃ±o de la ventana
         this.setSize(new Dimension(1024, 720));
 
 

@@ -35,21 +35,21 @@ public class LoginScreen extends JPanel implements MouseListener {
         this.setSize(1024, 768);
         this.setLayout(null);
 
-        usernameField.setSize(200,20);
-        usernameField.setLocation(412,141);
+        usernameField.setSize(200,30);
+        usernameField.setLocation(412,241);
         usernameField.setPlaceholder("Nombre de Usuario");
 
-        passwordField.setSize(200,20);
-        passwordField.setLocation(412, 220);
+        passwordField.setSize(200,30);
+        passwordField.setLocation(412, 320);
         passwordField.setPlaceholder("Contraseña");
 
         loginButton.setSize(132,45);
         loginButton.setLocation(446,420);
-        loginButton.setText("Login");
+        loginButton.setText("             Login");
 
         registerButton.setSize(132,45);
         registerButton.setLocation(446,505);
-        registerButton.setText("Register");
+        registerButton.setText("            Register");
 
 
 
