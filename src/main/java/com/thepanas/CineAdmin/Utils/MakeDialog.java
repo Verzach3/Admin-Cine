@@ -4,12 +4,13 @@ import javax.swing.*;
 
 public class MakeDialog{
 
-    public void makeInfoDialog(String message, String tittle){
+
+    public static void makeInfoDialog(String message, String tittle){
         JOptionPane.showMessageDialog(null,message, tittle,JOptionPane.INFORMATION_MESSAGE);
 
     }
 
-    public void makeErrorDialog(String message, String tittle){
+    public static void makeErrorDialog(String message, String tittle){
         JOptionPane.showMessageDialog(null,message, tittle,JOptionPane.ERROR_MESSAGE);
 
     }

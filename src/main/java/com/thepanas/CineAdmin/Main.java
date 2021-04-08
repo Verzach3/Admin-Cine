@@ -50,15 +50,19 @@ public class Main extends JFrame {
         mainFrame.getContentPane().removeAll();
         mainFrame.repaint();
         switch (panelNumber){
+            case 0:
+                mainFrame.add(firstOpenScreen);
+                break;
             case 1:
                 mainFrame.add(createAdminScreen);
                 break;
             case 2:
                 mainFrame.add(loginScreen);
                 break;
-            case 0:
+            case 3:
                 mainFrame.add(adminLateralPanel);
                 break;
+
         }
     }
 

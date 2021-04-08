@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 
@@ -95,7 +96,17 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         if (loginButton.evenListener(e)){
             for (User user: mainFrame.userDataBase){
-                System.out.println(user);
+                if (user.getNickName().equals(usernameField.getText()) && user.getPassword().equals(passwordField.getText())) {
+                    MakeDialog.makeInfoDialog("Acceso Correcto","Info");
+                    mainFrame.currentUser = user;
+                    int accesLevel = mainFrame.currentUser.getAccessLevel();
+                    switch (accesLevel){
+                        case 0:
+                            mainFrame.panelChanger(1);
+                    }
+                }else {
+                    MakeDialog.makeErrorDialog("Nombre de usuario o contraseña incorrecta", "Error");
+                }
             }
         }
 
