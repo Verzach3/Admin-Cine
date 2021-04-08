@@ -10,6 +10,7 @@ Prueba del TBarGraphics Recordar que el TBarGraphics recibe un Array
  */
 public class TWindowsTest{
     public static void main(String[] argv) {
+    	
         JFrame f = new JFrame();
         f.setSize(400, 300); //---------------->Tamaño definido de la ventana de prueba
         double[] values = new double[5]; //--------------------> Bucle con valores que quiero graficar
@@ -28,14 +29,6 @@ public class TWindowsTest{
 
         //---->ContentPane y ---> se ingresa -->Array ----->Titulo
         f.getContentPane().add(new TBarGraphics(values, "TBarGraphics"));
-
-        //--->WindowsListener
-        WindowListener wndCloser = new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        };
-        f.addWindowListener(wndCloser);
         f.setVisible(true);
     }
 }
