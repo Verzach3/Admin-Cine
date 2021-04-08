@@ -1,5 +1,5 @@
 package com.thepanas.GUILib;
-//------------------->Importaciones
+//------------------->Importations
 import javax.swing.*;
 import java.awt.*;
 /*

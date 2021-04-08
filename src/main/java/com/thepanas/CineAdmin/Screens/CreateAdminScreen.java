@@ -44,10 +44,10 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
         confirmPassWord.setLocation(402, 300);
         confirmPassWord.setSize(200, 20);
         confirmPassWord.setPlaceholder("Confirmar Contraseña");
-        confirmButton.setLocation(402, 350);
+        confirmButton.setLocation(442, 350);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
-        backButton.setLocation(30, 670);
+        backButton.setLocation(30, 625);
         backButton.setSize(40, 40);
         backButton.setText("<");
 

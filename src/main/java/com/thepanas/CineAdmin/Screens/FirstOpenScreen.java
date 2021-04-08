@@ -35,15 +35,17 @@ public class FirstOpenScreen extends JPanel implements MouseListener {
         // Tamaño de el boton
         continueButton.setSize(110, 40);
         // Unicacion del boton
-        continueButton.setLocation(500, 400);
+        continueButton.setLocation(450, 300);
         // Texto de el boton
         continueButton.setText("Comenzar");
+        //Tamaño del texto del boton
+        continueButton.setFontSize(16);
         // Ubicacion de el label
-        welcomeText.setLocation(400, 40);
+        welcomeText.setLocation(200, 40);
         // Texto de el label
         welcomeText.setText("Bienvenido al Panel de Control de CinemaFilms");
         //Tamaño del texto
-        welcomeText.setSize(25);
+        welcomeText.setSize(30);
 
         this.addMouseListener(this);
     }
