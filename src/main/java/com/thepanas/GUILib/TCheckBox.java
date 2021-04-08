@@ -6,26 +6,26 @@ import java.awt.event.MouseEvent;
 
 public class TCheckBox {
 
-    int X = 0;
-    int Y = 0;
-    int SIZE = 0;
+    int x = 0;
+    int y = 0;
+    int size = 0;
     Boolean clickStatus = false;
 
     public int getX(){
-      return X;
+      return x;
     }
 
     public int getY(){
-      return Y;
+      return y;
     }
 
     public void setLocation(int x, int y){
-        this.X = x;
-        this.Y = y;
+        this.x = x;
+        this.y = y;
     }
 
     public void setSize(int SIZE){
-        this.SIZE = SIZE;
+        this.size = SIZE;
     }
 
 
@@ -35,7 +35,7 @@ public class TCheckBox {
     }
 
     public Boolean evenListener(MouseEvent e){
-        if(e.getX() >= this.X && e.getX() <= this.SIZE + this.X && e.getY() >= this.Y && e.getY() <= this.SIZE + this.Y){
+        if(e.getX() >= this.x && e.getX() <= this.size + this.x && e.getY() >= this.y && e.getY() <= this.size + this.y){
             clickStatus = !clickStatus;
     }
         return clickStatus;
@@ -51,9 +51,9 @@ public class TCheckBox {
 
     public void paintComponent(Graphics2D g){
         g.setColor(buttonColor());
-        g.fillRoundRect(X, Y, SIZE, SIZE, 3,3);
+        g.fillRoundRect(x, y, size, size, 3,3);
         g.setColor(Color.BLACK);
-        g.drawRoundRect(X, Y, SIZE, SIZE, 3,3);
+        g.drawRoundRect(x, y, size, size, 3,3);
         
 
     }

@@ -3,27 +3,27 @@ package com.thepanas.GUILib;
 import java.awt.*;
 
 public class TLabel {
-    int X = 0;
-    int Y = 0;
+    int x = 0;
+    int y = 0;
     int fontSize = 15;
-    String TEXT = "Button";
+    String text = "Button";
 
     public int getX(){
-      return X;
+      return x;
     }
 
     public int getY(){
-      return Y;
+      return y;
     }
 
     public void setLocation(int x, int y){
-        this.X = x;
-        this.Y = y;
+        this.x = x;
+        this.y = y;
     }
 
 
     public void setText(String text){
-        this.TEXT = text;
+        this.text = text;
     }
 
     public void setSize(int fontSize) {
@@ -35,7 +35,7 @@ public class TLabel {
         g.setColor(Color.BLACK);
         Font font = new Font("Arial", Font.PLAIN, fontSize);
         g.setFont(font);
-        g.drawString(TEXT,X,Y);
+        g.drawString(text, x, y);
 
 
     }

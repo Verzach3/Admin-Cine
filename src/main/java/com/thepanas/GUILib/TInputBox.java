@@ -11,57 +11,58 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 
 public class TInputBox{
-    int X = 0;
-    int Y = 0;
-    int WIDTH = 0;
-    int HEIGHT = 0;
+    int x = 0;
+    int y = 0;
+    int width = 0;
+    int height = 0;
     int fontSize = 15;
-    String TEXT = "";
-    String PLACEHOLDER = "PLACEHOLDER";
-
-    public int getX(){
-        return X;
-    }
-
-    public int getY(){
-        return Y;
-    }
+    String text = "";
+    String placeholder = "PLACEHOLDER";
 
     public void setLocation(int x, int y){
-        this.X = x;
-        this.Y = y;
+        this.x = x;
+        this.y = y;
     }
 
     public void setSize(int width, int height){
-        this.WIDTH = width;
-        this.HEIGHT = height;
+        this.width = width;
+        this.height = height;
     }
 
     public void setText(String text){
-        if (TEXT == null || TEXT.equals("")){
-            TEXT = PLACEHOLDER;
+        if (this.text == null || this.text.equals("")){
+            this.text = placeholder;
         }else {
-            this.TEXT = text;
+            this.text = text;
         }
     }
 
     public String getText(){
-        if (TEXT.equals(PLACEHOLDER)){
+        if (text.equals(placeholder)){
             return "";
         }else {
-            return TEXT;
+            return text;
         }
     }
 
+    public int getWidth(){
+        return width;
+    }
+
+    public int getHeight(){
+        return height;
+    }
+
+
     public void evenListener(MouseEvent e){
-        if(e.getX() >= this.X && e.getX() <= this.WIDTH+ this.X && e.getY() >= this.Y && e.getY() <= this.HEIGHT+ this.Y){
+        if(e.getX() >= this.x && e.getX() <= this.width + this.x && e.getY() >= this.y && e.getY() <= this.height + this.y){
 
             this.onClick();
         }
     }
 
-    public void setPLACEHOLDER(String placeholder){
-        this.PLACEHOLDER = placeholder;
+    public void setPlaceholder(String placeholder){
+        this.placeholder = placeholder;
     }
 
     public void onClick(){
@@ -70,10 +71,10 @@ public class TInputBox{
         try{
             if (input == null){
                 System.out.println("No Effect");
-            }else if (TEXT.equals("")){
-                TEXT = PLACEHOLDER;
+            }else if (text.equals("")){
+                text = placeholder;
             }else {
-                TEXT = input;
+                text = input;
             }
         }catch (NullPointerException ignored){
 
@@ -85,21 +86,21 @@ public class TInputBox{
 
 
     public void paintComponent(Graphics2D g){
-        this.setText(this.TEXT);
+        this.setText(this.text);
         g.setColor(Color.LIGHT_GRAY);
-        g.fillRoundRect(X, Y, WIDTH, HEIGHT,3,3);
+        g.fillRoundRect(x, y, width, height,3,3);
         g.setColor(Color.BLACK);
-        g.drawRoundRect(X, Y, WIDTH, HEIGHT,3,3);
+        g.drawRoundRect(x, y, width, height,3,3);
 
-        if (TEXT == PLACEHOLDER) {
+        if (text.equals(placeholder)) {
             g.setColor(Color.WHITE);
         }else{
             g.setColor(Color.black);
         }
         
-        Font font = new Font("Arial", 2, HEIGHT-3);
+        Font font = new Font("Arial", Font.PLAIN, height -3);
         g.setFont(font);
-        g.drawString(TEXT, X + WIDTH/20, Y + (HEIGHT/2 + fontSize/2));
+        g.drawString(text, x + width /20, y + (height /2 + fontSize/2));
 
 
     }

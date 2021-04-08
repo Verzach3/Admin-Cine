@@ -11,17 +11,18 @@ import java.awt.*;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
-public class FirstOpenScreen extends JPanel {
+public class FirstOpenScreen extends JPanel implements MouseListener {
     Main mainFrame;
     /**
      * Los componentes tambien se definen como variables globales por la misma razon
      * que el objeto main.
      */
-    TButton button1 = new TButton();
-    TLabel label1 = new TLabel();
+    TButton continueButton = new TButton();
+    TLabel welcomeText = new TLabel();
     CreateAdminScreen createAdminScreen;
 
    public FirstOpenScreen(Main mainFrame,ArrayList<Usuario> userDatabase) {
@@ -32,19 +33,19 @@ public class FirstOpenScreen extends JPanel {
         // Layout manager del panel
         this.setLayout(null);
         // Tamaño de el boton
-        button1.setSize(110, 40);
+        continueButton.setSize(110, 40);
         // Unicacion del boton
-        button1.setLocation(500, 400);
+        continueButton.setLocation(500, 400);
         // Texto de el boton
-        button1.setText("Comenzar");
+        continueButton.setText("Comenzar");
         // Ubicacion de el label
-        label1.setLocation(400, 40);
+        welcomeText.setLocation(400, 40);
         // Texto de el label
-        label1.setText("Bienvenido al Panel de Control de CinemaFilms");
+        welcomeText.setText("Bienvenido al Panel de Control de CinemaFilms");
         //Tamaño del texto
-        label1.setSize(25);
+        welcomeText.setSize(25);
 
-        eventosMouse();
+        this.addMouseListener(this);
     }
 
     // Aqui van los metodos .paintComponent de los componentes
@@ -54,79 +55,44 @@ public class FirstOpenScreen extends JPanel {
         Graphics2D g2D = (Graphics2D) g;
 
         // Dibujo de los componentes
-        button1.paintComponent(g2D);
-        label1.paintComponent(g2D);
+        continueButton.paintComponent(g2D);
+        welcomeText.paintComponent(g2D);
     }
 
-    // Mouse Handler // Maneja los eventos del mouse
-    public void eventosMouse() {
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                if (button1.evenListener(e)){
-                    mainFrame.panelChanger(1);
 
-                }
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseClicked(MouseEvent e) {
 
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                button1.evenListener(e);
-                // Leave here
-                repaint();
-            }
 
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                super.mouseReleased(e);
-                // Leave here
-                repaint();
-                button1.onRelease();
-            }
+       this.repaint();
+    }
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                super.mouseEntered(e);
+    @Override
+    public void mousePressed(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
+        if (continueButton.evenListener(e)){
+            mainFrame.panelChanger(1);
+        }
 
-            @Override
-            public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
+       this.repaint();
+    }
 
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+       continueButton.onRelease();
 
-            @Override
-            public void mouseWheelMoved(MouseWheelEvent e) {
-                super.mouseWheelMoved(e);
+       this.repaint();
+    }
 
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseEntered(MouseEvent e) {
 
-            @Override
-            public void mouseDragged(MouseEvent e) {
-                super.mouseDragged(e);
+       this.repaint();
+    }
 
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseExited(MouseEvent e) {
 
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                super.mouseMoved(e);
-
-                // Leave here
-                repaint();
-            }
-        });
+       this.repaint();
     }
 }

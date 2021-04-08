@@ -6,7 +6,6 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 
 public class TButton {
-
     /* RECOMENDACIONES Y REQUERIMIENTOS */
     /* Para cada boton se debe de llamar el metodo onRelease()
        en el mouseReleased de cada panel para que el cambio de
@@ -14,38 +13,47 @@ public class TButton {
      */
 
 
-    int X = 1;
-    int Y = 1;
-    int WIDTH = 1;
-    int HEIGHT = 1;
+    int x = 1;
+    int y = 1;
+    int width = 1;
+    int height = 1;
     int fontSize = 12;
-    String TEXT = "Button";
+    String text = "Button";
     Boolean clickStatus = false;
 
     public int getX(){
-      return X;
+      return x;
     }
 
     public int getY(){
-      return Y;
+      return y;
     }
 
     public void setLocation(int x, int y){
-        this.X = x;
-        this.Y = y;
+        this.x = x;
+        this.y = y;
     }
 
     public void setSize(int width, int height){
-        this.WIDTH = width;
-        this.HEIGHT = height;
+        this.width = width;
+        this.height = height;
     }
 
+    public int getWidth(){
+        return width;
+    }
+
+    public int getHeight(){
+        return height;
+    }
+
+
     public void setText(String text){
-        this.TEXT = text;
+        this.text = text;
     }
 
     public int centrarTextoH(){
-        char[] chars = TEXT.toCharArray();
+        char[] chars = text.toCharArray();
 
         if(chars.length /2 == 0){
             return 1;
@@ -54,13 +62,14 @@ public class TButton {
         }
     }
 
-    public void onClick(){
-        clickStatus = true;
-    }
-
     public void onRelease(){
         clickStatus = false;
     }
+
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+    }
+
 
     public Color buttonColor(){
         if (clickStatus){
@@ -71,24 +80,24 @@ public class TButton {
     }
 
     public Boolean evenListener(MouseEvent e){
-        if(e.getX() >= this.X && e.getX() <= this.WIDTH + this.X && e.getY() >= this.Y && e.getY() <= this.HEIGHT + this.Y){
-            this.clickStatus = true;
+        if(e.getX() >= this.x && e.getX() <= this.width + this.x && e.getY() >= this.y && e.getY() <= this.height + this.y){
+            clickStatus = true;
         }else {
-            this.clickStatus = false;
+            clickStatus = false;
         }
         return clickStatus;
     }
 
     public void paintComponent(Graphics2D g){
         g.setColor(buttonColor());
-        g.fillRoundRect(X, Y, WIDTH, HEIGHT,10,10);
+        g.fillRoundRect(x, y, width, height,6,6);
         g.setColor(Color.BLACK);
-        g.drawRoundRect(X, Y, WIDTH, HEIGHT,10,10);
+        g.drawRoundRect(x, y, width, height,6,6);
 
         g.setColor(Color.WHITE);
         Font font = new Font("Arial", 2, fontSize);
         g.setFont(font);
-        g.drawString(TEXT, X + (WIDTH/centrarTextoH())/2, Y + (HEIGHT/2 + fontSize/2));
+        g.drawString(text, x + (width /centrarTextoH())/2, y + (height /2 + fontSize/2));
 
 
     }

@@ -50,7 +50,8 @@ public class AdminLateralPanel extends JPanel{
         createShow.setSize(113,48);
         createShow.setText("Crear función");
 
-
+        //Leave here
+        eventosMouse();
     }
 
     //Aqui van los metodos .paintComponent de los componentes
@@ -80,15 +81,22 @@ public class AdminLateralPanel extends JPanel{
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                
+                super.mousePressed(e);
+
                 //Leave here
                 repaint();
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
+                super.mouseClicked(e);
+
+                if (logoutButton.evenListener(e)){
+                    System.out.println("click");
+                }
+                createUserButton.evenListener(e);
+                createBillBoardButton.evenListener(e);
+
 
 
 
@@ -99,6 +107,10 @@ public class AdminLateralPanel extends JPanel{
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
+
+                logoutButton.evenListener(e);
+                createUserButton.evenListener(e);
+                createBillBoardButton.evenListener(e);
 
                 //Leave here
                 repaint();

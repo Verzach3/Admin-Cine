@@ -2,7 +2,6 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.Usuario;
-import com.thepanas.CineAdmin.Utils.PrintUsers;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -11,11 +10,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")
-public class CreateAdminScreen extends JPanel {
+public class CreateAdminScreen extends JPanel implements MouseListener {
 
     Main mainFrame;
     ArrayList<Usuario> dataBase;
@@ -34,23 +34,24 @@ public class CreateAdminScreen extends JPanel {
         this.setLayout(null);
         nameField.setLocation(402, 150);
         nameField.setSize(200, 20);
-        nameField.setPLACEHOLDER("Nombre");
+        nameField.setPlaceholder("Nombre");
         userName.setLocation(402, 200);
         userName.setSize(200, 20);
-        userName.setPLACEHOLDER("Usuario");
+        userName.setPlaceholder("Usuario");
         passWord.setLocation(402, 250);
         passWord.setSize(200, 20);
-        passWord.setPLACEHOLDER("Contraseña");
+        passWord.setPlaceholder("Contraseña");
         confirmPassWord.setLocation(402, 300);
         confirmPassWord.setSize(200, 20);
-        confirmPassWord.setPLACEHOLDER("Confirmar Contraseña");
+        confirmPassWord.setPlaceholder("Confirmar Contraseña");
         confirmButton.setLocation(402, 350);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
         backButton.setLocation(30, 670);
         backButton.setSize(40, 40);
         backButton.setText("<");
-        eventosMouse();
+
+        this.addMouseListener(this);
     }
 
     // Aqui van los metodos .paintComponent de los componentes
@@ -99,95 +100,51 @@ public class CreateAdminScreen extends JPanel {
     }
 
 
-    public int onHide() {
-        this.setVisible(false);
-        return 1;
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+        this.repaint();
     }
 
-    // Mouse Handler // Maneja los eventos del mouse
-    public void eventosMouse() {
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+    @Override
+    public void mousePressed(MouseEvent e) {
+        nameField.evenListener(e);
+        userName.evenListener(e);
+        passWord.evenListener(e);
+        confirmPassWord.evenListener(e);
 
-                // Leave here
-                repaint();
+
+        if (confirmButton.evenListener(e)) {
+            try {
+                createAdmin();
+            } catch (Exception f) {
+                System.out.println(f);
             }
 
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                nameField.evenListener(e);
-                userName.evenListener(e);
-                passWord.evenListener(e);
-                confirmPassWord.evenListener(e);
+        }
 
+        if (backButton.evenListener(e)){
+            mainFrame.panelChanger(0);
+        }
+        this.repaint();
+    }
 
-                if (confirmButton.evenListener(e)) {
-                    try {
-                        createAdmin();
-                    } catch (Exception f) {
-                        System.out.println(f);
-                    }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        confirmButton.onRelease();
 
-                }
+        this.repaint();
+    }
 
-                if (backButton.evenListener(e)){
-                    mainFrame.panelChanger(0);
-                }
+    @Override
+    public void mouseEntered(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
+        this.repaint();
+    }
 
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                super.mouseReleased(e);
-                confirmButton.onRelease();
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseExited(MouseEvent e) {
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                super.mouseEntered(e);
-
-                // Leave here
-                repaint();
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
-
-                // Leave here
-                repaint();
-            }
-
-            @Override
-            public void mouseWheelMoved(MouseWheelEvent e) {
-                super.mouseWheelMoved(e);
-
-                // Leave here
-                repaint();
-            }
-
-            @Override
-            public void mouseDragged(MouseEvent e) {
-                super.mouseDragged(e);
-
-                // Leave here
-                repaint();
-            }
-
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                super.mouseMoved(e);
-
-                // Leave here
-                repaint();
-            }
-        });
+        this.repaint();
     }
 }

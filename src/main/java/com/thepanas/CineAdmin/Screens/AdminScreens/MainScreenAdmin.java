@@ -20,8 +20,8 @@ public class MainScreenAdmin extends JPanel {
      * Los componentes tambien se definen como variables globales por la misma razon
      * que el objeto main.
      */
-    TButton button1 = new TButton();
-    TLabel label1 = new TLabel();
+    TButton startButton = new TButton();
+    TLabel welcomeMessage = new TLabel();
     CreateAdminScreen createAdminScreen;
 
    public MainScreenAdmin(Main mainFrame, ArrayList<Usuario> userDatabase) {
@@ -32,17 +32,17 @@ public class MainScreenAdmin extends JPanel {
         // Layout manager del panel
         this.setLayout(null);
         // Tamaño de el boton
-        button1.setSize(110, 40);
+        startButton.setSize(110, 40);
         // Unicacion del boton
-        button1.setLocation(500, 400);
+        startButton.setLocation(500, 400);
         // Texto de el boton
-        button1.setText("Comenzar");
+        startButton.setText("Comenzar");
         // Ubicacion de el label
-        label1.setLocation(400, 40);
+        welcomeMessage.setLocation(400, 40);
         // Texto de el label
-        label1.setText("Bienvenido al Panel de Control de CinemaFilms");
+        welcomeMessage.setText("Bienvenido al Panel de Control de CinemaFilms");
         //Tamaño del texto
-        label1.setSize(25);
+        welcomeMessage.setSize(25);
 
         this.setDebugOverlay(true);
 
@@ -60,8 +60,8 @@ public class MainScreenAdmin extends JPanel {
         Graphics2D g2D = (Graphics2D) g;
 
         // Dibujo de los componentes
-        button1.paintComponent(g2D);
-        label1.paintComponent(g2D);
+        startButton.paintComponent(g2D);
+        welcomeMessage.paintComponent(g2D);
 
         if (debugOverlay){
             g2D.fillRect(466,768,132,300);
@@ -74,7 +74,7 @@ public class MainScreenAdmin extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if (button1.evenListener(e)){
+                if (startButton.evenListener(e)){
                     mainFrame.panelChanger(1);
 
                 }
@@ -85,7 +85,7 @@ public class MainScreenAdmin extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                button1.evenListener(e);
+                startButton.evenListener(e);
                 // Leave here
                 repaint();
             }
@@ -95,7 +95,7 @@ public class MainScreenAdmin extends JPanel {
                 super.mouseReleased(e);
                 // Leave here
                 repaint();
-                button1.onRelease();
+                startButton.evenListener(e);
             }
 
             @Override

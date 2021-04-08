@@ -78,7 +78,7 @@ class TButtonExample extends JFrame {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                button.onRelease();
+                button.evenListener(e);
                 //Leave here
                 repaint();
             }

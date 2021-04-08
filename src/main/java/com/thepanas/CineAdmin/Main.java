@@ -21,6 +21,7 @@ public class Main extends JFrame {
 ///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////
     CreateAdminScreen createAdminScreen = new CreateAdminScreen(this,userDataBase);
     FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this ,userDataBase);
+    LoginScreen loginScreen = new LoginScreen(this,userDataBase);
     ScreenTemplate screenTemplate = new ScreenTemplate(this, userDataBase);
     AdminLateralPanel adminLateralPanel = new AdminLateralPanel(this, userDataBase);
 
@@ -28,7 +29,7 @@ public class Main extends JFrame {
 
     public Main() {
         //Tamaño de la ventana
-        this.setSize(new Dimension(1024, 805));
+        this.setSize(new Dimension(1024, 720));
 
 
         //Sin layout manager
@@ -53,7 +54,7 @@ public class Main extends JFrame {
                 mainFrame.add(createAdminScreen);
                 break;
             case 2:
-                mainFrame.add(adminLateralPanel);
+                mainFrame.add(loginScreen);
                 break;
             case 0:
                 mainFrame.add(firstOpenScreen);
@@ -63,7 +64,7 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         //Se pone visible el frame
-        mainFrame.panelChanger(1);
+        mainFrame.panelChanger(2);
 
         mainFrame.setVisible(true);
 
