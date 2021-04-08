@@ -2,16 +2,16 @@ package com.thepanas.CineAdmin.Utils;
 
 import java.util.ArrayList;
 
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 
 public class PrintUsers {
-    ArrayList<Usuario> a;
-    public PrintUsers(ArrayList<Usuario> a){
+    ArrayList<User> a;
+    public PrintUsers(ArrayList<User> a){
         this.a = a;
     }
 
     public void print(){
-        for (Usuario usuario : a) {
+        for (User usuario : a) {
             System.out.println("Nombre: " + usuario.getName());
         }
     }

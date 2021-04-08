@@ -2,7 +2,7 @@ package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;
 
@@ -24,7 +24,7 @@ public class MainScreenAdmin extends JPanel {
     TLabel welcomeMessage = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-   public MainScreenAdmin(Main mainFrame, ArrayList<Usuario> userDatabase) {
+   public MainScreenAdmin(Main mainFrame, ArrayList<User> userDatabase) {
         this.mainFrame = mainFrame;
 
         // Tamaño del panel

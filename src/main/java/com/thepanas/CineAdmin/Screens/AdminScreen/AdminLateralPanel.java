@@ -1,7 +1,7 @@
 package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 
 import javax.swing.*;
@@ -23,7 +23,7 @@ public class AdminLateralPanel extends JPanel{
     TButton createBillBoardButton = new TButton();
     TButton createShow = new TButton();
 
-    public AdminLateralPanel(Main mainFrame, ArrayList<Usuario> dataBase){
+    public AdminLateralPanel(Main mainFrame, ArrayList<User> dataBase){
         /*
         Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
         el main

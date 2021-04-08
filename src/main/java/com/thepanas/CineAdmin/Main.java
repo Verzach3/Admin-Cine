@@ -3,7 +3,7 @@ package com.thepanas.CineAdmin;
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 
 import javax.swing.JFrame;
 
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class Main extends JFrame {
 
     //Database donde se van a guardar los usuarios
-    public ArrayList<Usuario> userDataBase = new ArrayList<>();
-
+    public ArrayList<User> userDataBase = new ArrayList<>();
+    public User currentUser;
     static Main mainFrame = new Main();
 
     ///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////

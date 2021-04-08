@@ -1,12 +1,12 @@
 package com.thepanas.CineAdmin.Types;
 
-public class Usuario {
+public class User {
     int accessLevel;
     String name;
     String nickName;
     String password;
 
-    public Usuario(int setAccessLevel) {
+    public User(int setAccessLevel) {
         accessLevel = setAccessLevel;
 
 
@@ -20,7 +20,7 @@ public class Usuario {
      * @param setNickName
      * @param setPassword
      */
-    public Usuario(int setAccessLevel, String setName, String setNickName, String setPassword){
+    public User(int setAccessLevel, String setName, String setNickName, String setPassword){
         accessLevel = setAccessLevel;
         name = setName;
         nickName = setNickName;

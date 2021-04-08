@@ -1,25 +1,22 @@
 package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Types.Usuario;
-import com.thepanas.CineAdmin.Utils.MakeDialog;
+import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class CreateAdminScreen extends JPanel implements MouseListener {
 
     Main mainFrame;
-    ArrayList<Usuario> dataBase;
+    ArrayList<User> dataBase;
     TButton confirmButton = new TButton();
     TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
@@ -28,7 +25,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(Main mainFrame, ArrayList<Usuario> dataBase) {
+    public CreateAdminScreen(Main mainFrame, ArrayList<User> dataBase) {
         this.dataBase = dataBase;
         this.mainFrame = mainFrame;
         this.setSize(1024, 768);
@@ -70,7 +67,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
     }
 
     public void createAdmin() {
-        Usuario newAdmin;
+        User newAdmin;
         String finalPassword;
 
         if (!nameField.getText().equals("") || !userName.getText().equals("") || !passWord.getText().equals("") || !confirmPassWord.getText().equals("")) {
@@ -78,13 +75,13 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
             System.out.println(passWord.getText());
             if (passWord.getText().equals(confirmPassWord.getText())) {
                 finalPassword = passWord.getText();
-                newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
+                newAdmin = new User(0, nameField.getText(), userName.getText().trim(), finalPassword);
                 dataBase.add(newAdmin);
                 
                 /*
                  * Imprimir el admin recien creado
                  */
-                Usuario a = dataBase.get(0);
+                User a = dataBase.get(0);
                 System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
 
                 /*

@@ -1,6 +1,6 @@
 package com.thepanas.CineAdmin.Screens;
 
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;
 
@@ -22,7 +22,7 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
     TLabel welcomeText = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-   public FirstOpenScreen(Main mainFrame,ArrayList<Usuario> userDatabase) {
+   public FirstOpenScreen(Main mainFrame,ArrayList<User> userDatabase) {
         this.mainFrame = mainFrame;
 
         // Tamaño del panel

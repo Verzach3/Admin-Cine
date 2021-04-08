@@ -1,7 +1,7 @@
 package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 
@@ -25,7 +25,7 @@ public class LoginScreen extends JPanel implements MouseListener {
 
 
 
-    public LoginScreen(Main mainFrame, ArrayList<Usuario> dataBase){
+    public LoginScreen(Main mainFrame, ArrayList<User> dataBase){
         /*
         Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
         el main
@@ -90,8 +90,15 @@ public class LoginScreen extends JPanel implements MouseListener {
     @Override
     public void mousePressed(MouseEvent e) {
         usernameField.evenListener(e);
+
         passwordField.evenListener(e);
-        loginButton.evenListener(e);
+
+        if (loginButton.evenListener(e)){
+            for (User user: mainFrame.userDataBase){
+                System.out.println(user);
+            }
+        }
+
         registerButton.evenListener(e);
 
         this.repaint();
