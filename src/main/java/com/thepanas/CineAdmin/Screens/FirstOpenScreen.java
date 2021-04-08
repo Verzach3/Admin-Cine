@@ -9,13 +9,10 @@ import com.thepanas.CineAdmin.Main;
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.Graphics2D;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 
-public class FirstOpenScreen extends JPanel implements MouseListener {
+public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotionListener{
     Main mainFrame;
     /**
      * Los componentes tambien se definen como variables globales por la misma razon
@@ -48,6 +45,9 @@ public class FirstOpenScreen extends JPanel implements MouseListener {
         welcomeText.setSize(30);
 
         this.addMouseListener(this);
+        this.addMouseMotionListener(this);
+        this.setFocusable(true);
+        this.requestFocus();
     }
 
     // Aqui van los metodos .paintComponent de los componentes
@@ -59,6 +59,11 @@ public class FirstOpenScreen extends JPanel implements MouseListener {
         // Dibujo de los componentes
         continueButton.paintComponent(g2D);
         welcomeText.paintComponent(g2D);
+
+
+
+
+
     }
 
 
@@ -97,4 +102,19 @@ public class FirstOpenScreen extends JPanel implements MouseListener {
 
        this.repaint();
     }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
+
+       this.repaint();
+
+    }
+
 }

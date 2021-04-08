@@ -8,9 +8,9 @@ TBarGraphics ---------------> V1
 
 //---------------->TBarGraphics
 public class TBarGraphics extends JPanel {
-    private double[] values;
+    private final double[] values;
 
-    private String title;
+    private final String title;
 
     public TBarGraphics(double[] v, String t) {
 
@@ -25,11 +25,11 @@ public class TBarGraphics extends JPanel {
             return;
         double minValue = 0;
         double maxValue = 0;
-        for (int i = 0; i < values.length; i++) {
-            if (minValue > values[i])
-                minValue = values[i];
-            if (maxValue < values[i])
-                maxValue = values[i];
+        for (double value : values) {
+            if (minValue > value)
+                minValue = value;
+            if (maxValue < value)
+                maxValue = value;
         }
 
         //-------------------->Dimensiones

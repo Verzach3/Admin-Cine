@@ -57,7 +57,7 @@ public class Main extends JFrame {
                 mainFrame.add(loginScreen);
                 break;
             case 0:
-                mainFrame.add(firstOpenScreen);
+                mainFrame.add(adminLateralPanel);
                 break;
         }
     }

@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.Usuario;
+import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -80,16 +81,17 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
                 newAdmin = new Usuario(0, nameField.getText(), userName.getText().trim(), finalPassword);
                 dataBase.add(newAdmin);
                 
-                /**
+                /*
                  * Imprimir el admin recien creado
                  */
                 Usuario a = dataBase.get(0);
                 System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
 
-                /**
+                /*
                  * Avisa de la creacion correcta
                  */
                 JOptionPane.showMessageDialog(null,"Administrador Creado Correctamente","",JOptionPane.INFORMATION_MESSAGE);
+                mainFrame.panelChanger(2);
             } else {
                 JOptionPane.showMessageDialog(null, "La contraseña no es igual", "Error", JOptionPane.ERROR_MESSAGE);
             }

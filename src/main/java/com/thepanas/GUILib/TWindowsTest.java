@@ -9,10 +9,10 @@ Prueba del TBarGraphics Recordar que el TBarGraphics recibe un Array
  y lo grafica con los valores asignados o guardados
  */
 public class TWindowsTest{
-    public static void main(String[] argv) {
+    public static void main(String[] args) {
         JFrame f = new JFrame();
         f.setSize(400, 300); //---------------->Tamaño definido de la ventana de prueba
-        double[] values = new double[5]; //--------------------> Bucle con valores que quiero graficar
+        double[] values = new double[6]; //--------------------> Bucle con valores que quiero graficar
 
         //----------------------->Valores
         values[0] = 9;
@@ -24,6 +24,8 @@ public class TWindowsTest{
         values[3] = 5;
 
         values[4] = 2;
+
+        values[5] = 10;
         //---------------------------------------------------->
 
         //---->ContentPane y ---> se ingresa -->Array ----->Titulo
