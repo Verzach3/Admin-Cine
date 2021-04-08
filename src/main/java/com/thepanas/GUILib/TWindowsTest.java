@@ -30,14 +30,6 @@ public class TWindowsTest{
 
         //---->ContentPane y ---> se ingresa -->Array ----->Titulo
         f.getContentPane().add(new TBarGraphics(values, "TBarGraphics"));
-
-        //--->WindowsListener
-        WindowListener wndCloser = new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        };
-        f.addWindowListener(wndCloser);
         f.setVisible(true);
     }
 }
