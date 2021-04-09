@@ -34,7 +34,7 @@ public class AdminLateralPanel extends JPanel{
         this.setLayout(null);
 
         ///Componentes///
-        logoutButton.setLocation(83,703);
+        logoutButton.setLocation(83,500);
         logoutButton.setSize(97,45);
         logoutButton.setText("Cerrar Sesion");
 
@@ -92,7 +92,8 @@ public class AdminLateralPanel extends JPanel{
                 super.mouseClicked(e);
 
                 if (logoutButton.evenListener(e)){
-                    System.out.println("click");
+                    mainFrame.currentUser = null;
+                    mainFrame.panelChanger(2);
                 }
                 createUserButton.evenListener(e);
                 createBillBoardButton.evenListener(e);

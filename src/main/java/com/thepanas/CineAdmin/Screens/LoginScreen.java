@@ -103,6 +103,8 @@ public class LoginScreen extends JPanel implements MouseListener {
                     switch (accesLevel){
                         case 0:
                             mainFrame.panelChanger(1);
+                            break;
+
                     }
                 }else {
                     MakeDialog.makeErrorDialog("Nombre de usuario o contraseña incorrecta", "Error");
