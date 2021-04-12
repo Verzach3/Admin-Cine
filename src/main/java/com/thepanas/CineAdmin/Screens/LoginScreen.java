@@ -56,6 +56,7 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         this.addMouseListener(this);
 
+        this.repaint();
 
         //Leave here
     }
@@ -75,16 +76,12 @@ public class LoginScreen extends JPanel implements MouseListener {
 
     public void onExit(){
         this.setVisible(false);
-
         //El return se usa para decirle al mainframe que Panel deberia de estar mostrandose
-
     }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
-
         this.repaint();
     }
 
@@ -97,22 +94,33 @@ public class LoginScreen extends JPanel implements MouseListener {
         if (loginButton.evenListener(e)){
             for (User user: mainFrame.userDataBase){
                 if (user.getNickName().equals(usernameField.getText()) && user.getPassword().equals(passwordField.getText())) {
+                    usernameField.setText("");
+                    passwordField.setText("");
                     MakeDialog.makeInfoDialog("Acceso Correcto","Info");
                     mainFrame.currentUser = user;
                     int accesLevel = mainFrame.currentUser.getAccessLevel();
                     switch (accesLevel){
                         case 0:
-                            mainFrame.panelChanger(1);
+                            mainFrame.panelChanger(3);
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            MakeDialog.makeInfoDialog("Usuario no afiliado", "info");
                             break;
 
+
                     }
-                }else {
-                    MakeDialog.makeErrorDialog("Nombre de usuario o contraseña incorrecta", "Error");
                 }
             }
+            MakeDialog.makeErrorDialog("Nombre de usuario o contraseña incorrecta", "Error");
         }
 
-        registerButton.evenListener(e);
+        if (registerButton.evenListener(e)) {
+            mainFrame.panelChanger(4);
+        }
 
         this.repaint();
     }
@@ -122,8 +130,6 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         loginButton.onRelease();
         registerButton.onRelease();
-
-        System.out.println("released");
         this.repaint();
     }
 

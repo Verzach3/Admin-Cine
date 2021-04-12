@@ -1,9 +1,7 @@
 package com.thepanas.GUILib;
 //Librerias
 import javax.swing.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+
 /*
 Prueba del TBarGraphics Recordar que el TBarGraphics recibe un Array
  y lo grafica con los valores asignados o guardados

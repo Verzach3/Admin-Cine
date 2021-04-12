@@ -24,6 +24,7 @@ public class Main extends JFrame {
     LoginScreen loginScreen = new LoginScreen(this,userDataBase);
     ScreenTemplate screenTemplate = new ScreenTemplate(this, userDataBase);
     AdminLateralPanel adminLateralPanel = new AdminLateralPanel(this, userDataBase);
+    RegisterScreen registerScreen = new RegisterScreen(this, userDataBase);
 
 ///////////////////
 
@@ -62,6 +63,9 @@ public class Main extends JFrame {
             case 3:
                 mainFrame.add(adminLateralPanel);
                 break;
+            case 4:
+                mainFrame.add(registerScreen);
+
 
         }
     }

@@ -6,6 +6,15 @@ public class User {
     String nickName;
     String password;
 
+    /*
+     *  Niveles de acceso
+     *  0: Administrador
+     *  1: Supervisor
+     *  2: Cliente afiliado
+     *  3: Cliente no afiliado
+     *
+     */
+
     public User(int setAccessLevel) {
         accessLevel = setAccessLevel;
 
@@ -13,12 +22,7 @@ public class User {
     }
 
     /**
-     * 
      * Objeto usuario
-     * @param setAccessLevel
-     * @param setName
-     * @param setNickName
-     * @param setPassword
      */
     public User(int setAccessLevel, String setName, String setNickName, String setPassword){
         accessLevel = setAccessLevel;

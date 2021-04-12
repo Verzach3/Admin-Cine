@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -42,9 +43,10 @@ public class RegisterScreen extends JPanel implements MouseListener {
         confirmPassWord.setLocation(402, 300);
         confirmPassWord.setSize(200, 30);
         confirmPassWord.setPlaceholder("Confirmar Contraseña");
-        confirmButton.setLocation(442, 350);
+        confirmButton.setLocation(442, 400);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
+
         backButton.setLocation(30, 625);
         backButton.setSize(40, 40);
         backButton.setText("<");
@@ -67,34 +69,40 @@ public class RegisterScreen extends JPanel implements MouseListener {
     }
 
     public void createAdmin() {
-        User newAdmin;
+        User newUser;
         String finalPassword;
 
-        if (!nameField.getText().equals("") || !userName.getText().equals("") || !passWord.getText().equals("") || !confirmPassWord.getText().equals("")) {
+        for (User user : dataBase) {
+            if (!user.getNickName().equals(userName.getText().trim())) {
+                if (!nameField.getText().equals("") || !userName.getText().equals("") || !passWord.getText().equals("") || !confirmPassWord.getText().equals("")) {
 
-            System.out.println(passWord.getText());
-            if (passWord.getText().equals(confirmPassWord.getText())) {
-                finalPassword = passWord.getText();
-                newAdmin = new User(0, nameField.getText(), userName.getText().trim(), finalPassword);
-                dataBase.add(newAdmin);
-                
-                /*
-                 * Imprimir el admin recien creado
-                 */
-                User a = dataBase.get(0);
-                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
-
-                /*
-                 * Avisa de la creacion correcta
-                 */
-                JOptionPane.showMessageDialog(null,"Administrador Creado Correctamente","",JOptionPane.INFORMATION_MESSAGE);
-                mainFrame.panelChanger(2);
-            } else {
-                JOptionPane.showMessageDialog(null, "La contraseña no es igual", "Error", JOptionPane.ERROR_MESSAGE);
+                    if (passWord.getText().equals(confirmPassWord.getText())) {
+                        finalPassword = passWord.getText();
+                        newUser = new User(3, nameField.getText(), userName.getText().trim(), finalPassword);
+                        dataBase.add(newUser);
+                        
+                        System.out.println("Nombre: "+ newUser.getName()+ " || " + "Usuario: " + newUser.getNickName() + " || " + "Contraseña: " + newUser.getPassword());
+        
+                        /*
+                         * Avisa de la creacion correcta
+                         */
+                        MakeDialog.makeInfoDialog("Usuario Creado Correctamente","");
+                        mainFrame.panelChanger(2);
+                    } else {
+                        MakeDialog.makeErrorDialog("La contraseña no es igual", "Error");
+                    }
+                }else{
+                    MakeDialog.makeErrorDialog("Uno o mas campos vacios", "Error");
+                }
+                break;
+            } if (user.getNickName().equals(userName.getText().trim())){
+                MakeDialog.makeErrorDialog("Usuario ya en uso", "Error");
+                break;
             }
-        }else{
-            JOptionPane.showMessageDialog(null, "Uno o mas campos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+
+            System.out.println(user.getNickName() + "||" + userName.getText());
         }
+
 
     }
 

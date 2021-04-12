@@ -81,8 +81,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
                 /*
                  * Imprimir el admin recien creado
                  */
-                User a = dataBase.get(0);
-                System.out.println("Nombre: "+ a.getName()+ " || " + "Usuario: " + a.getNickName() + " || " + "Contraseña: " + a.getPassword());
+                System.out.println("Nombre: "+ newAdmin.getName()+ " || " + "Usuario: " + newAdmin.getNickName() + " || " + "Contraseña: " + newAdmin.getPassword());
 
                 /*
                  * Avisa de la creacion correcta

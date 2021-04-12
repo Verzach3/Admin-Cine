@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 
 import javax.swing.*;
@@ -56,6 +57,17 @@ public class AdminLateralPanel extends JPanel{
 
     //Aqui van los metodos .paintComponent de los componentes
     public void paint(Graphics g){
+
+        //Detecta si hay un usuario valido en currentUSer, si no, entonces devuelve el usuario al login
+        if (mainFrame.currentUser == null) {
+            MakeDialog.makeErrorDialog("La Sesion Expiró", "Error");
+            mainFrame.panelChanger(2);
+        }
+        //Detecta si el usuario actual tiene permisos de administrador
+        if (mainFrame.currentUser != null && mainFrame.currentUser.getAccessLevel() != 0){
+            MakeDialog.makeErrorDialog("Usuario no autorizado", "Error de autorizacion");
+            mainFrame.panelChanger(2);
+        }
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
         g2D.fillRect(0,0,this.getWidth(),this.getHeight());
