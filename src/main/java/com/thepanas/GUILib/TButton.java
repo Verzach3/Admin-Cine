@@ -5,34 +5,15 @@ import java.awt.Graphics2D;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 
-public class TButton {
+public class TButton extends TComponent{
     /* RECOMENDACIONES Y REQUERIMIENTOS */
     /* Para cada boton se debe de llamar el metodo onRelease()
        en el mouseReleased de cada panel para que el cambio de
        color surta efecto
      */
 
-
-    int x = 1;
-    int y = 1;
-    int width = 1;
-    int height = 1;
-    int fontSize = 12;
     String text = "Button";
     Boolean clickStatus = false;
-
-    public int getX(){
-      return x;
-    }
-
-    public int getY(){
-      return y;
-    }
-
-    public void setLocation(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
 
     public void setSize(int width, int height){
         this.width = width;

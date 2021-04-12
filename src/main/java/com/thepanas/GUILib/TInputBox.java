@@ -10,19 +10,7 @@ import javax.swing.*;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 
-public class TInputBox{
-    int x = 0;
-    int y = 0;
-    int width = 0;
-    int height = 0;
-    int fontSize = 15;
-    String text = "";
-    String placeholder = "PLACEHOLDER";
-
-    public void setLocation(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
+public class TInputBox extends TComponent{
 
     public void setSize(int width, int height){
         this.width = width;
@@ -54,11 +42,12 @@ public class TInputBox{
     }
 
 
-    public void evenListener(MouseEvent e){
+    public Boolean evenListener(MouseEvent e){
         if(e.getX() >= this.x && e.getX() <= this.width + this.x && e.getY() >= this.y && e.getY() <= this.height + this.y){
 
             this.onClick();
         }
+        return null;
     }
 
     public void setPlaceholder(String placeholder){

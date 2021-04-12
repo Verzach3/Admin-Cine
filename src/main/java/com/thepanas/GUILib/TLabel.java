@@ -2,24 +2,8 @@ package com.thepanas.GUILib;
 
 import java.awt.*;
 
-public class TLabel {
-    int x = 0;
-    int y = 0;
-    int fontSize = 15;
-    String text = "Button";
+public class TLabel extends  TComponent{
 
-    public int getX(){
-      return x;
-    }
-
-    public int getY(){
-      return y;
-    }
-
-    public void setLocation(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
 
 
     public void setText(String text){

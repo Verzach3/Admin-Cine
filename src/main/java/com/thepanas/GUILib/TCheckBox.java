@@ -4,31 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 
-public class TCheckBox {
-
-    int x = 0;
-    int y = 0;
-    int size = 0;
-    Boolean clickStatus = false;
-
-    public int getX(){
-      return x;
-    }
-
-    public int getY(){
-      return y;
-    }
-
-    public void setLocation(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
-
-    public void setSize(int SIZE){
-        this.size = SIZE;
-    }
-
-
+public class TCheckBox extends TComponent{
 
     public void onClick(){
         clickStatus = !clickStatus;
