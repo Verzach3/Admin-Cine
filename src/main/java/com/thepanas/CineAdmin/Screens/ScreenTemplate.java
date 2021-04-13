@@ -34,7 +34,13 @@ public class ScreenTemplate extends JPanel implements MouseListener {
     public void paint(Graphics g){
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-
+        
+        //remover todo el try catch
+        try {
+            g2D.wait((long) 1.0);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 

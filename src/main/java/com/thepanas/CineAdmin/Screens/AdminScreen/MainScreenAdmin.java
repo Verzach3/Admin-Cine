@@ -7,13 +7,14 @@ import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
+
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseWheelEvent;
 import java.util.ArrayList;
 
-public class MainScreenAdmin extends JPanel {
+@SuppressWarnings("serial")
+public class MainScreenAdmin extends JPanel implements MouseInputListener {
     Boolean debugOverlay = false;
     Main mainFrame;
     /**
@@ -24,7 +25,7 @@ public class MainScreenAdmin extends JPanel {
     TLabel welcomeMessage = new TLabel();
     CreateAdminScreen createAdminScreen;
 
-   public MainScreenAdmin(Main mainFrame, ArrayList<User> userDatabase) {
+    public MainScreenAdmin(Main mainFrame, ArrayList<User> userDatabase) {
         this.mainFrame = mainFrame;
 
         // Tamaño del panel
@@ -41,17 +42,16 @@ public class MainScreenAdmin extends JPanel {
         welcomeMessage.setLocation(400, 40);
         // Texto de el label
         welcomeMessage.setText("Bienvenido al Panel de Control de CinemaFilms");
-        //Tamaño del texto
+        // Tamaño del texto
         welcomeMessage.setSize(25);
 
         this.setDebugOverlay(true);
 
-        eventosMouse();
     }
 
-    //Activa el overlay si el status es true
-    public void setDebugOverlay(Boolean status){
-       debugOverlay = status;
+    // Activa el overlay si el status es true
+    public void setDebugOverlay(Boolean status) {
+        debugOverlay = status;
     }
 
     // Aqui van los metodos .paintComponent de los componentes
@@ -63,80 +63,47 @@ public class MainScreenAdmin extends JPanel {
         startButton.paintComponent(g2D);
         welcomeMessage.paintComponent(g2D);
 
-        if (debugOverlay){
-            g2D.fillRect(466,768,132,300);
+        if (debugOverlay) {
+            g2D.fillRect(466, 768, 132, 300);
         }
     }
 
-    // Mouse Handler // Maneja los eventos del mouse
-    public void eventosMouse() {
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                if (startButton.evenListener(e)){
-                    mainFrame.panelChanger(1);
+    @Override
+    public void mouseClicked(MouseEvent e) {
 
-                }
-                // Leave here
-                repaint();
-            }
+    }
 
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                startButton.evenListener(e);
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mousePressed(MouseEvent e) {
+        if (startButton.evenListener(e)) {
+            mainFrame.panelChanger(1);
 
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                super.mouseReleased(e);
-                // Leave here
-                repaint();
-                startButton.evenListener(e);
-            }
+        }
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                super.mouseEntered(e);
+    }
 
-                // Leave here
-                repaint();
-            }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        startButton.onRelease();
+    }
 
-            @Override
-            public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
+    @Override
+    public void mouseEntered(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
+    }
 
-            @Override
-            public void mouseWheelMoved(MouseWheelEvent e) {
-                super.mouseWheelMoved(e);
+    @Override
+    public void mouseExited(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
+    }
 
-            @Override
-            public void mouseDragged(MouseEvent e) {
-                super.mouseDragged(e);
+    @Override
+    public void mouseDragged(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
+    }
 
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                super.mouseMoved(e);
+    @Override
+    public void mouseMoved(MouseEvent e) {
 
-                // Leave here
-                repaint();
-            }
-        });
     }
 }

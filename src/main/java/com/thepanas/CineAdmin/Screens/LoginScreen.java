@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class LoginScreen extends JPanel implements MouseListener {
 
     /*
-    Se define un objeto main para poder acceder al metodo panelchanger
+     * Se define un objeto main para poder acceder al metodo panelchanger
      */
     Main mainFrame;
 
@@ -24,45 +24,40 @@ public class LoginScreen extends JPanel implements MouseListener {
     TButton loginButton = new TButton();
     TButton registerButton = new TButton();
 
-
-
-    public LoginScreen(Main mainFrame, ArrayList<User> dataBase){
+    public LoginScreen(Main mainFrame, ArrayList<User> dataBase) {
         /*
-        Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
-        el main
+         * Se le da valor al objeto panel changer con el frame principal dado en el
+         * momento de la definicion del objeto en el main
          */
         this.mainFrame = mainFrame;
-
         this.setSize(1024, 768);
         this.setLayout(null);
 
-        usernameField.setSize(200,30);
-        usernameField.setLocation(412,241);
+        usernameField.setSize(200, 30);
+        usernameField.setLocation(412, 241);
         usernameField.setPlaceholder("Nombre de Usuario");
 
-        passwordField.setSize(200,30);
+        passwordField.setSize(200, 30);
         passwordField.setLocation(412, 320);
         passwordField.setPlaceholder("Contraseña");
 
-        loginButton.setSize(132,45);
-        loginButton.setLocation(446,420);
+        loginButton.setSize(132, 45);
+        loginButton.setLocation(446, 420);
         loginButton.setText("             Login");
 
-        registerButton.setSize(132,45);
-        registerButton.setLocation(446,505);
+        registerButton.setSize(132, 45);
+        registerButton.setLocation(446, 505);
         registerButton.setText("            Register");
-
-
 
         this.addMouseListener(this);
 
         this.repaint();
 
-        //Leave here
+        // Leave here
     }
 
-    //Aqui van los metodos .paintComponent de los componentes
-    public void paint(Graphics g){
+    // Aqui van los metodos .paintComponent de los componentes
+    public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
         usernameField.paintComponent(g2D);
@@ -70,15 +65,13 @@ public class LoginScreen extends JPanel implements MouseListener {
         loginButton.paintComponent(g2D);
         registerButton.paintComponent(g2D);
 
-
     }
 
-
-    public void onExit(){
+    public void onExit() {
         this.setVisible(false);
-        //El return se usa para decirle al mainframe que Panel deberia de estar mostrandose
+        // El return se usa para decirle al mainframe que Panel deberia de estar
+        // mostrandose
     }
-
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -91,31 +84,34 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         passwordField.evenListener(e);
 
-        if (loginButton.evenListener(e)){
-            for (User user: mainFrame.userDataBase){
-                if (user.getNickName().equals(usernameField.getText()) && user.getPassword().equals(passwordField.getText())) {
+        if (loginButton.evenListener(e)) {
+            boolean found = false;
+            for (User user : mainFrame.userDataBase) {
+                if (user.getNickName().equals(usernameField.getText())
+                        && user.getPassword().equals(passwordField.getText())) {
                     usernameField.setText("");
                     passwordField.setText("");
-                    MakeDialog.makeInfoDialog("Acceso Correcto","Info");
+                    MakeDialog.makeInfoDialog("Acceso Correcto", "Info");
                     mainFrame.currentUser = user;
                     int accesLevel = mainFrame.currentUser.getAccessLevel();
-                    switch (accesLevel){
-                        case 0:
-                            mainFrame.panelChanger(3);
-                            break;
-                        case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            MakeDialog.makeInfoDialog("Usuario no afiliado", "info");
-                            break;
-
-
+                    found = true;
+                    switch (accesLevel) {
+                    case 0:
+                        mainFrame.panelChanger(3);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        MakeDialog.makeInfoDialog("Usuario no afiliado", "info");
+                        break;
                     }
                 }
             }
-            MakeDialog.makeErrorDialog("Nombre de usuario o contraseña incorrecta", "Error");
+            if (!found){
+                MakeDialog.makeErrorDialog("Usuario o Contraseña no validos.", "Error de autenticación");
+            }
         }
 
         if (registerButton.evenListener(e)) {
@@ -138,7 +134,6 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         this.repaint();
     }
-
     @Override
     public void mouseExited(MouseEvent e) {
 

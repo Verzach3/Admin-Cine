@@ -7,6 +7,7 @@ TBarGraphics ---------------> V1
  */
 
 //---------------->TBarGraphics
+@SuppressWarnings("serial")
 public class TBarGraphics extends JPanel {
     private final double[] values;
 

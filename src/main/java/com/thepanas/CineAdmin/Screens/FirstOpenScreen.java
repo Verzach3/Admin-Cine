@@ -12,6 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+@SuppressWarnings("serial")
 public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotionListener{
     Main mainFrame;
     /**
@@ -22,9 +23,10 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
     TLabel welcomeText = new TLabel();
     CreateAdminScreen createAdminScreen;
 
+
    public FirstOpenScreen(Main mainFrame,ArrayList<User> userDatabase) {
         this.mainFrame = mainFrame;
-
+        mainFrame.setTitle("Crea el usuario");
         // Tamaño del panel
         this.setSize(1024, 768);
         // Layout manager del panel

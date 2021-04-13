@@ -1,8 +1,5 @@
 package com.thepanas.GUILib;
 
-import java.awt.event.MouseEvent;
-
-
 public class TComponent {
 
     int x = 1;
