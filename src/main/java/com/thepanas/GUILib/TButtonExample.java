@@ -1,3 +1,8 @@
+/*
+ * Clase de prueba
+ */
+
+
 package com.thepanas.GUILib;
 
 import java.awt.Dimension;

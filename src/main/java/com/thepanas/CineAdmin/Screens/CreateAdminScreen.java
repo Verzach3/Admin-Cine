@@ -5,18 +5,15 @@ import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class CreateAdminScreen extends JPanel implements MouseListener {
 
     Main mainFrame;
-    ArrayList<User> dataBase;
     TButton confirmButton = new TButton();
     TButton backButton = new TButton();
     TInputBox nameField = new TInputBox();
@@ -25,8 +22,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateAdminScreen(Main mainFrame, ArrayList<User> dataBase) {
-        this.dataBase = dataBase;
+    public CreateAdminScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);
@@ -76,7 +72,6 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
             if (passWord.getText().equals(confirmPassWord.getText())) {
                 finalPassword = passWord.getText();
                 newAdmin = new User(0, nameField.getText(), userName.getText().trim(), finalPassword);
-                dataBase.add(newAdmin);
                 
                 /*
                  * Imprimir el admin recien creado

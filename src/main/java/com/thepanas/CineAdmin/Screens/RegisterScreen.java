@@ -26,8 +26,7 @@ public class RegisterScreen extends JPanel implements MouseListener {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public RegisterScreen(Main mainFrame, ArrayList<User> dataBase) {
-        this.dataBase = dataBase;
+    public RegisterScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);

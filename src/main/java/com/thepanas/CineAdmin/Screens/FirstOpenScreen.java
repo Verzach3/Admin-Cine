@@ -1,6 +1,5 @@
 package com.thepanas.CineAdmin.Screens;
 
-import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TLabel;
 
@@ -10,7 +9,6 @@ import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.Graphics2D;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotionListener{
@@ -24,7 +22,7 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
     CreateAdminScreen createAdminScreen;
 
 
-   public FirstOpenScreen(Main mainFrame,ArrayList<User> userDatabase) {
+   public FirstOpenScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
         mainFrame.setTitle("Crea el usuario");
         // Tamaño del panel

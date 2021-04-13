@@ -2,8 +2,10 @@ package com.thepanas.CineAdmin;
 
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
+import com.thepanas.CineAdmin.Screens.ClientScreens.ClientLateralPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.User;
+
 
 import javax.swing.JFrame;
 
@@ -19,12 +21,14 @@ public class Main extends JFrame {
     static Main mainFrame = new Main();
 
     ///////////////////////////////////////// Definicion de los screens de la aplicacion ///////////////////////////////////
-    CreateAdminScreen createAdminScreen = new CreateAdminScreen(this,userDataBase);
-    FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this ,userDataBase);
-    LoginScreen loginScreen = new LoginScreen(this,userDataBase);
-    ScreenTemplate screenTemplate = new ScreenTemplate(this, userDataBase);
-    AdminLateralPanel adminLateralPanel = new AdminLateralPanel(this, userDataBase);
-    RegisterScreen registerScreen = new RegisterScreen(this, userDataBase);
+    CreateAdminScreen createAdminScreen = new CreateAdminScreen(this);
+    FirstOpenScreen firstOpenScreen = new FirstOpenScreen(this);
+    LoginScreen loginScreen = new LoginScreen(this);
+    ScreenTemplate screenTemplate = new ScreenTemplate(this);
+    AdminLateralPanel adminLateralPanel = new AdminLateralPanel(this);
+    RegisterScreen registerScreen = new RegisterScreen(this);
+    ClientLateralPanel affiliatedClientLateralPanel = new ClientLateralPanel(this, true);
+    ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
 
 ///////////////////
 
@@ -65,6 +69,14 @@ public class Main extends JFrame {
                 break;
             case 4:
                 mainFrame.add(registerScreen);
+                break;
+            case 5:
+                mainFrame.add(affiliatedClientLateralPanel);
+                break;
+            case 6:
+                mainFrame.add(notAffiliatedClientLateralPanel);
+                break;
+                
 
 
         }

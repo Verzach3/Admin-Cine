@@ -1,13 +1,11 @@
 package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Types.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class ScreenTemplate extends JPanel implements MouseListener {
@@ -17,7 +15,7 @@ public class ScreenTemplate extends JPanel implements MouseListener {
      */
     Main mainFrame;
 
-    public ScreenTemplate(Main mainFrame,ArrayList<User> dataBase){
+    public ScreenTemplate(Main mainFrame){
         /*
         Se le da valor al objeto panel changer con el frame principal dado en el momento de la definicion del objeto en
         el main

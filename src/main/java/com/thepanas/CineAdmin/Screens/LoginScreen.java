@@ -9,7 +9,6 @@ import com.thepanas.GUILib.TInputBox;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class LoginScreen extends JPanel implements MouseListener {
@@ -24,7 +23,7 @@ public class LoginScreen extends JPanel implements MouseListener {
     TButton loginButton = new TButton();
     TButton registerButton = new TButton();
 
-    public LoginScreen(Main mainFrame, ArrayList<User> dataBase) {
+    public LoginScreen(Main mainFrame) {
         /*
          * Se le da valor al objeto panel changer con el frame principal dado en el
          * momento de la definicion del objeto en el main
@@ -104,7 +103,7 @@ public class LoginScreen extends JPanel implements MouseListener {
                     case 2:
                         break;
                     case 3:
-                        MakeDialog.makeInfoDialog("Usuario no afiliado", "info");
+                        mainFrame.panelChanger(5);
                         break;
                     }
                 }

@@ -1,3 +1,6 @@
+/*
+* Clase de prueba
+*/
 package com.thepanas.GUILib;
 //Librerias
 import javax.swing.*;

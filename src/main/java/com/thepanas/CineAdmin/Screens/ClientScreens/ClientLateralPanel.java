@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin.Screens.AdminScreen;
+package com.thepanas.CineAdmin.Screens.ClientScreens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 @SuppressWarnings("serial")
-public class AdminLateralPanel extends JPanel implements MouseInputListener {
+public class ClientLateralPanel extends JPanel implements MouseInputListener {
 
     /*
      * Se define un objeto main para poder acceder al metodo panelchanger
@@ -19,12 +19,14 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton createUserButton = new TButton();
     TButton createBillBoardButton = new TButton();
     TButton createShow = new TButton();
+    boolean affiliated;
 
-    public AdminLateralPanel(Main mainFrame) {
+    public ClientLateralPanel(Main mainFrame, boolean affiliated) {
         /*
          * Se le da valor al objeto panel changer con el frame principal dado en el
          * momento de la definicion del objeto en el main
          */
+        this.affiliated = affiliated;
         this.mainFrame = mainFrame;
 
         this.setSize(258, 768);
