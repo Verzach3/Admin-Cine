@@ -16,7 +16,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
      */
     Main mainFrame;
     TButton logoutButton = new TButton();
-    TButton createUserButton = new TButton();
+    TButton createSupervisorButton = new TButton();
     TButton createBillBoardButton = new TButton();
     TButton createShow = new TButton();
 
@@ -35,9 +35,9 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         logoutButton.setSize(97, 45);
         logoutButton.setText("Cerrar Sesion");
 
-        createUserButton.setLocation(73, 71);
-        createUserButton.setSize(113, 45);
-        createUserButton.setText("Crear Usuarios");
+        createSupervisorButton.setLocation(73, 71);
+        createSupervisorButton.setSize(113, 45);
+        createSupervisorButton.setText("Crear Supervisores");
 
         createBillBoardButton.setLocation(73, 201);
         createBillBoardButton.setSize(113, 48);
@@ -68,7 +68,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         Graphics2D g2D = (Graphics2D) g;
         g2D.fillRect(0, 0, this.getWidth(), this.getHeight());
         logoutButton.paintComponent(g2D);
-        createUserButton.paintComponent(g2D);
+        createSupervisorButton.paintComponent(g2D);
         createBillBoardButton.paintComponent(g2D);
         createShow.paintComponent(g2D);
         // Remover
@@ -95,7 +95,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             mainFrame.currentUser = null;
             mainFrame.panelChanger(2);
         }
-        createUserButton.evenListener(e);
+        createSupervisorButton.evenListener(e);
         createBillBoardButton.evenListener(e);
 
         repaint();
@@ -104,7 +104,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     @Override
     public void mouseReleased(MouseEvent e) {
         logoutButton.evenListener(e);
-        createUserButton.evenListener(e);
+        createSupervisorButton.evenListener(e);
         createBillBoardButton.evenListener(e);
 
         repaint();

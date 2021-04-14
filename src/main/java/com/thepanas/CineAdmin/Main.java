@@ -2,7 +2,7 @@ package com.thepanas.CineAdmin;
 
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
-import com.thepanas.CineAdmin.Screens.ClientScreens.ClientLateralPanel;
+import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.User;
 

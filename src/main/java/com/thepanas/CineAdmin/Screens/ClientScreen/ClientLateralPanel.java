@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin.Screens.ClientScreens;
+package com.thepanas.CineAdmin.Screens.ClientScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
