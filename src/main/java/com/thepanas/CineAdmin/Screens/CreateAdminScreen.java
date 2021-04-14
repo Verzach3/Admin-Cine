@@ -81,6 +81,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
                 /*
                  * Avisa de la creacion correcta
                  */
+                mainFrame.userDataBase.add(newAdmin);
                 JOptionPane.showMessageDialog(null,"Administrador Creado Correctamente","",JOptionPane.INFORMATION_MESSAGE);
                 mainFrame.panelChanger(2);
             } else {
