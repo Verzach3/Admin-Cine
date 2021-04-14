@@ -1,7 +1,6 @@
 package com.thepanas.CineAdmin.Screens.ClientScreen;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
@@ -11,21 +10,15 @@ import java.awt.event.MouseEvent;
 @SuppressWarnings("serial")
 public class ClientLateralPanel extends JPanel implements MouseInputListener {
 
-    /*
-     * Se define un objeto main para poder acceder al metodo panelchanger
-     */
     Main mainFrame;
-    TButton logoutButton = new TButton();
-    TButton createUserButton = new TButton();
-    TButton createBillBoardButton = new TButton();
-    TButton createShow = new TButton();
+    TButton bookTickets = new TButton();
+    TButton buyTickets = new TButton();
+    TButton movieConsultation = new TButton();
+    TButton modifyData = new TButton();
     boolean affiliated;
 
     public ClientLateralPanel(Main mainFrame, boolean affiliated) {
-        /*
-         * Se le da valor al objeto panel changer con el frame principal dado en el
-         * momento de la definicion del objeto en el main
-         */
+
         this.affiliated = affiliated;
         this.mainFrame = mainFrame;
 
@@ -33,47 +26,32 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         this.setLayout(null);
 
         /// Componentes///
-        logoutButton.setLocation(83, 500);
-        logoutButton.setSize(97, 45);
-        logoutButton.setText("Cerrar Sesion");
+        bookTickets.setLocation(73, 100);
+        bookTickets.setSize(125, 45);
+        bookTickets.setText("Reservar tiquetes");
 
-        createUserButton.setLocation(73, 71);
-        createUserButton.setSize(113, 45);
-        createUserButton.setText("Crear Usuarios");
+        buyTickets.setLocation(73, 200);
+        buyTickets.setSize(125, 45);
+        buyTickets.setText("Comprar tiquetes");
 
-        createBillBoardButton.setLocation(73, 201);
-        createBillBoardButton.setSize(113, 48);
-        createBillBoardButton.setText("Registrar película");
+        movieConsultation.setLocation(73, 300);
+        movieConsultation.setSize(150, 48);
+        movieConsultation.setText("Consulta de peliculas");
 
-        createShow.setLocation(73, 331);
-        createShow.setSize(113, 48);
-        createShow.setText("Crear función");
+        modifyData.setLocation(73, 400);
+        modifyData.setSize(115, 48);
+        modifyData.setText("Modificar datos");
 
-        // Leave here
     }
 
-    // Aqui van los metodos .paintComponent de los componentes
-    public void paint(Graphics g) {
 
-        // Detecta si hay un usuario valido en currentUSer, si no, entonces devuelve el
-        // usuario al login
-        if (mainFrame.currentUser == null) {
-            MakeDialog.makeErrorDialog("La Sesion Expiró", "Error");
-            mainFrame.panelChanger(2);
-        }
-        // Detecta si el usuario actual tiene permisos de administrador
-        if (mainFrame.currentUser != null && mainFrame.currentUser.getAccessLevel() != 0) {
-            MakeDialog.makeErrorDialog("Usuario no autorizado", "Error de autorizacion");
-            mainFrame.panelChanger(2);
-        }
+    public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        g2D.fillRect(0, 0, this.getWidth(), this.getHeight());
-        logoutButton.paintComponent(g2D);
-        createUserButton.paintComponent(g2D);
-        createBillBoardButton.paintComponent(g2D);
-        createShow.paintComponent(g2D);
-        // Remover
+        bookTickets.paintComponent(g2D);
+        buyTickets.paintComponent(g2D);
+        movieConsultation.paintComponent(g2D);
+        modifyData.paintComponent(g2D);
 
     }
 
@@ -81,7 +59,6 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         this.setVisible(false);
 
         // El return se usa para decirle al mainframe que Panel deberia de estar
-        // mostrandose
 
     }
 
@@ -93,21 +70,15 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if (logoutButton.evenListener(e)) {
-            mainFrame.currentUser = null;
-            mainFrame.panelChanger(2);
-        }
-        createUserButton.evenListener(e);
-        createBillBoardButton.evenListener(e);
-
-        repaint();
+       bookTickets.evenListener(e);
+       buyTickets.evenListener(e);
+       movieConsultation.evenListener(e);
+       modifyData.evenListener(e);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        logoutButton.evenListener(e);
-        createUserButton.evenListener(e);
-        createBillBoardButton.evenListener(e);
+       
 
         repaint();
     }
