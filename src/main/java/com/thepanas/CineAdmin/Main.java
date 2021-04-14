@@ -3,6 +3,7 @@ package com.thepanas.CineAdmin;
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
+import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Types.User;
 
@@ -29,6 +30,7 @@ public class Main extends JFrame {
     RegisterScreen registerScreen = new RegisterScreen(this);
     ClientLateralPanel affiliatedClientLateralPanel = new ClientLateralPanel(this, true);
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
+    ClientPanel clientPanel = new ClientPanel(this);
 
 ///////////////////
 
@@ -75,6 +77,9 @@ public class Main extends JFrame {
                 break;
             case 6:
                 mainFrame.add(notAffiliatedClientLateralPanel);
+                break;
+            case 7:
+                mainFrame.add(clientPanel);
                 break;
                 
 
