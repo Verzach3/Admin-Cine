@@ -21,6 +21,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton createSupervisorButton = new TButton();
     TButton registerMovieButton = new TButton();
     TButton createMovieFunctionButton = new TButton();
+    TButton createAffiliateButton = new TButton();
 
     //Paneles hijos
     CreateSupervisorScreen createSupervisorScreen;
@@ -43,15 +44,19 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         logoutButton.setText("Cerrar Sesion");
 
         createSupervisorButton.setLocation(73, 71);
-        createSupervisorButton.setSize(120, 45);
+        createSupervisorButton.setSize(140, 48);
         createSupervisorButton.setText("Crear Supervisores");
 
-        registerMovieButton.setLocation(73, 201);
-        registerMovieButton.setSize(113, 48);
+        createAffiliateButton.setLocation(73, 170);
+        createAffiliateButton.setSize(140, 48);
+        createAffiliateButton.setText("Crear Afiliado");
+
+        registerMovieButton.setLocation(73, 270);
+        registerMovieButton.setSize(140, 48);
         registerMovieButton.setText("Registrar película");
 
-        createMovieFunctionButton.setLocation(73, 331);
-        createMovieFunctionButton.setSize(113, 48);
+        createMovieFunctionButton.setLocation(73, 370);
+        createMovieFunctionButton.setSize(140, 48);
         createMovieFunctionButton.setText("Crear función");
 
         this.addMouseListener(this);
@@ -83,6 +88,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createSupervisorButton.paintComponent(g2D);
         registerMovieButton.paintComponent(g2D);
         createMovieFunctionButton.paintComponent(g2D);
+        createAffiliateButton.paintComponent(g2D);
         // Remover
 
     }

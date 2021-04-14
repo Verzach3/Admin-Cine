@@ -23,7 +23,7 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
     TInputBox userName = new TInputBox();
     TInputBox passWord = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
-    TLabel welcomeLabel = new TLabel();
+    TLabel titleLabel = new TLabel();
 
     public CreateSupervisorScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
@@ -46,6 +46,9 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
         confirmButton.setLocation(242, 400);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
+        titleLabel.setLocation(160, 80);
+        titleLabel.setSize(30);
+        titleLabel.setText("CREAR SUPERVISOR");
 
             this.addMouseListener(this);
     }
@@ -60,6 +63,7 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
         passWord.paintComponent(g2D);
         confirmPassWord.paintComponent(g2D);
         confirmButton.paintComponent(g2D);
+        titleLabel.paintComponent(g2D);
 
     }
 

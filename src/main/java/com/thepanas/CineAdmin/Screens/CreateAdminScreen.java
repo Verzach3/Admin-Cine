@@ -20,7 +20,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
     TInputBox userName = new TInputBox();
     TInputBox passWord = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
-    TLabel welcomeLabel = new TLabel();
+    TLabel titleLabel = new TLabel();
 
     public CreateAdminScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
@@ -44,6 +44,9 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
         backButton.setLocation(30, 625);
         backButton.setSize(40, 40);
         backButton.setText("<");
+        titleLabel.setLocation(320, 80);
+        titleLabel.setSize(30);
+        titleLabel.setText("CREAR ADMINISTRADOR");
 
         this.addMouseListener(this);
     }
@@ -59,6 +62,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
         confirmPassWord.paintComponent(g2D);
         confirmButton.paintComponent(g2D);
         backButton.paintComponent(g2D);
+        titleLabel.paintComponent(g2D);
 
     }
 

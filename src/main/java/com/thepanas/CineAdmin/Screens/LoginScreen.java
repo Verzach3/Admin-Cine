@@ -5,6 +5,7 @@ import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
+import com.thepanas.GUILib.TLabel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +23,7 @@ public class LoginScreen extends JPanel implements MouseListener {
     TInputBox passwordField = new TInputBox();
     TButton loginButton = new TButton();
     TButton registerButton = new TButton();
+    TLabel titleLabel = new TLabel();
 
     public LoginScreen(Main mainFrame) {
         /*
@@ -31,6 +33,10 @@ public class LoginScreen extends JPanel implements MouseListener {
         this.mainFrame = mainFrame;
         this.setSize(1024, 768);
         this.setLayout(null);
+
+        titleLabel.setSize(30);
+        titleLabel.setLocation(400, 80);
+        titleLabel.setText("INICIAR SESION");
 
         usernameField.setSize(200, 30);
         usernameField.setLocation(412, 241);
@@ -63,6 +69,7 @@ public class LoginScreen extends JPanel implements MouseListener {
         passwordField.paintComponent(g2D);
         loginButton.paintComponent(g2D);
         registerButton.paintComponent(g2D);
+        titleLabel.paintComponent(g2D);
 
     }
 
