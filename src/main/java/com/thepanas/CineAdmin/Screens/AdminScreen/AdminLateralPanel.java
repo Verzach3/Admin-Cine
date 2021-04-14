@@ -1,6 +1,7 @@
 package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
+import com.thepanas.CineAdmin.Screens.AdminScreen.LateralPanelScreens.CreateSupervisorScreen;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import javax.swing.*;
@@ -20,23 +21,26 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton createBillBoardButton = new TButton();
     TButton createShow = new TButton();
 
+    //Paneles hijos
+    CreateSupervisorScreen createSupervisorScreen;
+
     public AdminLateralPanel(Main mainFrame) {
         /*
          * Se le da valor al objeto panel changer con el frame principal dado en el
          * momento de la definicion del objeto en el main
          */
         this.mainFrame = mainFrame;
-
-        this.setSize(258, 768);
+        createSupervisorScreen = new CreateSupervisorScreen(mainFrame);
+        this.setSize(1024, 768);
         this.setLayout(null);
 
         /// Componentes///
         logoutButton.setLocation(83, 500);
-        logoutButton.setSize(97, 45);
+        logoutButton.setSize(100, 45);
         logoutButton.setText("Cerrar Sesion");
 
         createSupervisorButton.setLocation(73, 71);
-        createSupervisorButton.setSize(113, 45);
+        createSupervisorButton.setSize(120, 45);
         createSupervisorButton.setText("Crear Supervisores");
 
         createBillBoardButton.setLocation(73, 201);
@@ -47,6 +51,8 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createShow.setSize(113, 48);
         createShow.setText("Crear función");
 
+        this.addMouseListener(this);
+
         // Leave here
     }
 
@@ -55,6 +61,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
 
         // Detecta si hay un usuario valido en currentUSer, si no, entonces devuelve el
         // usuario al login
+        /*
         if (mainFrame.currentUser == null) {
             MakeDialog.makeErrorDialog("La Sesion Expiró", "Error");
             mainFrame.panelChanger(2);
@@ -64,9 +71,11 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             MakeDialog.makeErrorDialog("Usuario no autorizado", "Error de autorizacion");
             mainFrame.panelChanger(2);
         }
+        */
+
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        g2D.fillRect(0, 0, this.getWidth(), this.getHeight());
+        g2D.fillRect(0, 0, 258, this.getHeight());
         logoutButton.paintComponent(g2D);
         createSupervisorButton.paintComponent(g2D);
         createBillBoardButton.paintComponent(g2D);
@@ -95,7 +104,10 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             mainFrame.currentUser = null;
             mainFrame.panelChanger(2);
         }
-        createSupervisorButton.evenListener(e);
+        if (createSupervisorButton.evenListener(e)) {
+            
+            this.add(createSupervisorScreen);
+        }
         createBillBoardButton.evenListener(e);
 
         repaint();
