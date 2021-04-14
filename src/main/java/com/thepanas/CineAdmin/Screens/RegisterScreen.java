@@ -28,6 +28,7 @@ public class RegisterScreen extends JPanel implements MouseListener {
 
     public RegisterScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
+        this.dataBase = mainFrame.userDataBase;
         this.setSize(1024, 768);
         this.setLayout(null);
         nameField.setLocation(402, 150);

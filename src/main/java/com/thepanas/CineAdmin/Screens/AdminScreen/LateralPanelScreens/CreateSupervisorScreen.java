@@ -16,7 +16,6 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class CreateSupervisorScreen extends JPanel implements MouseListener {
 
-    String hola = "";
     Main mainFrame;
     ArrayList<User> dataBase;
     TButton confirmButton = new TButton();
@@ -28,21 +27,23 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
 
     public CreateSupervisorScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
-        this.setSize(1024, 768);
+        this.dataBase = mainFrame.userDataBase;
+        this.setSize(650, 768);
+        this.setLocation(300,0);
         this.setLayout(null);
-        nameField.setLocation(402, 150);
+        nameField.setLocation(202, 150);
         nameField.setSize(200, 30);
         nameField.setPlaceholder("Nombre");
-        userName.setLocation(402, 200);
+        userName.setLocation(202, 200);
         userName.setSize(200, 30);
         userName.setPlaceholder("Usuario");
-        passWord.setLocation(402, 250);
+        passWord.setLocation(202, 250);
         passWord.setSize(200, 30);
         passWord.setPlaceholder("Contraseña");
-        confirmPassWord.setLocation(402, 300);
+        confirmPassWord.setLocation(202, 300);
         confirmPassWord.setSize(200, 30);
         confirmPassWord.setPlaceholder("Confirmar Contraseña");
-        confirmButton.setLocation(442, 400);
+        confirmButton.setLocation(242, 400);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
 
@@ -72,7 +73,7 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
 
                     if (passWord.getText().equals(confirmPassWord.getText())) {
                         finalPassword = passWord.getText();
-                        newUser = new User(3, nameField.getText(), userName.getText().trim(), finalPassword);
+                        newUser = new User(1, nameField.getText(), userName.getText().trim(), finalPassword);
                         dataBase.add(newUser);
                         
                         System.out.println("Nombre: "+ newUser.getName()+ " || " + "Usuario: " + newUser.getNickName() + " || " + "Contraseña: " + newUser.getPassword());
