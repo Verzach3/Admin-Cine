@@ -101,9 +101,10 @@ public class LoginScreen extends JPanel implements MouseListener {
                     case 1:
                         break;
                     case 2:
+                        mainFrame.panelChanger(5);
                         break;
                     case 3:
-                        mainFrame.panelChanger(5);
+                        mainFrame.panelChanger(6);
                         break;
                     }
                 }
