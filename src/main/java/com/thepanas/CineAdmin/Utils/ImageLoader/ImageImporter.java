@@ -8,8 +8,6 @@ import java.nio.channels.FileChannel;
 
 public class ImageImporter {
 
-    ImageIcon image;
-    String fileName;
     String filePath;
     String finalImagePath;
     File directory = new File("images");
@@ -28,7 +26,7 @@ public class ImageImporter {
         }
     }
 
-    public void getImage(){
+    public ImageIcon getImage(){
         String ext[] = {"gif", "jpg", "jpeg", "png"};
         filePath = "";
         JFileChooser fc = new JFileChooser(new File("."));
@@ -47,16 +45,15 @@ public class ImageImporter {
                 FileOutputStream fos = new FileOutputStream("images/" + finalImagePath);
                 FileChannel outChannel = fos.getChannel();
 
+                inChannel.transferTo(0,inChannel.size(), outChannel);
+                fis.close();
+                fos.close();
 
+                return new ImageIcon(finalImagePath);
             } catch (Exception i){
                 System.out.println(i);
             }
-        }else {
         }
-
-
-
-
-
+        return null;
     }
 }

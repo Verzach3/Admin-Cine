@@ -33,7 +33,7 @@ public class ImageMethods extends JPanel {
         setBackground(Color.WHITE);
         setBorder(new LineBorder(Color.BLACK));
         setLayout(null);
-        
+
         img = null;
         acepto = false;
         nomArchivo = nomArchivoCopiado = "";
