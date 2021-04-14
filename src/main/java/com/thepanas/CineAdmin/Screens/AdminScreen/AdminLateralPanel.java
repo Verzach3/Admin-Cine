@@ -1,7 +1,8 @@
 package com.thepanas.CineAdmin.Screens.AdminScreen;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.CineAdmin.Screens.AdminScreen.LateralPanelScreens.CreateSupervisorScreen;
+import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateMovie;
+import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateSupervisorScreen;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import javax.swing.*;
@@ -18,11 +19,12 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     Main mainFrame;
     TButton logoutButton = new TButton();
     TButton createSupervisorButton = new TButton();
-    TButton createBillBoardButton = new TButton();
-    TButton createShow = new TButton();
+    TButton registerMovieButton = new TButton();
+    TButton createMovieFunctionButton = new TButton();
 
     //Paneles hijos
     CreateSupervisorScreen createSupervisorScreen;
+    CreateMovie createMovie;
 
     public AdminLateralPanel(Main mainFrame) {
         /*
@@ -31,6 +33,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
          */
         this.mainFrame = mainFrame;
         createSupervisorScreen = new CreateSupervisorScreen(mainFrame);
+        createMovie = new CreateMovie(mainFrame);
         this.setSize(1024, 768);
         this.setLayout(null);
 
@@ -43,13 +46,13 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createSupervisorButton.setSize(120, 45);
         createSupervisorButton.setText("Crear Supervisores");
 
-        createBillBoardButton.setLocation(73, 201);
-        createBillBoardButton.setSize(113, 48);
-        createBillBoardButton.setText("Registrar película");
+        registerMovieButton.setLocation(73, 201);
+        registerMovieButton.setSize(113, 48);
+        registerMovieButton.setText("Registrar película");
 
-        createShow.setLocation(73, 331);
-        createShow.setSize(113, 48);
-        createShow.setText("Crear función");
+        createMovieFunctionButton.setLocation(73, 331);
+        createMovieFunctionButton.setSize(113, 48);
+        createMovieFunctionButton.setText("Crear función");
 
         this.addMouseListener(this);
 
@@ -78,8 +81,8 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         g2D.fillRect(0, 0, 258, this.getHeight());
         logoutButton.paintComponent(g2D);
         createSupervisorButton.paintComponent(g2D);
-        createBillBoardButton.paintComponent(g2D);
-        createShow.paintComponent(g2D);
+        registerMovieButton.paintComponent(g2D);
+        createMovieFunctionButton.paintComponent(g2D);
         // Remover
 
     }
@@ -108,16 +111,19 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             
             this.add(createSupervisorScreen);
         }
-        createBillBoardButton.evenListener(e);
+
+        if(registerMovieButton.evenListener(e)){
+            this.add(createMovie);
+        }
 
         repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        logoutButton.evenListener(e);
-        createSupervisorButton.evenListener(e);
-        createBillBoardButton.evenListener(e);
+        logoutButton.onRelease();
+        createSupervisorButton.onRelease();
+        registerMovieButton.onRelease();
 
         repaint();
     }

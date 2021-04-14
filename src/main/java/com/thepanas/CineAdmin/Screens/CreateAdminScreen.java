@@ -96,7 +96,6 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
         this.repaint();
     }
 

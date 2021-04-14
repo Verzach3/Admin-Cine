@@ -1,4 +1,4 @@
-package com.thepanas.CineAdmin.Screens.AdminScreen.LateralPanelScreens;
+package com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
@@ -14,7 +14,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")
-public class CreateSupervisorScreen extends JPanel implements MouseListener {
+public class CreateMovie extends JPanel implements MouseListener {
 
     Main mainFrame;
     ArrayList<User> dataBase;
@@ -25,7 +25,7 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
     TInputBox confirmPassWord = new TInputBox();
     TLabel welcomeLabel = new TLabel();
 
-    public CreateSupervisorScreen(Main mainFrame) {
+    public CreateMovie(Main mainFrame) {
         this.mainFrame = mainFrame;
         this.dataBase = mainFrame.userDataBase;
         this.setSize(650, 768);
@@ -74,15 +74,19 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
                     if (passWord.getText().equals(confirmPassWord.getText())) {
                         finalPassword = passWord.getText();
                         newUser = new User(1, nameField.getText(), userName.getText().trim(), finalPassword);
-                        dataBase.add(newUser);
                         
                         System.out.println("Nombre: "+ newUser.getName()+ " || " + "Usuario: " + newUser.getNickName() + " || " + "Contraseña: " + newUser.getPassword());
         
                         /*
                          * Avisa de la creacion correcta
                          */
-                        MakeDialog.makeInfoDialog("Usuario Creado Correctamente","");
-                        mainFrame.panelChanger(2);
+                        mainFrame.userDataBase.add(newUser);
+                        MakeDialog.makeInfoDialog("Supervisor Creado Correctamente","");
+                        nameField.setText("");
+                        userName.setText("");
+                        passWord.setText("");
+                        confirmPassWord.setText("");
+
                     } else {
                         MakeDialog.makeErrorDialog("La contraseña no es igual", "Error");
                     }
@@ -131,6 +135,8 @@ public class CreateSupervisorScreen extends JPanel implements MouseListener {
     @Override
     public void mouseReleased(MouseEvent e) {
         confirmButton.onRelease();
+        
+
 
         this.repaint();
     }
