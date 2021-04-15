@@ -6,6 +6,7 @@ import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 
 @SuppressWarnings("serial")
 public class ClientLateralPanel extends JPanel implements MouseInputListener {
@@ -17,8 +18,11 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
     TButton modifyData = new TButton();
     boolean affiliated;
 
-    public ClientLateralPanel(Main mainFrame, boolean affiliated) {
+   //Paneles hijo
+    ClientPanel clientPanel;
 
+    public ClientLateralPanel(Main mainFrame, boolean affiliated) {
+        clientPanel = new ClientPanel(mainFrame);
         this.affiliated = affiliated;
         this.mainFrame = mainFrame;
 
@@ -26,20 +30,20 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         this.setLayout(null);
 
         /// Componentes///
-        bookTickets.setLocation(73, 100);
-        bookTickets.setSize(125, 45);
+        bookTickets.setLocation(50, 100);
+        bookTickets.setSize(150, 45);
         bookTickets.setText("Reservar tiquetes");
 
-        buyTickets.setLocation(73, 200);
-        buyTickets.setSize(125, 45);
+        buyTickets.setLocation(50, 200);
+        buyTickets.setSize(150, 45);
         buyTickets.setText("Comprar tiquetes");
 
-        movieConsultation.setLocation(73, 300);
+        movieConsultation.setLocation(50, 300);
         movieConsultation.setSize(150, 48);
         movieConsultation.setText("Consulta de peliculas");
 
-        modifyData.setLocation(73, 400);
-        modifyData.setSize(115, 48);
+        modifyData.setLocation(50, 400);
+        modifyData.setSize(150, 48);
         modifyData.setText("Modificar datos");
 
     }
@@ -48,6 +52,7 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
+        g2D.fillRect(0,0,258,this.getHeight());
         bookTickets.paintComponent(g2D);
         buyTickets.paintComponent(g2D);
         movieConsultation.paintComponent(g2D);
@@ -68,17 +73,25 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         repaint();
     }
 
+
+
     @Override
     public void mousePressed(MouseEvent e) {
+
        bookTickets.evenListener(e);
        buyTickets.evenListener(e);
        movieConsultation.evenListener(e);
-       modifyData.evenListener(e);
+
+        if(modifyData.evenListener(e)){
+            this.add(clientPanel);
+        }
+
+        repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-       
+        modifyData.onRelease();
 
         repaint();
     }
