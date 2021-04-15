@@ -5,7 +5,9 @@ import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
+import com.thepanas.CineAdmin.Types.Movie;
 import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Types.MovieFunction;
 
 
 import javax.swing.JFrame;
@@ -18,6 +20,8 @@ public class Main extends JFrame {
 
     //Database donde se van a guardar los usuarios
     public ArrayList<User> userDataBase = new ArrayList<>();
+    public ArrayList<Movie> movieDataBase = new ArrayList<>();
+    public ArrayList<MovieFunction> functionsDataBase = new ArrayList<>();
     public User currentUser;
     static Main mainFrame = new Main();
 

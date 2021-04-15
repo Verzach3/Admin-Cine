@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin.Screens;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Utils.ResourseLoader;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -63,6 +64,8 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
         confirmButton.paintComponent(g2D);
         backButton.paintComponent(g2D);
         titleLabel.paintComponent(g2D);
+
+
 
     }
 

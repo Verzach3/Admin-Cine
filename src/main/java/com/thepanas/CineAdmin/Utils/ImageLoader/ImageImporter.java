@@ -13,7 +13,7 @@ public class ImageImporter {
     File directory = new File("images");
 
 
-    ImageImporter(){
+    public ImageImporter(){
 
     }
 
