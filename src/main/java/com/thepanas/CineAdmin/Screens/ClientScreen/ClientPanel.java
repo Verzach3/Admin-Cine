@@ -1,6 +1,8 @@
 package com.thepanas.CineAdmin.Screens.ClientScreen;
 
 import com.thepanas.CineAdmin.Main;
+import com.thepanas.CineAdmin.Types.User;
+import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import com.thepanas.GUILib.TInputBox;
 import com.thepanas.GUILib.TLabel;
@@ -9,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 
 @SuppressWarnings("serial")
@@ -17,6 +20,7 @@ public class ClientPanel extends JPanel implements MouseListener{
     Main mainFrame;
 
     //Botones
+    ArrayList<User>dataBase;
     TInputBox modifyName = new TInputBox();
     TInputBox modifyPassword = new TInputBox();
     TInputBox confirmPassword = new TInputBox();
@@ -28,45 +32,57 @@ public class ClientPanel extends JPanel implements MouseListener{
     public ClientPanel(Main mainFrame){
 
         this.mainFrame = mainFrame;
-
-
-
+        this.dataBase = mainFrame.userDataBase;
         this.setSize(1024,768);
-        this.setBackground(Color.darkGray);
+        this.setLocation(300,0);
+        this.setBackground(Color.cyan);
         this.setLayout(null);
 
         //componentes
 
             //InPuts
-
             modifyName.setSize(200,30);
             modifyName.setPlaceholder("Modificar Nombre");
-            modifyName.setLocation(400,150);
+            modifyName.setLocation(250,150);
 
             modifyUser.setSize(200,30);
             modifyUser.setPlaceholder("Modificar usuario");
-            modifyUser.setLocation(400,250);
+            modifyUser.setLocation(250,250);
 
             modifyPassword.setSize(200,30);
             modifyPassword.setPlaceholder("Modificar Contraseña");
-            modifyPassword.setLocation(400,350);
+            modifyPassword.setLocation(250,350);
 
             confirmPassword.setSize(200,30);
             confirmPassword.setPlaceholder("Confirmar Contraseña");
-            confirmPassword.setLocation(400,450);
+            confirmPassword.setLocation(250,450);
 
             confirm.setSize(200,30);
             confirm.setText("CONFIRMAR");
-            confirm.setLocation(400,550);
+            confirm.setLocation(250,550);
             confirm.setSize(15);
 
 
         //Titulo
             title.setText("Modificar Datos");
-            title.setLocation(350,50);
+            title.setLocation(190,50);
             title.setSize(45);
 
         this.addMouseListener(this);
+    }
+    
+    // ------> Probablemente este malo xd
+    public void modificarDatos(){
+        for(int x =0;x < dataBase.size();x++){
+            dataBase.get(x).setNickName(modifyUser.getText()); //--->Modifico nombre
+            if(modifyPassword.equals(confirmPassword)){
+                dataBase.get(x).setPassword(modifyPassword.getText()); // -----> Modificar contraseña
+            }
+            dataBase.get(x).setName(modifyName.getText()); // ---> Modificar el nombre de usuario
+
+        }
+        System.out.println("Nombre: "+modifyName.getText()+"||"+"Usuario: "+modifyUser.getText()+"||"+"Contraseña: "+modifyPassword.getText());
+        System.out.println("Cuenta Modificada Exitosamente");
     }
 
     public void paint(Graphics g){
@@ -103,13 +119,20 @@ public class ClientPanel extends JPanel implements MouseListener{
         modifyUser.evenListener(e);
         modifyPassword.evenListener(e);
         confirmPassword.evenListener(e);
-        confirm.evenListener(e);
+
+        if(confirm.evenListener(e)){
+            try {
+                modificarDatos();
+            }catch (Exception f){
+                System.out.println(f);
+            }
+        }
         this.repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        confirm.onRelease();
         this.repaint();
     }
 

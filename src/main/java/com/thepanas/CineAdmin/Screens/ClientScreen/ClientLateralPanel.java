@@ -12,6 +12,7 @@ import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 public class ClientLateralPanel extends JPanel implements MouseInputListener {
 
     Main mainFrame;
+    TButton logoutButton = new TButton();
     TButton bookTickets = new TButton();
     TButton buyTickets = new TButton();
     TButton movieConsultation = new TButton();
@@ -26,10 +27,14 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         this.affiliated = affiliated;
         this.mainFrame = mainFrame;
 
-        this.setSize(258, 768);
+        this.setSize(1024, 768);
         this.setLayout(null);
 
         /// Componentes///
+        logoutButton.setLocation(50,500);
+        logoutButton.setSize(150,45);
+        logoutButton.setText("Cerrar Sesion");
+
         bookTickets.setLocation(50, 100);
         bookTickets.setSize(150, 45);
         bookTickets.setText("Reservar tiquetes");
@@ -46,17 +51,19 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         modifyData.setSize(150, 48);
         modifyData.setText("Modificar datos");
 
+        this.addMouseListener(this);
     }
 
 
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        g2D.fillRect(0,0,258,this.getHeight());
+        g2D.fillRect(0,0,300,this.getHeight());
         bookTickets.paintComponent(g2D);
         buyTickets.paintComponent(g2D);
         movieConsultation.paintComponent(g2D);
         modifyData.paintComponent(g2D);
+        logoutButton.paintComponent(g2D);
 
     }
 
@@ -86,12 +93,18 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
             this.add(clientPanel);
         }
 
+        if(logoutButton.evenListener(e)){
+            mainFrame.currentUser = null;
+            mainFrame.panelChanger(2);
+        }
+
         repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
         modifyData.onRelease();
+        logoutButton.onRelease();
 
         repaint();
     }

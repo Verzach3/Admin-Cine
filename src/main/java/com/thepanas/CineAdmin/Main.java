@@ -54,7 +54,6 @@ public class Main extends JFrame {
         //Impide expandir la ventana
         this.setResizable(false);
 
-
     }
 
     public void panelChanger(int panelNumber){
