@@ -97,7 +97,7 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         //Se pone visible el frame
 
-        mainFrame.panelChanger(1);
+        mainFrame.panelChanger(0);
 
 
         mainFrame.setVisible(true);

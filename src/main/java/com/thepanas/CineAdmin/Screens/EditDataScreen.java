@@ -24,6 +24,7 @@ public class EditDataScreen extends JPanel implements MouseListener {
     TInputBox passWord = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
     TLabel titleLabel = new TLabel();
+    Boolean isFirstPaint = true;
 
     public EditDataScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
@@ -33,22 +34,22 @@ public class EditDataScreen extends JPanel implements MouseListener {
         this.setLayout(null);
         nameField.setLocation(202, 150);
         nameField.setSize(200, 30);
-        nameField.setPlaceholder("Nombre");
+        nameField.setPlaceholder("Nuevo Nombre");
         userName.setLocation(202, 200);
         userName.setSize(200, 30);
-        userName.setPlaceholder("Usuario");
+        userName.setPlaceholder("Nuevo Usuario");
         passWord.setLocation(202, 250);
         passWord.setSize(200, 30);
-        passWord.setPlaceholder("Contraseña");
+        passWord.setPlaceholder("Nueva Contraseña");
         confirmPassWord.setLocation(202, 300);
         confirmPassWord.setSize(200, 30);
         confirmPassWord.setPlaceholder("Confirmar Contraseña");
         confirmButton.setLocation(242, 400);
         confirmButton.setSize(110, 40);
-        confirmButton.setText("Crear Usuario");
+        confirmButton.setText("Editar");
         titleLabel.setLocation(160, 80);
         titleLabel.setSize(30);
-        titleLabel.setText("CREAR SUPERVISOR");
+        titleLabel.setText("EDITAR DATOS");
 
             this.addMouseListener(this);
     }
@@ -65,48 +66,52 @@ public class EditDataScreen extends JPanel implements MouseListener {
         confirmButton.paintComponent(g2D);
         titleLabel.paintComponent(g2D);
 
-    }
-
-    public void createSupervisor() {
-        User newUser;
-        String finalPassword;
-
-        for (User user : dataBase) {
-            if (!user.getNickName().equals(userName.getText().trim())) {
-                if (!nameField.getText().equals("") || !userName.getText().equals("") || !passWord.getText().equals("") || !confirmPassWord.getText().equals("")) {
-
-                    if (passWord.getText().equals(confirmPassWord.getText())) {
-                        finalPassword = passWord.getText();
-                        newUser = new User(1, nameField.getText(), userName.getText().trim(), finalPassword);
-                        
-                        System.out.println("Nombre: "+ newUser.getName()+ " || " + "Usuario: " + newUser.getNickName() + " || " + "Contraseña: " + newUser.getPassword());
-        
-                        /*
-                         * Avisa de la creacion correcta
-                         */
-                        mainFrame.userDataBase.add(newUser);
-                        MakeDialog.makeInfoDialog("Supervisor Creado Correctamente","");
-                        nameField.setText("");
-                        userName.setText("");
-                        passWord.setText("");
-                        confirmPassWord.setText("");
-
-                    } else {
-                        MakeDialog.makeErrorDialog("La contraseña no es igual", "Error");
-                    }
-                }else{
-                    MakeDialog.makeErrorDialog("Uno o mas campos vacios", "Error");
-                }
-                break;
-            } if (user.getNickName().equals(userName.getText().trim())){
-                MakeDialog.makeErrorDialog("Usuario ya en uso", "Error");
-                break;
-            }
-
-            System.out.println(user.getNickName() + "||" + userName.getText());
+        if (isFirstPaint){
+            nameField.setText(mainFrame.currentUser.getName());
+            userName.setText(mainFrame.currentUser.getNickName());
+            isFirstPaint = false;
         }
 
+    }
 
+    public boolean checkUser(){
+
+        for (User user : mainFrame.userDataBase){
+            if (mainFrame.currentUser.getNickName().equals(userName.getText())){
+                return true;
+            }
+
+            return !user.getNickName().equals(userName.getText());
+        }
+        return false;
+    }
+
+    public void editUser() {
+        for (User user: mainFrame.userDataBase){
+
+            if (!nameField.getText().equals("") && !userName.getText().equals("") && passWord.getText().equals(confirmPassWord.getText())){
+            if (checkUser()){
+                if (user == mainFrame.currentUser){
+                user.setName(nameField.getText());
+                nameField.setText("");
+                user.setNickName(userName.getText().trim());
+                userName.setText("");
+                user.setPassword(passWord.getText());
+                passWord.setText("");
+                confirmPassWord.setText("");
+                System.out.println();
+                MakeDialog.makeInfoDialog("Todo listo!, por favor vuelva a iniciar sesión", "Todo listo");
+                System.out.println("Logout");
+                mainFrame.currentUser = null;
+                isFirstPaint = true;
+                mainFrame.panelChanger(2);
+
+            }
+            }
+            }else {
+                MakeDialog.makeErrorDialog("Uno o mas campos vacios, o las contraseñas no coinciden", "Error");
+            }
+        }
     }
 
 
@@ -126,7 +131,7 @@ public class EditDataScreen extends JPanel implements MouseListener {
 
         if (confirmButton.evenListener(e)) {
             try {
-                createSupervisor();
+                editUser();
             } catch (Exception f) {
                 System.out.println(f);
             }

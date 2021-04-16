@@ -3,6 +3,7 @@ package com.thepanas.CineAdmin.Screens.AdminScreen;
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateMovie;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateSupervisorScreen;
+import com.thepanas.CineAdmin.Screens.EditDataScreen;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import javax.swing.*;
@@ -26,6 +27,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     //Paneles hijos
     CreateSupervisorScreen createSupervisorScreen;
     CreateMovie createMovie;
+    EditDataScreen editDataScreen;
 
     public AdminLateralPanel(Main mainFrame) {
         /*
@@ -35,6 +37,8 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         this.mainFrame = mainFrame;
         createSupervisorScreen = new CreateSupervisorScreen(mainFrame);
         createMovie = new CreateMovie(mainFrame);
+        editDataScreen = new EditDataScreen(mainFrame);
+
         this.setSize(1024, 768);
         this.setLayout(null);
 
