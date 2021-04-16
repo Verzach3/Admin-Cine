@@ -24,7 +24,7 @@ public class RegisterScreen extends JPanel implements MouseListener {
     TInputBox userName = new TInputBox();
     TInputBox passWord = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
-    TLabel welcomeLabel = new TLabel();
+    TLabel titleeLabel = new TLabel();
 
     public RegisterScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
@@ -34,15 +34,19 @@ public class RegisterScreen extends JPanel implements MouseListener {
         nameField.setLocation(402, 150);
         nameField.setSize(200, 30);
         nameField.setPlaceholder("Nombre");
+
         userName.setLocation(402, 200);
         userName.setSize(200, 30);
         userName.setPlaceholder("Usuario");
+
         passWord.setLocation(402, 250);
         passWord.setSize(200, 30);
         passWord.setPlaceholder("Contraseña");
+
         confirmPassWord.setLocation(402, 300);
         confirmPassWord.setSize(200, 30);
         confirmPassWord.setPlaceholder("Confirmar Contraseña");
+
         confirmButton.setLocation(442, 400);
         confirmButton.setSize(110, 40);
         confirmButton.setText("Crear Usuario");
@@ -50,6 +54,10 @@ public class RegisterScreen extends JPanel implements MouseListener {
         backButton.setLocation(30, 625);
         backButton.setSize(40, 40);
         backButton.setText("<");
+
+        titleeLabel.setLocation(420, 80);
+        titleeLabel.setSize(30);
+        titleeLabel.setText("Registrarse");
 
         this.addMouseListener(this);
     }
@@ -65,7 +73,7 @@ public class RegisterScreen extends JPanel implements MouseListener {
         confirmPassWord.paintComponent(g2D);
         confirmButton.paintComponent(g2D);
         backButton.paintComponent(g2D);
-
+        titleeLabel.paintComponent(g2D);
     }
 
     public void createAdmin() {
