@@ -25,7 +25,7 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
 
    public FirstOpenScreen(Main mainFrame) {
         this.mainFrame = mainFrame;
-        mainFrame.setTitle("Crea el usuario");
+        mainFrame.setTitle("Cinema Films");
         // Tamaño del panel
         this.setSize(1024, 768);
         // Layout manager del panel

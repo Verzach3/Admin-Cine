@@ -26,7 +26,12 @@ public class UIDesigner extends JFrame implements MouseInputListener {
         this.setLayout(null);
         this.setLocationRelativeTo(null);
 
+<<<<<<< HEAD
 
+=======
+        plusRound.setSize(5
+        );
+>>>>>>> main
 
 
         this.setVisible(true);

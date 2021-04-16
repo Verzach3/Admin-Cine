@@ -48,11 +48,11 @@ public class LoginScreen extends JPanel implements MouseListener {
 
         loginButton.setSize(132, 45);
         loginButton.setLocation(446, 420);
-        loginButton.setText("             Login");
+        loginButton.setText("         Login");
 
         registerButton.setSize(132, 45);
         registerButton.setLocation(446, 505);
-        registerButton.setText("            Register");
+        registerButton.setText("        Register");
 
         this.addMouseListener(this);
 

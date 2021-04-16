@@ -22,7 +22,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton registerMovieButton = new TButton();
     TButton createMovieFunctionButton = new TButton();
     TButton createAffiliateButton = new TButton();
-
+    TButton createAdmin = new TButton();
     //Paneles hijos
     CreateSupervisorScreen createSupervisorScreen;
     CreateMovie createMovie;
@@ -39,23 +39,27 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         this.setLayout(null);
 
         /// Componentes///
-        logoutButton.setLocation(83, 500);
+        logoutButton.setLocation(90, 600);
         logoutButton.setSize(100, 45);
         logoutButton.setText("Cerrar Sesion");
 
-        createSupervisorButton.setLocation(73, 71);
+        createSupervisorButton.setLocation(73, 170);
         createSupervisorButton.setSize(140, 48);
-        createSupervisorButton.setText("Crear Supervisores");
+        createSupervisorButton.setText("Crear Superviso");
 
-        createAffiliateButton.setLocation(73, 170);
+        createAdmin.setLocation(73, 70);
+        createAdmin.setSize(139, 48);
+        createAdmin.setText("Crear Admin");
+
+        createAffiliateButton.setLocation(73, 270);
         createAffiliateButton.setSize(140, 48);
         createAffiliateButton.setText("Crear Afiliado");
 
-        registerMovieButton.setLocation(73, 270);
+        registerMovieButton.setLocation(73, 370);
         registerMovieButton.setSize(140, 48);
         registerMovieButton.setText("Registrar película");
 
-        createMovieFunctionButton.setLocation(73, 370);
+        createMovieFunctionButton.setLocation(73, 470);
         createMovieFunctionButton.setSize(140, 48);
         createMovieFunctionButton.setText("Crear función");
 
@@ -89,6 +93,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         registerMovieButton.paintComponent(g2D);
         createMovieFunctionButton.paintComponent(g2D);
         createAffiliateButton.paintComponent(g2D);
+        createAdmin.paintComponent(g2D);
         // Remover
 
     }
