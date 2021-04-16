@@ -44,5 +44,10 @@ public class TComponent {
     public void setSize(int SIZE) {
         this.size = SIZE;
     }
+
+    public void setSize(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
 }
 

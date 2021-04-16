@@ -22,8 +22,6 @@ public class ResourseLoader {
         System.out.println(resourceFolder.getAbsolutePath());
         System.out.println(image.getDescription());
         return image.getImage();
-
-
     }
 
 }

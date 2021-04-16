@@ -35,6 +35,7 @@ public class Main extends JFrame {
     ClientLateralPanel affiliatedClientLateralPanel = new ClientLateralPanel(this, true);
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
     ClientPanel clientPanel = new ClientPanel(this);
+    MovieExplorer movieExplorer = new MovieExplorer(this);
 
 ///////////////////
 
@@ -83,6 +84,9 @@ public class Main extends JFrame {
                 break;
             case 7:
                 mainFrame.add(clientPanel);
+                break;
+            case 8:
+                mainFrame.add(movieExplorer);
                 break;
                 
 
