@@ -21,35 +21,41 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
     TButton modifyDate = new TButton();
     TButton createShow = new TButton();
 
+    //----------------> Paneles Hijo
+    CrearAfiliado crearAfiliado;
+
     public SupervisorLateralPanel(Main mainFrame) {
+        crearAfiliado = new CrearAfiliado(mainFrame);
         /*
          * Se le da valor al objeto panel changer con el frame principal dado en el
          * momento de la definicion del objeto en el main
          */
         this.mainFrame = mainFrame;
 
-        this.setSize(258, 768);
+        this.setSize(1024, 768);
         this.setLayout(null);
 
         /// Componentes///
-        logoutButton.setLocation(83, 500);
-        logoutButton.setSize(113, 45);
-        logoutButton.setText("Cerrar Sesion");
 
-        createUserButton.setLocation(83, 71);
-        createUserButton.setSize(113, 45);
+
+        createUserButton.setLocation(70, 100);
+        createUserButton.setSize(120, 45);
         createUserButton.setText("Crear Usuarios");
 
-        createBillBoardButton.setLocation(83, 201);
-        createBillBoardButton.setSize(113, 48);
+        createBillBoardButton.setLocation(70, 200);
+        createBillBoardButton.setSize(120, 48);
         createBillBoardButton.setText("Registrar película");
 
-        createShow.setLocation(83, 331);
-        createShow.setSize(113, 48);
+        createShow.setLocation(70, 300);
+        createShow.setSize(120, 48);
         createShow.setText("Crear función");
 
+        logoutButton.setLocation(70, 400);
+        logoutButton.setSize(120, 45);
+        logoutButton.setText("Cerrar Sesion");
 
 
+        this.addMouseListener(this);
         // Leave here
     }
 
@@ -69,7 +75,7 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
         }
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        g2D.fillRect(0, 0, this.getWidth(), this.getHeight());
+        g2D.fillRect(0, 0, 300, this.getHeight());
         logoutButton.paintComponent(g2D);
         createUserButton.paintComponent(g2D);
         createBillBoardButton.paintComponent(g2D);
@@ -98,7 +104,10 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
             mainFrame.currentUser = null;
             mainFrame.panelChanger(2);
         }
-        createUserButton.evenListener(e);
+        if(createUserButton.evenListener(e)){
+            this.add(crearAfiliado);
+        }
+        createShow.evenListener(e);
         createBillBoardButton.evenListener(e);
 
         repaint();
@@ -106,10 +115,11 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        logoutButton.evenListener(e);
-        createUserButton.evenListener(e);
-        createBillBoardButton.evenListener(e);
-
+        logoutButton.onRelease();
+        createUserButton.onRelease();
+        createBillBoardButton.onRelease();
+        createShow.onRelease();
+        logoutButton.onRelease();
         repaint();
     }
 

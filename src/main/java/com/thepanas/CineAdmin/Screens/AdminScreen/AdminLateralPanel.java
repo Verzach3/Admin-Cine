@@ -4,6 +4,7 @@ import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateMovie;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateSupervisorScreen;
 import com.thepanas.CineAdmin.Screens.EditDataScreen;
+import com.thepanas.CineAdmin.Screens.SupervisorScreen.CrearAfiliado;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
 import com.thepanas.GUILib.TButton;
 import javax.swing.*;
@@ -26,6 +27,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton createAdmin = new TButton();
     //Paneles hijos
     CreateSupervisorScreen createSupervisorScreen;
+    CrearAfiliado crearAfiliado;
     CreateMovie createMovie;
     EditDataScreen editDataScreen;
 
@@ -36,6 +38,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
          */
         this.mainFrame = mainFrame;
         createSupervisorScreen = new CreateSupervisorScreen(mainFrame);
+        crearAfiliado = new CrearAfiliado(mainFrame);
         createMovie = new CreateMovie(mainFrame);
         editDataScreen = new EditDataScreen(mainFrame);
 
@@ -131,6 +134,10 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createMovie);
         }
 
+        if(createAffiliateButton.evenListener(e)){
+            this.add(crearAfiliado);
+        }
+
         repaint();
     }
 
@@ -139,7 +146,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         logoutButton.onRelease();
         createSupervisorButton.onRelease();
         registerMovieButton.onRelease();
-
+        createAffiliateButton.onRelease();
         repaint();
     }
 
