@@ -6,9 +6,10 @@ public class MovieCard extends TComponent{
 
    int round = 5;
 
-   MovieCard(){
+  /* MovieCard(){
        this.
    }
+   */
 
    public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;

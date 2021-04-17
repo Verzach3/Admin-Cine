@@ -18,6 +18,7 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
     TButton logoutButton = new TButton();
     TButton createUserButton = new TButton();
     TButton createBillBoardButton = new TButton();
+    TButton modifyDate = new TButton();
     TButton createShow = new TButton();
 
     public SupervisorLateralPanel(Main mainFrame) {
@@ -32,20 +33,22 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
 
         /// Componentes///
         logoutButton.setLocation(83, 500);
-        logoutButton.setSize(97, 45);
+        logoutButton.setSize(113, 45);
         logoutButton.setText("Cerrar Sesion");
 
-        createUserButton.setLocation(73, 71);
+        createUserButton.setLocation(83, 71);
         createUserButton.setSize(113, 45);
         createUserButton.setText("Crear Usuarios");
 
-        createBillBoardButton.setLocation(73, 201);
+        createBillBoardButton.setLocation(83, 201);
         createBillBoardButton.setSize(113, 48);
         createBillBoardButton.setText("Registrar película");
 
-        createShow.setLocation(73, 331);
+        createShow.setLocation(83, 331);
         createShow.setSize(113, 48);
         createShow.setText("Crear función");
+
+
 
         // Leave here
     }
@@ -59,8 +62,8 @@ public class SupervisorLateralPanel extends JPanel implements MouseInputListener
             MakeDialog.makeErrorDialog("La Sesion Expiró", "Error");
             mainFrame.panelChanger(2);
         }
-        // Detecta si el usuario actual tiene permisos de administrador
-        if (mainFrame.currentUser != null && mainFrame.currentUser.getAccessLevel() != 0) {
+        // Detecta si el usuario actual tiene permisos de Supervisor
+        if (mainFrame.currentUser != null && mainFrame.currentUser.getAccessLevel() != 1) {
             MakeDialog.makeErrorDialog("Usuario no autorizado", "Error de autorizacion");
             mainFrame.panelChanger(2);
         }

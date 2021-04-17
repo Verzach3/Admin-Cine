@@ -60,11 +60,13 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
         // Dibujo de los componentes
         continueButton.paintComponent(g2D);
         welcomeText.paintComponent(g2D);
-
+        /*
         ResourseLoader rL = new ResourseLoader();
         rL.init();
         Image a = rL.loadImage("mk.jpg");
         g2D.drawImage(a, 50,50 , this);
+
+         */
 
 
 

@@ -34,6 +34,7 @@ public class ClientPanel extends JPanel implements MouseListener{
         this.mainFrame = mainFrame;
         this.dataBase = mainFrame.userDataBase;
         this.setSize(1024,768);
+
         this.setLocation(300,0);
         this.setBackground(Color.cyan);
         this.setLayout(null);
@@ -73,14 +74,7 @@ public class ClientPanel extends JPanel implements MouseListener{
     
     // ------> Probablemente este malo xd
     public void modificarDatos(){
-        for(int x =0;x < dataBase.size();x++){
-            dataBase.get(x).setNickName(modifyUser.getText()); //--->Modifico nombre
-            if(modifyPassword.equals(confirmPassword)){
-                dataBase.get(x).setPassword(modifyPassword.getText()); // -----> Modificar contraseña
-            }
-            dataBase.get(x).setName(modifyName.getText()); // ---> Modificar el nombre de usuario
 
-        }
         System.out.println("Nombre: "+modifyName.getText()+"||"+"Usuario: "+modifyUser.getText()+"||"+"Contraseña: "+modifyPassword.getText());
         System.out.println("Cuenta Modificada Exitosamente");
     }

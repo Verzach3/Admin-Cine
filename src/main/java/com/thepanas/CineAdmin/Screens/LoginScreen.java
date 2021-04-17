@@ -106,6 +106,7 @@ public class LoginScreen extends JPanel implements MouseListener {
                         mainFrame.panelChanger(3);
                         break;
                     case 1:
+                        mainFrame.panelChanger(9);
                         break;
                     case 2:
                         mainFrame.panelChanger(5);
@@ -113,6 +114,7 @@ public class LoginScreen extends JPanel implements MouseListener {
                     case 3:
                         mainFrame.panelChanger(6);
                         break;
+
                     }
                 }
             }
