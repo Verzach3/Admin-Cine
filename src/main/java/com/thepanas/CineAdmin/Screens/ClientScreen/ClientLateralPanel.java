@@ -51,9 +51,18 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         modifyData.setText("Modificar datos");
 
         this.addMouseListener(this);
+
+
+        this.addMouseListener(this);
+
+
         logoutButton.setLocation(50, 600);
         logoutButton.setSize(100, 48);
         logoutButton.setText("Cerrar Sesion");
+
+
+
+
 
 
     }
@@ -62,11 +71,20 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
+
+
+
+        g2D.fillRect(0,0,300,this.getHeight());
+
         g2D.fillRect(0,0,258,this.getHeight());
 
         if(mainFrame.currentUser.getAccessLevel() == 2){
             bookTickets.setLocation(-100,-100);
         }
+
+
+
+
         bookTickets.paintComponent(g2D);
         buyTickets.paintComponent(g2D);
         movieConsultation.paintComponent(g2D);
