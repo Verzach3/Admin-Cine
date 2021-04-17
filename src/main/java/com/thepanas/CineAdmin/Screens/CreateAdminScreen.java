@@ -83,7 +83,7 @@ public class CreateAdminScreen extends JPanel implements MouseListener {
                  * Imprimir el admin recien creado
                  */
                 System.out.println("Nombre: "+ newAdmin.getName()+ " || " + "Usuario: " + newAdmin.getNickName() + " || " + "Contraseña: " + newAdmin.getPassword());
-                MakeDialog.makeInfoDialog("La Creacion del Administrador ha sido exitosa"," ");
+                //MakeDialog.makeInfoDialog("La Creacion del Administrador ha sido exitosa"," ");
                 /*
                  * Avisa de la creacion correcta
                  */

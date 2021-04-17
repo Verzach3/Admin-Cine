@@ -128,20 +128,31 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             mainFrame.panelChanger(2);
         }
         if (createSupervisorButton.evenListener(e)) {
-            
-            this.add(createSupervisorScreen);
+            this.add(createSupervisorScreen).setVisible(true);
+            this.add(createMovie).setVisible(true);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createAdminScreen).setVisible(true);
         }
 
         if(registerMovieButton.evenListener(e)){
-            this.add(createMovie);
+            this.add(createMovie).setVisible(true);
+            this.add(createSupervisorScreen).setVisible(true);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createAdminScreen).setVisible(true);
         }
 
         if(createAffiliateButton.evenListener(e)){
-            this.add(crearAfiliado);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createMovie).setVisible(true);
+            this.add(createSupervisorScreen).setVisible(true);
+            this.add(createAdminScreen).setVisible(true);
         }
 
         if (createAdmin.evenListener(e)){
-            this.add(createAdminScreen);
+            this.add(createAdminScreen).setVisible(true);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createMovie).setVisible(true);
+            this.add(createSupervisorScreen).setVisible(true);
         }
 
         repaint();
