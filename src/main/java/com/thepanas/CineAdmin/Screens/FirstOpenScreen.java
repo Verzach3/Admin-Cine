@@ -1,8 +1,7 @@
 package com.thepanas.CineAdmin.Screens;
 
-import com.thepanas.CineAdmin.Utils.ResourseLoader;
-import com.thepanas.GUILib.TButton;
-import com.thepanas.GUILib.TLabel;
+import com.thepanas.CineAdmin.GUILib.TButton;
+import com.thepanas.CineAdmin.GUILib.TLabel;
 
 import com.thepanas.CineAdmin.Main;
 
@@ -60,15 +59,6 @@ public class FirstOpenScreen extends JPanel implements MouseListener, MouseMotio
         // Dibujo de los componentes
         continueButton.paintComponent(g2D);
         welcomeText.paintComponent(g2D);
-
-        ResourseLoader rL = new ResourseLoader();
-        rL.init();
-        Image a = rL.loadImage("mk.jpg");
-        g2D.drawImage(a, 50,50 , this);
-
-
-
-
 
     }
 

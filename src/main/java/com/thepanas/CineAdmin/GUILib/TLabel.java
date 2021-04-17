@@ -1,4 +1,4 @@
-package com.thepanas.GUILib;
+package com.thepanas.CineAdmin.GUILib;
 
 import java.awt.*;
 

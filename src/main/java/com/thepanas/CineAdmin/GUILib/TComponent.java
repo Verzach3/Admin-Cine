@@ -1,4 +1,4 @@
-package com.thepanas.GUILib;
+package com.thepanas.CineAdmin.GUILib;
 
 public class TComponent {
 
@@ -48,6 +48,7 @@ public class TComponent {
     public void setSize(int width, int height){
         this.width = width;
         this.height = height;
+
     }
 }
 

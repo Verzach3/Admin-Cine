@@ -1,12 +1,11 @@
 package com.thepanas.CineAdmin.Screens.ClientScreen;
 
 import com.thepanas.CineAdmin.Main;
-import com.thepanas.GUILib.TButton;
+import com.thepanas.CineAdmin.GUILib.TButton;
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 
 @SuppressWarnings("serial")
 public class ClientLateralPanel extends JPanel implements MouseInputListener {

@@ -1,12 +1,11 @@
 package com.thepanas.CineAdmin.Utils;
 
-import com.thepanas.GUILib.TButton;
+import com.thepanas.CineAdmin.GUILib.TButton;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
 
 public class UIDesigner extends JFrame implements MouseInputListener {
 

@@ -2,7 +2,7 @@ package com.thepanas.CineAdmin.Screens.SupervisorScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
-import com.thepanas.GUILib.TButton;
+import com.thepanas.CineAdmin.GUILib.TButton;
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
