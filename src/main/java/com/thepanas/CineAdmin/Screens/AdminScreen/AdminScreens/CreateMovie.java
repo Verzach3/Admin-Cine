@@ -1,5 +1,6 @@
 package com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens;
 
+import com.thepanas.CineAdmin.GUILib.TButton;
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.CineAdmin.GUILib.TInputBox;
@@ -21,7 +22,8 @@ public class CreateMovie extends JPanel implements MouseListener {
     TInputBox movieDuration = new TInputBox();
     TInputBox confirmPassWord = new TInputBox();
     TInputBox movieType = new TInputBox();
-    TLabel welcomeLabel = new TLabel();
+    TLabel titleLabel = new TLabel();
+    TButton register = new TButton();
 
     public CreateMovie(Main mainFrame) {
         this.mainFrame = mainFrame;
@@ -29,21 +31,34 @@ public class CreateMovie extends JPanel implements MouseListener {
         this.setSize(650, 768);
         this.setLocation(300, 0);
         this.setLayout(null);
+
         movieName.setLocation(202, 150);
         movieName.setSize(200, 30);
         movieName.setPlaceholder("Nombre");
+
         movieGenre.setLocation(202, 200);
         movieGenre.setSize(200, 30);
         movieGenre.setPlaceholder("Genero");
+
         movieDuration.setLocation(202, 250);
         movieDuration.setSize(200, 30);
         movieDuration.setPlaceholder("Duración");
+
         confirmPassWord.setLocation(202, 300);
         confirmPassWord.setSize(200, 30);
         confirmPassWord.setPlaceholder("Clasificación");
+
         movieType.setLocation(202, 350);
         movieType.setSize(200, 30);
         movieType.setPlaceholder("Tipo");
+
+        titleLabel.setLocation(150, 80);
+        titleLabel.setSize(30);
+        titleLabel.setText("REGISTRAR PELÍCULA");
+
+        register.setLocation(250, 400);
+        register.setSize(110, 40);
+        register.setText("Registrar");
 
 
             this.addMouseListener(this);
@@ -58,6 +73,8 @@ public class CreateMovie extends JPanel implements MouseListener {
         movieGenre.paintComponent(g2D);
         movieDuration.paintComponent(g2D);
         confirmPassWord.paintComponent(g2D);
+        titleLabel.paintComponent(g2D);
+        register.paintComponent(g2D);
 
     }
 

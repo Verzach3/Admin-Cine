@@ -1,5 +1,6 @@
 package com.thepanas.CineAdmin;
 
+import com.thepanas.CineAdmin.Cinemas.SeatSelectionScreen;
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
@@ -39,6 +40,8 @@ public class Main extends JFrame {
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
     MoviesContainer movieExplorer = new MoviesContainer(this);
     SupervisorLateralPanel ltrSupervisor = new SupervisorLateralPanel(this);
+    SeatSelectionScreen seatSelection = new SeatSelectionScreen(this);
+
 
 ///////////////////
 
@@ -90,6 +93,9 @@ public class Main extends JFrame {
                 break;
             case 8:
                 mainFrame.add(ltrSupervisor);
+                break;
+            case 10:
+                mainFrame.add(seatSelection);
                 break;
         }
     }
