@@ -1,11 +1,12 @@
 package com.thepanas.CineAdmin.Screens.AdminScreen;
 
+import com.thepanas.CineAdmin.GUILib.TButton;
+import com.thepanas.CineAdmin.GUILib.TInputBox;
+import com.thepanas.CineAdmin.GUILib.TLabel;
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Types.User;
 import com.thepanas.CineAdmin.Utils.MakeDialog;
-import com.thepanas.GUILib.TButton;
-import com.thepanas.GUILib.TInputBox;
-import com.thepanas.GUILib.TLabel;
+
 
 import javax.swing.*;
 import java.awt.*;
