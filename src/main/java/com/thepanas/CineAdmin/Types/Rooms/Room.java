@@ -12,4 +12,6 @@ public class Room {
         seats[index].checked = status;
    }
 
+
+
 }

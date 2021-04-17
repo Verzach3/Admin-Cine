@@ -5,7 +5,6 @@ import java.awt.*;
 public class TLabel extends  TComponent{
 
 
-
     public void setText(String text){
         this.text = text;
     }
@@ -25,7 +24,6 @@ public class TLabel extends  TComponent{
     }
 
     public TLabel() {
-
     }
 
 

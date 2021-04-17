@@ -22,7 +22,7 @@ public class ScreenTemplate extends JPanel implements MouseListener {
          */
         this.mainFrame = mainFrame;
 
-        this.setSize(17,768);
+        this.setSize(1024,768);
         this.setLayout(null);
 
         this.addMouseListener(this);

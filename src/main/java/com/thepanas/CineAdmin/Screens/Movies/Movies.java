@@ -7,6 +7,7 @@ import java.awt.*;
 
 public class Movies extends JPanel {
 
+
     Main mainFrame;
     MoviesContainer moviesContainer;
 
