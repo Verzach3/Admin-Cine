@@ -3,7 +3,6 @@ package com.thepanas.CineAdmin;
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
-import com.thepanas.CineAdmin.Screens.ClientScreen.ClientPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Screens.Movies.MoviesContainer;
 import com.thepanas.CineAdmin.Screens.SupervisorScreen.SupervisorLateralPanel;
@@ -38,7 +37,6 @@ public class Main extends JFrame {
     RegisterScreen registerScreen = new RegisterScreen(this);
     ClientLateralPanel affiliatedClientLateralPanel = new ClientLateralPanel(this, true);
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
-    ClientPanel clientPanel = new ClientPanel(this);
     MoviesContainer movieExplorer = new MoviesContainer(this);
     SupervisorLateralPanel ltrSupervisor = new SupervisorLateralPanel(this);
 
@@ -88,12 +86,9 @@ public class Main extends JFrame {
                 mainFrame.add(notAffiliatedClientLateralPanel);
                 break;
             case 7:
-                mainFrame.add(clientPanel);
-                break;
-            case 8:
                 mainFrame.add(movieExplorer);
                 break;
-            case 9:
+            case 8:
                 mainFrame.add(ltrSupervisor);
                 break;
         }

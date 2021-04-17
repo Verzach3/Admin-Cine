@@ -2,6 +2,8 @@ package com.thepanas.CineAdmin.Screens.ClientScreen;
 
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.GUILib.TButton;
+import com.thepanas.CineAdmin.Screens.EditDataScreen;
+
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
@@ -19,10 +21,11 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
     boolean affiliated;
 
    //Paneles hijo
-    ClientPanel clientPanel;
+    EditDataScreen editDataScreen;
 
     public ClientLateralPanel(Main mainFrame, boolean affiliated) {
-        clientPanel = new ClientPanel(mainFrame);
+
+        editDataScreen = new EditDataScreen(mainFrame);
         this.affiliated = affiliated;
         this.mainFrame = mainFrame;
 
@@ -118,7 +121,7 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
        movieConsultation.evenListener(e);
 
         if(modifyData.evenListener(e)){
-            this.add(clientPanel);
+            this.add(editDataScreen);
         }
 
         if(logoutButton.evenListener(e)){
