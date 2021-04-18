@@ -3,7 +3,6 @@ package com.thepanas.CineAdmin.Screens.AdminScreen;
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateMovie;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateSupervisorScreen;
-import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
 import com.thepanas.CineAdmin.Screens.EditDataScreen;
 import com.thepanas.CineAdmin.Screens.SupervisorScreen.CrearAfiliado;
 import com.thepanas.CineAdmin.GUILib.TButton;
@@ -30,7 +29,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     CreateAdmin createAdminScreen;
     CrearAfiliado crearAfiliado;
     CreateMovie createMovie;
-    CreateFuncion createFuncion;
+    CreateMovieX createMovieX;
     EditDataScreen editDataScreen;
 
     public AdminLateralPanel(Main mainFrame) {
@@ -43,7 +42,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createAdminScreen = new CreateAdmin(mainFrame);
         crearAfiliado = new CrearAfiliado(mainFrame);
         createMovie = new CreateMovie(mainFrame);
-        createFuncion = new CreateFuncion(mainFrame);
+        createMovieX = new CreateMovieX(mainFrame);
         editDataScreen = new EditDataScreen(mainFrame);
 
         this.setSize(1024, 768);
@@ -68,11 +67,11 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
 
         registerMovieButton.setLocation(73, 370);
         registerMovieButton.setSize(140, 48);
-        registerMovieButton.setText("Registrar película");
+        registerMovieButton.setText("Registrar Pelicula");
 
         createMovieFunctionButton.setLocation(73, 470);
         createMovieFunctionButton.setSize(140, 48);
-        createMovieFunctionButton.setText("Crear función");
+        createMovieFunctionButton.setText("Estadistica");
 
         this.addMouseListener(this);
 
@@ -131,42 +130,32 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         }
         if (createSupervisorButton.evenListener(e)) {
             this.add(createSupervisorScreen).setVisible(true);
-            this.add(createMovie).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
-            this.add(createFuncion).setVisible(true);
+            this.add(createMovieX).setVisible(true);
         }
 
         if(registerMovieButton.evenListener(e)){
-            this.add(createMovie).setVisible(true);
+            this.add(createMovieX).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
-            this.add(createFuncion).setVisible(true);
         }
 
         if(createAffiliateButton.evenListener(e)){
             this.add(crearAfiliado).setVisible(true);
-            this.add(createMovie).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
-            this.add(createFuncion).setVisible(true);
+            this.add(createMovieX).setVisible(true);
         }
 
         if (createAdmin.evenListener(e)){
             this.add(createAdminScreen).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
-            this.add(createMovie).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
-            this.add(createFuncion).setVisible(true);
+            this.add(createMovieX).setVisible(true);
         }
-        if(createMovieFunctionButton.evenListener(e)){
-            this.add(createFuncion).setVisible(true);
-            this.add(createAdminScreen).setVisible(true);
-            this.add(createSupervisorScreen).setVisible(true);
-            this.add(crearAfiliado).setVisible(true);
-            this.add(createMovie).setVisible(true);
-        }
+
 
         repaint();
     }
@@ -177,7 +166,6 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createSupervisorButton.onRelease();
         registerMovieButton.onRelease();
         createAffiliateButton.onRelease();
-        createMovieFunctionButton.onRelease();
         createAdmin.onRelease();
         repaint();
     }
