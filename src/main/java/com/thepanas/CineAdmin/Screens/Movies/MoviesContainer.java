@@ -21,6 +21,7 @@ public class MoviesContainer extends JPanel implements MouseInputListener, Mouse
     ArrayList<MovieCard> demoArray = new ArrayList<>();
 
     MovieCard movie1 = new MovieCard(this);
+    MovieCard movie2 = new MovieCard(this);
 
 
     Main mainFrame;
@@ -35,9 +36,15 @@ public class MoviesContainer extends JPanel implements MouseInputListener, Mouse
         movie1.setName("  Mortal Kombat");
         movie1.setClassification("+18");
         movie1.setMovieImage(resourseLoader.loadImage("mk.jpg"));
+        movie2.setName("     Joker");
+        movie2.setMovieImage(resourseLoader.loadImage("joker.jpg"));
+        demoArray.add(movie2);
+        demoArray.add(movie1);
+        demoArray.add(movie1);
+        demoArray.add(movie1);
         demoArray.add(movie1);
         this.mainFrame = mainFrame;
-        this.setSize(1024, 720);
+        this.setSize(1024, 5000);
 
         this.setBackground(Color.CYAN);
 
@@ -48,19 +55,35 @@ public class MoviesContainer extends JPanel implements MouseInputListener, Mouse
         this.addMouseWheelListener(this);
 
         resourseLoader.init();
+
+
     }
 
     public void render(Graphics2D g){
+        int defaultX = 73;
+        int defaultY = 98;
+        int counter = 0;
         for (MovieCard movieCard: demoArray){
             movieCard.paintComponent(g);
-
-
+            movieCard.setLocation(defaultX, defaultY);
+            defaultX += 46 + movieCard.getWidth();
+            if (counter >= 2){
+                defaultY += 42 + movieCard.getHeight();
+                counter = 0;
+                defaultX = 73;
+            }else {
+                counter ++;
+            }
 
         }
     }
 
+
+
     public void paint(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
+
+        System.out.println(demoArray.size());
 
 
         render(g2D);
@@ -116,8 +139,8 @@ public class MoviesContainer extends JPanel implements MouseInputListener, Mouse
         System.out.println("Y: " + this.getY());
 
         if (!(this.getY() > 0)){
-        this.setLocation(0, this.getY() + (e.getUnitsToScroll() * 5) * -1);
-        superiorPanelY += (e.getUnitsToScroll()*5);
+        this.setLocation(0, this.getY() + (e.getUnitsToScroll() * 10) * -1);
+        superiorPanelY += (e.getUnitsToScroll()*10);
         }
         if (this.getY() >= 0){
             this.setLocation(this.getX(), 0);

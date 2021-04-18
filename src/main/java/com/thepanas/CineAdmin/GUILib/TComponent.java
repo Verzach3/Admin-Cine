@@ -20,6 +20,30 @@ public class TComponent {
         return y;
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getFontSize() {
+        return fontSize;
+    }
+
+    public String getPlaceholder() {
+        return placeholder;
+    }
+
+    public Boolean getClickStatus() {
+        return clickStatus;
+    }
+
     public void setLocation(int x, int y) {
         this.x = x;
         this.y = y;

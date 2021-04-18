@@ -1,6 +1,5 @@
 package com.thepanas.CineAdmin;
 
-import com.thepanas.CineAdmin.Cinemas.SeatSelectionScreen;
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
 import com.thepanas.CineAdmin.Screens.AdminScreen.CreateFuncion;
@@ -41,12 +40,10 @@ public class Main extends JFrame {
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
     MoviesContainer movieExplorer = new MoviesContainer(this);
     SupervisorLateralPanel ltrSupervisor = new SupervisorLateralPanel(this);
-<<<<<<< Updated upstream
+
     SeatSelectionScreen seatSelection = new SeatSelectionScreen(this);
 
-=======
     CreateFuncion createFuncion = new CreateFuncion(this);
->>>>>>> Stashed changes
 
 ///////////////////
 
@@ -99,13 +96,12 @@ public class Main extends JFrame {
             case 8:
                 mainFrame.add(ltrSupervisor);
                 break;
-<<<<<<< Updated upstream
             case 10:
                 mainFrame.add(seatSelection);
-=======
+                mainFrame.add(createFuncion);
+                mainFrame.add(seatSelection);
             case 9:
                 mainFrame.add(createFuncion);
->>>>>>> Stashed changes
                 break;
         }
     }

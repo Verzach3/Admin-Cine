@@ -26,7 +26,6 @@ public class MovieCard extends TComponent {
        this.height = 343;
        this.width = 262;
        nameLabel.setSize(24);
-       nameLabel.setLocation(113,136);
    }
 
    public void setMovieImage(Image image){
@@ -37,6 +36,7 @@ public class MovieCard extends TComponent {
    public void paintComponent(Graphics g){
         Graphics2D g2D = (Graphics2D) g;
         g2D.setColor(Color.GRAY);
+        nameLabel.setLocation(this.x + 40,this.y + 38);
 
 
        g2D.fillRoundRect(this.x, this.y, this.width, this.height, 9, this.round);
@@ -56,7 +56,6 @@ public class MovieCard extends TComponent {
             System.out.println("Event True");
         }else {
             hoverStatus = false;
-            System.out.println("Event False");
         }
 
         return hoverStatus;
