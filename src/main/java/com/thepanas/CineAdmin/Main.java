@@ -97,7 +97,6 @@ public class Main extends JFrame {
             case 8:
                 mainFrame.add(ltrSupervisor);
                 break;
-
             case 9:
                 mainFrame.add(seatSelection);
                 break;

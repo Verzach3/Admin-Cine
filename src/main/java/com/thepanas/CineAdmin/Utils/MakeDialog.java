@@ -15,4 +15,11 @@ public class MakeDialog{
 
     }
 
+    public static String makeMultiSelector(String[] options){
+        return JOptionPane.showInputDialog(null, "Selecciona uno", "Seleccion", JOptionPane.QUESTION_MESSAGE,null, options, options[0]).toString();
+    }
+
+    public static int makeButtonSelector(String[] options){
+        return JOptionPane.showOptionDialog(null, "Selecciona uno", "Seleccion", JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null, options, options[0]);
+    }
 }
