@@ -25,12 +25,12 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton createMovieFunctionButton = new TButton();
     TButton createAffiliateButton = new TButton();
     TButton createAdmin = new TButton();
+
     //Paneles hijos
     CreateMovieX createMovieX;
     CreateSupervisorScreen createSupervisorScreen; //0
     CreateAdmin createAdminScreen; //1
     CrearAfiliado crearAfiliado; //2
-    CreateMovie createMovie; //3
     EditDataScreen editDataScreen;//4
     CreateMovieFunction createMovieFunction; //5
 
@@ -38,7 +38,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
        createSupervisorScreen.setVisible(false);
        createAdminScreen.setVisible(false);
        crearAfiliado.setVisible(false);
-       createMovie.setVisible(false);
+       createMovieX.setVisible(false);
        editDataScreen.setVisible(false);
        createMovieFunction.setVisible(false);
    }
@@ -56,7 +56,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
                 crearAfiliado.setVisible(true);
                 break;
             case 3:
-                createMovie.setVisible(true);
+                createMovieX.setVisible(true);
                 break;
             case 4:
                 editDataScreen.setVisible(true);
@@ -90,7 +90,10 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         this.add(crearAfiliado);
         crearAfiliado.setVisible(false);
 
-        createMovie = new CreateMovie(mainFrame);
+        createMovieX = new CreateMovieX(mainFrame);
+        this.add(createMovieX);
+        createMovieX.setVisible(false);
+
         editDataScreen = new EditDataScreen(mainFrame);
         this.add(editDataScreen);
         editDataScreen.setVisible(false);
@@ -180,31 +183,19 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             mainFrame.panelChanger(2);
         }
         if (createSupervisorButton.evenListener(e)) {
-            this.add(createSupervisorScreen).setVisible(true);
-            this.add(createMovie).setVisible(true);
-            this.add(crearAfiliado).setVisible(true);
-            this.add(createAdminScreen).setVisible(true);
+            changeOption(0);
         }
 
         if(registerMovieButton.evenListener(e)){
-            this.add(createMovie).setVisible(true);
-            this.add(createSupervisorScreen).setVisible(true);
-            this.add(crearAfiliado).setVisible(true);
-            this.add(createAdminScreen).setVisible(true);
+            changeOption(3);
         }
 
         if(createAffiliateButton.evenListener(e)){
-            this.add(crearAfiliado).setVisible(true);
-            this.add(createMovie).setVisible(true);
-            this.add(createSupervisorScreen).setVisible(true);
-            this.add(createAdminScreen).setVisible(true);
+            changeOption(2);
         }
 
         if (createAdmin.evenListener(e)){
-            this.add(createAdminScreen).setVisible(true);
-            this.add(crearAfiliado).setVisible(true);
-            this.add(createMovie).setVisible(true);
-            this.add(createSupervisorScreen).setVisible(true);
+            changeOption(1);
         }
 
         repaint();
