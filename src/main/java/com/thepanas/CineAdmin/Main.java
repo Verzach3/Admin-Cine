@@ -2,6 +2,7 @@ package com.thepanas.CineAdmin;
 
 import com.thepanas.CineAdmin.Screens.*;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminLateralPanel;
+import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.StatisticsScreen;
 import com.thepanas.CineAdmin.Screens.AdminScreen.CreateFuncion;
 import com.thepanas.CineAdmin.Screens.ClientScreen.ClientLateralPanel;
 import com.thepanas.CineAdmin.Screens.CreateAdminScreen;
@@ -40,10 +41,17 @@ public class Main extends JFrame {
     ClientLateralPanel notAffiliatedClientLateralPanel = new ClientLateralPanel(this, false);
     MoviesContainer movieExplorer = new MoviesContainer(this);
     SupervisorLateralPanel ltrSupervisor = new SupervisorLateralPanel(this);
+<<<<<<< Updated upstream
 
     SeatSelectionScreen seatSelection = new SeatSelectionScreen(this);
 
     CreateFuncion createFuncion = new CreateFuncion(this);
+=======
+    SeatSelectionScreen seatSelection = new SeatSelectionScreen(this);
+    CreateFuncion createFuncion = new CreateFuncion(this);
+    StatisticsScreen statisticsScreen = new StatisticsScreen(this);
+
+>>>>>>> Stashed changes
 
 ///////////////////
 
@@ -96,12 +104,23 @@ public class Main extends JFrame {
             case 8:
                 mainFrame.add(ltrSupervisor);
                 break;
+<<<<<<< Updated upstream
             case 10:
                 mainFrame.add(seatSelection);
                 mainFrame.add(createFuncion);
                 mainFrame.add(seatSelection);
+=======
+>>>>>>> Stashed changes
             case 9:
+                mainFrame.add(seatSelection);
+            case 10:
                 mainFrame.add(createFuncion);
+<<<<<<< Updated upstream
+=======
+                break;
+            case 11:
+                mainFrame.add(statisticsScreen);
+>>>>>>> Stashed changes
                 break;
         }
     }
@@ -109,7 +128,7 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         //Se pone visible el frame
 
-        mainFrame.panelChanger(9);
+        mainFrame.panelChanger(0);
 
 
         mainFrame.setVisible(true);

@@ -30,6 +30,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     CreateAdmin createAdminScreen;
     CrearAfiliado crearAfiliado;
     CreateMovie createMovie;
+    CreateFuncion createFuncion;
     EditDataScreen editDataScreen;
 
     public AdminLateralPanel(Main mainFrame) {
@@ -42,6 +43,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createAdminScreen = new CreateAdmin(mainFrame);
         crearAfiliado = new CrearAfiliado(mainFrame);
         createMovie = new CreateMovie(mainFrame);
+        createFuncion = new CreateFuncion(mainFrame);
         editDataScreen = new EditDataScreen(mainFrame);
 
         this.setSize(1024, 768);
@@ -132,6 +134,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createMovie).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
+            this.add(createFuncion).setVisible(true);
         }
 
         if(registerMovieButton.evenListener(e)){
@@ -139,6 +142,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createSupervisorScreen).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
+            this.add(createFuncion).setVisible(true);
         }
 
         if(createAffiliateButton.evenListener(e)){
@@ -146,6 +150,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createMovie).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
+            this.add(createFuncion).setVisible(true);
         }
 
         if (createAdmin.evenListener(e)){
@@ -153,6 +158,14 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(crearAfiliado).setVisible(true);
             this.add(createMovie).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
+            this.add(createFuncion).setVisible(true);
+        }
+        if(createMovieFunctionButton.evenListener(e)){
+            this.add(createFuncion).setVisible(true);
+            this.add(createAdminScreen).setVisible(true);
+            this.add(createSupervisorScreen).setVisible(true);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createMovie).setVisible(true);
         }
 
         repaint();
@@ -164,6 +177,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         createSupervisorButton.onRelease();
         registerMovieButton.onRelease();
         createAffiliateButton.onRelease();
+        createMovieFunctionButton.onRelease();
         createAdmin.onRelease();
         repaint();
     }

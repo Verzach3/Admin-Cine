@@ -25,52 +25,47 @@ public class CreateFuncion extends JPanel implements MouseListener {
     public CreateFuncion(Main mainFrame){
         this.mainFrame = mainFrame;
         this.setLayout(null);
-        this.setSize(1024,768);
+        this.setSize(650,768);
+        this.setLocation(300,0);
 
         //-------> Componentes
-        typeFunction.setLocation(300,100);
+        typeFunction.setLocation(100,100);
         typeFunction.setSize(200,30);
-        typeFunction.setPlaceholder("Tipo de funcion");
+        typeFunction.setPlaceholder("Hora");
 
-        typeofSchedule.setLocation(300,200);
+        typeofSchedule.setLocation(100,200);
         typeofSchedule.setSize(200,30);
-        typeofSchedule.setPlaceholder("Horario");
+        typeofSchedule.setPlaceholder("Fecha inicio");
 
-        typeofRom.setLocation(300,300);
+        typeofRom.setLocation(100,300);
         typeofRom.setSize(200,30);
-        typeofRom.setPlaceholder("Sala");
+        typeofRom.setPlaceholder("Fecha Fin");
 
-        classificationType.setLocation(300,400);
+        classificationType.setLocation(100,400);
         classificationType.setSize(200,30);
-        classificationType.setPlaceholder("Clasificacion");
+        classificationType.setPlaceholder("Sala");
 
-        chairType.setLocation(300,500);
+        chairType.setLocation(100,500);
         chairType.setSize(200,30);
-        chairType.setPlaceholder("Sillas");
+        chairType.setPlaceholder("Tipo de funcion");
 
-        createMovie.setLocation(300,600);
+        createMovie.setLocation(100,600);
         createMovie.setSize(200,30);
-        createMovie.setText("Crear Pelicula");
+        createMovie.setText("Registrar Pelicula");
 
         title.setSize(32);
-        title.setLocation(300,50);
+        title.setLocation(100,50);
         title.setText("Crear Pelicula");
-
-        logout.setSize(115,30);
-        logout.setLocation(50,250);
-        logout.setText("Cerrar Sesion");
-
 
         this.addMouseListener(this);
     }
     public void paint(Graphics g){
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
-        g2D.setColor(Color.black);
-        g2D.fillRect(0,0,250,this.getHeight());
+
         //-------->Marco
         g2D.setColor(Color.DARK_GRAY);
-        g2D.fillRect(625,100,350,400);
+        g2D.fillRect(400,100,350,400);
         typeFunction.paintComponent(g2D);
         typeofSchedule.paintComponent(g2D);
         typeofRom.paintComponent(g2D);
@@ -94,10 +89,6 @@ public class CreateFuncion extends JPanel implements MouseListener {
         classificationType.evenListener(e);
         chairType.evenListener(e);
         createMovie.evenListener(e);
-        if(logout.evenListener(e)){
-            mainFrame.currentUser = null;
-            mainFrame.panelChanger(2);
-        }
 
         repaint();
     }
