@@ -53,7 +53,6 @@ public class ClientLateralPanel extends JPanel implements MouseInputListener {
         modifyData.setSize(150, 48);
         modifyData.setText("Modificar datos");
 
-        this.addMouseListener(this);
 
 
         this.addMouseListener(this);
