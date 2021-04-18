@@ -3,7 +3,9 @@ package com.thepanas.CineAdmin.Screens.AdminScreen;
 import com.thepanas.CineAdmin.Main;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateMovie;
 import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.CreateSupervisorScreen;
+import com.thepanas.CineAdmin.Screens.AdminScreen.AdminScreens.StatisticsUsers;
 import com.thepanas.CineAdmin.Screens.EditDataScreen;
+import com.thepanas.CineAdmin.Screens.Movies.MoviesContainer;
 import com.thepanas.CineAdmin.Screens.SupervisorScreen.CrearAfiliado;
 import com.thepanas.CineAdmin.GUILib.TButton;
 import javax.swing.*;
@@ -21,7 +23,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     TButton logoutButton = new TButton();
     TButton createSupervisorButton = new TButton();
     TButton registerMovieButton = new TButton();
-    TButton createMovieFunctionButton = new TButton();
+    TButton movie = new TButton();
     TButton createAffiliateButton = new TButton();
     TButton createAdmin = new TButton();
     //Paneles hijos
@@ -30,7 +32,9 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
     CrearAfiliado crearAfiliado;
     CreateMovie createMovie;
     CreateMovieX createMovieX;
+    StatisticsUsers statisticsUsers;
     EditDataScreen editDataScreen;
+    MoviesContainer moviesContainer;
 
     public AdminLateralPanel(Main mainFrame) {
         /*
@@ -43,7 +47,9 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         crearAfiliado = new CrearAfiliado(mainFrame);
         createMovie = new CreateMovie(mainFrame);
         createMovieX = new CreateMovieX(mainFrame);
+        statisticsUsers = new StatisticsUsers(mainFrame);
         editDataScreen = new EditDataScreen(mainFrame);
+        moviesContainer = new MoviesContainer(mainFrame);
 
         this.setSize(1024, 768);
         this.setLayout(null);
@@ -69,9 +75,9 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         registerMovieButton.setSize(140, 48);
         registerMovieButton.setText("Registrar Pelicula");
 
-        createMovieFunctionButton.setLocation(73, 470);
-        createMovieFunctionButton.setSize(140, 48);
-        createMovieFunctionButton.setText("Estadistica");
+        movie.setLocation(73, 470);
+        movie.setSize(140, 48);
+        movie.setText("Explorar Peliculas");
 
         this.addMouseListener(this);
 
@@ -101,7 +107,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
         logoutButton.paintComponent(g2D);
         createSupervisorButton.paintComponent(g2D);
         registerMovieButton.paintComponent(g2D);
-        createMovieFunctionButton.paintComponent(g2D);
+        movie.paintComponent(g2D);
         createAffiliateButton.paintComponent(g2D);
         createAdmin.paintComponent(g2D);
         // Remover
@@ -133,6 +139,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
             this.add(createMovieX).setVisible(true);
+            this.add(statisticsUsers).setVisible(true);
         }
 
         if(registerMovieButton.evenListener(e)){
@@ -140,6 +147,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createSupervisorScreen).setVisible(true);
             this.add(crearAfiliado).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
+            this.add(statisticsUsers).setVisible(true);
         }
 
         if(createAffiliateButton.evenListener(e)){
@@ -147,6 +155,7 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(createSupervisorScreen).setVisible(true);
             this.add(createAdminScreen).setVisible(true);
             this.add(createMovieX).setVisible(true);
+            this.add(statisticsUsers).setVisible(true);
         }
 
         if (createAdmin.evenListener(e)){
@@ -154,6 +163,15 @@ public class AdminLateralPanel extends JPanel implements MouseInputListener {
             this.add(crearAfiliado).setVisible(true);
             this.add(createSupervisorScreen).setVisible(true);
             this.add(createMovieX).setVisible(true);
+            this.add(statisticsUsers).setVisible(true);
+        }
+        if(movie.evenListener(e)){
+            this.add(moviesContainer).setVisible(true);
+            this.add(crearAfiliado).setVisible(true);
+            this.add(createSupervisorScreen).setVisible(true);
+            this.add(createMovieX).setVisible(true);
+            this.add(createAdminScreen).setVisible(true);
+
         }
 
 
