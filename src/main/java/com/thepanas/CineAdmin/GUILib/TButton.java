@@ -28,6 +28,9 @@ public class TButton extends TComponent{
         return height;
     }
 
+    public String getText(){
+        return text;
+    }
 
     public void setText(String text){
         this.text = text;
